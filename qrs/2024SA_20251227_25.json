@@ -1,0 +1,31 @@
+{
+  "qr_id": "2024SA_20251227_25",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2025-12-27",
+  "minted_by": "Kelly Springer",
+  "status": "MINTED",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Santa Ana Fazenda",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2023",
+    "sku": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Santa Ana 2023 | Kirsten 20251227 | San Francisco - AGL2"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2025-12-27",
+      "by": "Kelly Springer",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl2",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/2024SA_20251227_25.png",
+  "scan_target": "https://truesight.me/qr/?id=2024SA_20251227_25",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024SA_20251227_25",
+  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_source": "seed_from_sheet.py"
+}

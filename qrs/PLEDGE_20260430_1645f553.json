@@ -1,0 +1,42 @@
+{
+  "qr_id": "PLEDGE_20260430_1645f553",
+  "asset_type": "tree",
+  "schema_version": "v0",
+  "minted_at": "2026-04-30",
+  "minted_by": "Gary Teh",
+  "status": "SOLD",
+  "current_holder": null,
+  "lineage": {
+    "farm": "",
+    "state": "",
+    "country": "",
+    "harvest_year": "",
+    "sku": "SunMint Tree Planting Pledge - QR Code",
+    "planted_at": null,
+    "latitude": "",
+    "longitude": "",
+    "planting_video_url": "",
+    "seedling_photo_url": "",
+    "location_text": "https://github.com/TrueSightDAO/qr_codes/blob/main/PLEDGE_20260430_1645f553.png"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-04-30",
+      "by": "Gary Teh",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://agroverse.shop/sunmint-pledge",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/PLEDGE_20260430_1645f553.png",
+  "scan_target": "https://truesight.me/qr/?id=PLEDGE_20260430_1645f553",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=PLEDGE_20260430_1645f553",
+  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_source": "seed_from_sheet.py"
+}

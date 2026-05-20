@@ -1,0 +1,36 @@
+{
+  "qr_id": "2024OSCAR_20260121_4",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-01-21",
+  "minted_by": "Lumin Earth Apothecary - Summer and Sierra",
+  "status": "SOLD",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Oscar Farm",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 + 8 Ounce Package Kraft Pouch CP340992735BR | Kirsten 20260121"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-01-21",
+      "by": "Lumin Earth Apothecary - Summer and Sierra",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/2024OSCAR_20260121_4.png",
+  "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20260121_4",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20260121_4",
+  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_source": "seed_from_sheet.py"
+}

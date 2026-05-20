@@ -1,0 +1,36 @@
+{
+  "qr_id": "2024PAULO_20250804_6",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2025-08-04",
+  "minted_by": "Sacred Earth Farms",
+  "status": "SOLD",
+  "current_holder": null,
+  "lineage": {
+    "farm": "La do Sitio",
+    "state": "Para",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "Ceremonial Cacao Kraft Pouch - 20250219006 + Cacao Mass Bar CP340993869BR San Francisco - AGL8"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2025-08-04",
+      "by": "Sacred Earth Farms",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL8",
+      "notes": "Per Agroverse QR codes sheet status"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl8",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/2024PAULO_20250804_6.png",
+  "scan_target": "https://truesight.me/qr/?id=2024PAULO_20250804_6",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024PAULO_20250804_6",
+  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_source": "seed_from_sheet.py"
+}

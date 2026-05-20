@@ -1,0 +1,37 @@
+{
+  "qr_id": "20250829_GARY_TEST",
+  "asset_type": "tree",
+  "schema_version": "v0",
+  "minted_at": "2025-08-24",
+  "minted_by": "Gary Teh",
+  "status": "MINTED",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Gary Land",
+    "state": "No State",
+    "country": "My Country",
+    "harvest_year": "2025",
+    "sku": "NovaGaia Tree Planting Pledge - QR Code",
+    "planted_at": null,
+    "latitude": "",
+    "longitude": "",
+    "planting_video_url": "",
+    "seedling_photo_url": "",
+    "location_text": "https://github.com/TrueSightDAO/qr_codes/blob/main/Gary_Land_20250829_GARY_TEST.png"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2025-08-24",
+      "by": "Gary Teh",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.truesight.me/sunmint-tree-planting-pledges/sef1",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/20250829_GARY_TEST.png",
+  "scan_target": "https://truesight.me/qr/?id=20250829_GARY_TEST",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=20250829_GARY_TEST",
+  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_source": "seed_from_sheet.py"
+}

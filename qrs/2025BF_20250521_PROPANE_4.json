@@ -1,0 +1,31 @@
+{
+  "qr_id": "2025BF_20250521_PROPANE_4",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": null,
+  "minted_by": "Gary Teh",
+  "status": "MINTED",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Okanogan Barter Faire",
+    "state": "Washington",
+    "country": "USA",
+    "harvest_year": "2025",
+    "sku": "Propane Tank - 16 oz"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": null,
+      "by": "Gary Teh",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl9",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/2025BF_20250521_PROPANE_4.png",
+  "scan_target": "https://truesight.me/qr/?id=2025BF_20250521_PROPANE_4",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2025BF_20250521_PROPANE_4",
+  "_seeded_at": "2026-05-20T20:18:03Z",
+  "_source": "seed_from_sheet.py"
+}

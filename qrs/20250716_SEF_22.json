@@ -1,0 +1,37 @@
+{
+  "qr_id": "20250716_SEF_22",
+  "asset_type": "tree",
+  "schema_version": "v0",
+  "minted_at": "2025-08-24",
+  "minted_by": "Sacred Earth Farms",
+  "status": "MINTED",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Sacred Earth Farms",
+    "state": "Oregon",
+    "country": "USA",
+    "harvest_year": "2025",
+    "sku": "NovaGaia Tree Planting Pledge - QR Code",
+    "planted_at": null,
+    "latitude": "",
+    "longitude": "",
+    "planting_video_url": "",
+    "seedling_photo_url": "",
+    "location_text": "https://github.com/TrueSightDAO/tokenomics/tree/main/python_scripts/agroverse_qr_code_generator/package_qr_codes/compiled_Sacred_Earth_Farms_20250716_SEF_22.png"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2025-08-24",
+      "by": "Sacred Earth Farms",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.truesight.me/sunmint-tree-planting-pledges/sef1",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/20250716_SEF_22.png",
+  "scan_target": "https://truesight.me/qr/?id=20250716_SEF_22",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=20250716_SEF_22",
+  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_source": "seed_from_sheet.py"
+}

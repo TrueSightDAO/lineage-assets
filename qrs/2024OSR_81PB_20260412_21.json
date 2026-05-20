@@ -1,0 +1,36 @@
+{
+  "qr_id": "2024OSR_81PB_20260412_21",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-04-12",
+  "minted_by": "Kirsten Ritschel",
+  "status": "SOLD",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Oscar Farm",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "81% Dark Chocolate Bar 50grams - Oscar Fazenda, Brazil 2024 + CP340993988BR San Francisco"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-04-12",
+      "by": "Kirsten Ritschel",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/2024OSR_81PB_20260412_21.png",
+  "scan_target": "https://truesight.me/qr/?id=2024OSR_81PB_20260412_21",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSR_81PB_20260412_21",
+  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_source": "seed_from_sheet.py"
+}

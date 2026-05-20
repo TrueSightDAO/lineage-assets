@@ -1,0 +1,36 @@
+{
+  "qr_id": "2025CAPELAVELHA_20250809_17",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2025-08-09",
+  "minted_by": "Kirsten Ritschel",
+  "status": "SOLD",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Capela Velha",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2025",
+    "sku": "Caramelized Cacao Kraft Pouch - Alibaba:269035810001023771 + Caramelized Cacao Beans CP340993299BR San Francisco AGL10"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2025-08-09",
+      "by": "Kirsten Ritschel",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL10",
+      "notes": "Per Agroverse QR codes sheet status"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl10",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/2025CAPELAVELHA_20250809_17.png",
+  "scan_target": "https://truesight.me/qr/?id=2025CAPELAVELHA_20250809_17",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2025CAPELAVELHA_20250809_17",
+  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_source": "seed_from_sheet.py"
+}

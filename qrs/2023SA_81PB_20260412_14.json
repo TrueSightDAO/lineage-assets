@@ -1,0 +1,36 @@
+{
+  "qr_id": "2023SA_81PB_20260412_14",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-04-12",
+  "minted_by": "Kirsten Ritschel",
+  "status": "SOLD",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Santa Ana Fazenda",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2023",
+    "sku": "81% Dark Chocolate Bar 50grams - Santa Anna Fazenda, Brazil 2023 San Francisco"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-04-12",
+      "by": "Kirsten Ritschel",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl2",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/qr_codes/main/2023SA_81PB_20260412_14.png",
+  "scan_target": "https://truesight.me/qr/?id=2023SA_81PB_20260412_14",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2023SA_81PB_20260412_14",
+  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_source": "seed_from_sheet.py"
+}
