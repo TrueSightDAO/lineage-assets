@@ -1,0 +1,21 @@
+# Service account / API credentials — never commit
+*_key.json
+*credentials*.json
+*token.json
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Generator scratch / outputs
+scripts/qr_generator/package_qr_codes/
+scripts/qr_generator/to_print/
+scripts/qr_generator/output/
+
+# Macros
+.DS_Store
