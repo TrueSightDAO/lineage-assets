@@ -1,20 +1,42 @@
 {
-  "generated_at": "2026-05-20T20:46:18Z",
+  "generated_at": "2026-05-25T22:25:29Z",
   "source": "build_index.py",
-  "qr_count": 1457,
+  "qr_count": 1459,
   "by_status": {
+    "SAMPLE": 73,
     "SOLD": 337,
-    "SAMPLE": 71,
     "MINTED": 987,
     "ON CONSIGNMENT": 56,
     "GIFT": 3,
     "EXPENSED": 3
   },
   "by_asset_type": {
-    "tree": 319,
-    "cacao_bag": 1138
+    "cacao_bag": 1140,
+    "tree": 319
   },
   "qrs": [
+    {
+      "qr_id": "DTS_CT_20260626_1",
+      "asset_type": "cacao_bag",
+      "status": "SAMPLE",
+      "farm": "La do Sitio",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-26",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=DTS_CT_20260626_1"
+    },
+    {
+      "qr_id": "DTS_CC_20260626_1",
+      "asset_type": "cacao_bag",
+      "status": "SAMPLE",
+      "farm": "Oscar Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-26",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=DTS_CC_20260626_1"
+    },
     {
       "qr_id": "PLEDGE_20260430_d384b1ae",
       "asset_type": "tree",
