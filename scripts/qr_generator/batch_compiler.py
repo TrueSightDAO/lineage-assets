@@ -528,18 +528,21 @@ def main():
         print(f"Saved copy to print: {to_print_path}")
 
         # ─── lineage-assets integration ─────────────────────────────────
-        # Write the raw QR PNG (no labels) into ../../pngs so it can be
-        # consumed by the truesight.me/qr/?id=<id> renderer + serves as
-        # the canonical "QR image for this asset" reference.
+        # Write the COMPILED label image (QR + centre logo + farm copy +
+        # serial string) into ../../pngs — this is what truesight.me/qr/?id=<id>
+        # renders and the canonical "QR image for this asset". It MUST match the
+        # format of every other committed png (AUSTIN_*, PLEDGE_*, …): the full
+        # label, NOT the bare QR. Saving the bare `qr_img` here was the recurring
+        # mismatch with the bag-label format — use `compiled`.
         if not args.no_raw_png:
             try:
                 os.makedirs(args.pngs_dir, exist_ok=True)
                 raw_png_path = os.path.join(args.pngs_dir, f"{qr_code}.png")
-                qr_img.save(raw_png_path)
+                compiled.save(raw_png_path)
                 pngs_written += 1
                 print(f"  → lineage-assets PNG: {raw_png_path}")
             except Exception as e:
-                print(f"  [warn] could not save raw PNG to {args.pngs_dir}: {e}")
+                print(f"  [warn] could not save PNG to {args.pngs_dir}: {e}")
 
         # Write the per-QR JSON manifest into ../../qrs so the asset
         # becomes a first-class lineage-asset at mint time. Idempotent —
