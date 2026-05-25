@@ -1,0 +1,31 @@
+{
+  "qr_id": "DTS_CC_20260626_1",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-06-26",
+  "minted_by": "Gary Teh",
+  "status": "SAMPLE",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Oscar Farm",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "Cacao Mass Bar CP340992687BR (loose grams)"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-06-26",
+      "by": "Gary Teh",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/DTS_CC_20260626_1.png",
+  "scan_target": "https://truesight.me/qr/?id=DTS_CC_20260626_1",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=DTS_CC_20260626_1",
+  "_seeded_at": "2026-05-25T22:23:42Z",
+  "_source": "seed_from_sheet.py"
+}
