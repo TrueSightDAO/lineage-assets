@@ -3,7 +3,7 @@
   "asset_type": "cacao_bag",
   "schema_version": "v0",
   "minted_at": "2025-12-27",
-  "minted_by": "Gary Teh",
+  "minted_by": "Kirsten Ritschel",
   "status": "MINTED",
   "current_holder": null,
   "lineage": {
@@ -17,7 +17,7 @@
     {
       "type": "minted",
       "at": "2025-12-27",
-      "by": "Gary Teh",
+      "by": "Kirsten Ritschel",
       "notes": "QR generated and registered on Agroverse QR codes sheet"
     }
   ],
@@ -26,6 +26,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024SA_20251227_36.png",
   "scan_target": "https://truesight.me/qr/?id=2024SA_20251227_36",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024SA_20251227_36",
-  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_seeded_at": "2026-06-02T23:13:50Z",
   "_source": "seed_from_sheet.py"
 }

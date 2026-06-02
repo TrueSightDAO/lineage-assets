@@ -1,0 +1,42 @@
+{
+  "qr_id": "pk--12ayKFx5scz",
+  "asset_type": "tree",
+  "schema_version": "v0",
+  "minted_at": "2026-06-02",
+  "minted_by": "Gary Teh",
+  "status": "SOLD",
+  "current_holder": null,
+  "lineage": {
+    "farm": "ERA Butterfly Effect Club",
+    "state": "",
+    "country": "",
+    "harvest_year": "",
+    "sku": "Butterfly Effect Club Tree Planting Pledge - QR Code",
+    "planted_at": null,
+    "latitude": "",
+    "longitude": "",
+    "planting_video_url": "",
+    "seedling_photo_url": "",
+    "location_text": "https://github.com/TrueSightDAO/qr_codes/blob/main/pk--12ayKFx5scz.png"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-06-02",
+      "by": "Gary Teh",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "BEC",
+      "notes": "Per Agroverse QR codes sheet status"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://truesight.me/programs/butterfly-effect/credentials/#pk--12ayKFx5scz",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/pk--12ayKFx5scz.png",
+  "scan_target": "https://truesight.me/qr/?id=pk--12ayKFx5scz",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=pk--12ayKFx5scz",
+  "_seeded_at": "2026-06-02T23:13:50Z",
+  "_source": "seed_from_sheet.py"
+}
