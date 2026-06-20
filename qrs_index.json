@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-02T23:13:50Z",
+  "generated_at": "2026-06-20T23:22:33Z",
   "source": "build_index.py",
-  "qr_count": 1554,
+  "qr_count": 1572,
   "by_status": {
     "SAMPLE": 73,
-    "SOLD": 437,
-    "MINTED": 982,
-    "ON CONSIGNMENT": 56,
+    "MINTED": 999,
+    "SOLD": 445,
+    "ON CONSIGNMENT": 49,
     "GIFT": 3,
     "EXPENSED": 3
   },
   "by_asset_type": {
-    "cacao_bag": 1140,
+    "cacao_bag": 1158,
     "tree": 414
   },
   "qrs": [
@@ -36,6 +36,204 @@
       "minted_at": "2026-06-26",
       "current_holder": null,
       "scan_target": "https://truesight.me/qr/?id=DTS_CC_20260626_1"
+    },
+    {
+      "qr_id": "2024OSCAR_CC_20260620_3",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CC_20260620_3"
+    },
+    {
+      "qr_id": "2024OSCAR_CC_20260620_2",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CC_20260620_2"
+    },
+    {
+      "qr_id": "2024OSCAR_CC_20260620_1",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CC_20260620_1"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_9",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_9"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_8",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_8"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_7",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_7"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_6",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_6"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_5",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_5"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_4",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_4"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_3",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_3"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_2",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_2"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_15",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_15"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_14",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_14"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_13",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_13"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_12",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_12"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_11",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_11"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_10",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_10"
+    },
+    {
+      "qr_id": "2024OSCAR_CB_20260620_1",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_1"
     },
     {
       "qr_id": "pk-ztJmAFd7WFgS",
@@ -11777,7 +11975,7 @@
     {
       "qr_id": "2025CAPELAVELHA_20250809_5",
       "asset_type": "cacao_bag",
-      "status": "ON CONSIGNMENT",
+      "status": "SOLD",
       "farm": "Capela Velha",
       "country": "Brazil",
       "harvest_year": "2025",
@@ -11788,7 +11986,7 @@
     {
       "qr_id": "2025CAPELAVELHA_20250809_4",
       "asset_type": "cacao_bag",
-      "status": "ON CONSIGNMENT",
+      "status": "SOLD",
       "farm": "Capela Velha",
       "country": "Brazil",
       "harvest_year": "2025",
@@ -11799,7 +11997,7 @@
     {
       "qr_id": "2025CAPELAVELHA_20250809_3",
       "asset_type": "cacao_bag",
-      "status": "ON CONSIGNMENT",
+      "status": "SOLD",
       "farm": "Capela Velha",
       "country": "Brazil",
       "harvest_year": "2025",
@@ -11876,7 +12074,7 @@
     {
       "qr_id": "2025CAPELAVELHA_20250809_2",
       "asset_type": "cacao_bag",
-      "status": "ON CONSIGNMENT",
+      "status": "SOLD",
       "farm": "Capela Velha",
       "country": "Brazil",
       "harvest_year": "2025",
@@ -11931,7 +12129,7 @@
     {
       "qr_id": "2025CAPELAVELHA_20250809_15",
       "asset_type": "cacao_bag",
-      "status": "ON CONSIGNMENT",
+      "status": "SOLD",
       "farm": "Capela Velha",
       "country": "Brazil",
       "harvest_year": "2025",
@@ -11964,7 +12162,7 @@
     {
       "qr_id": "2025CAPELAVELHA_20250809_12",
       "asset_type": "cacao_bag",
-      "status": "ON CONSIGNMENT",
+      "status": "SOLD",
       "farm": "Capela Velha",
       "country": "Brazil",
       "harvest_year": "2025",
@@ -12184,7 +12382,7 @@
     {
       "qr_id": "2024PAULO_20250804_15",
       "asset_type": "cacao_bag",
-      "status": "ON CONSIGNMENT",
+      "status": "SOLD",
       "farm": "La do Sitio",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -13878,7 +14076,7 @@
     {
       "qr_id": "2024OSCAR_20250711_NIBS_19",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",

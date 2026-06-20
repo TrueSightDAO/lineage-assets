@@ -1,0 +1,31 @@
+{
+  "qr_id": "2024OSCAR_CB_20260620_12",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-06-20",
+  "minted_by": "Kirsten Ritschel",
+  "status": "MINTED",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Oscar's Farm",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "Agroverse 81% Cacao Chocolate Bar 50g | 8 Ounce Nibs CP340992735BR | Kirsten 20260620 | San Francisco - AGL4"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-06-20",
+      "by": "Kirsten Ritschel",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_CB_20260620_12.png",
+  "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_12",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_CB_20260620_12",
+  "_seeded_at": "2026-06-20T23:22:30Z",
+  "_source": "batch_compiler.py"
+}
