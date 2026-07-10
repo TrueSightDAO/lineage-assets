@@ -1,0 +1,24 @@
+{
+  "qr_id": "UAT_TEST_001",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": null,
+  "minted_by": "",
+  "status": "SAMPLE",
+  "current_holder": null,
+  "lineage": {
+    "farm": "UAT Farm",
+    "state": "CA",
+    "country": "USA",
+    "harvest_year": "2026",
+    "sku": ""
+  },
+  "events": [],
+  "owner_email_hash": null,
+  "current_landing_page": "https://agroverse.shop",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/UAT_TEST_001.png",
+  "scan_target": "https://truesight.me/qr/?id=UAT_TEST_001",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=UAT_TEST_001",
+  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_source": "seed_from_sheet.py"
+}

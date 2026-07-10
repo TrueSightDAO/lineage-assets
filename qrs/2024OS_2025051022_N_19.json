@@ -4,7 +4,7 @@
   "schema_version": "v0",
   "minted_at": "2025-10-21",
   "minted_by": "Green Gulch Zen Monastery",
-  "status": "ON CONSIGNMENT",
+  "status": "SOLD",
   "current_holder": null,
   "lineage": {
     "farm": "Oscar Farm",
@@ -19,6 +19,11 @@
       "at": "2025-10-21",
       "by": "Green Gulch Zen Monastery",
       "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
     }
   ],
   "owner_email_hash": null,
@@ -26,6 +31,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OS_2025051022_N_19.png",
   "scan_target": "https://truesight.me/qr/?id=2024OS_2025051022_N_19",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OS_2025051022_N_19",
-  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_seeded_at": "2026-07-10T21:40:23Z",
   "_source": "seed_from_sheet.py"
 }

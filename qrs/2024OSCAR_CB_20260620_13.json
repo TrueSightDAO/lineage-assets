@@ -3,7 +3,7 @@
   "asset_type": "cacao_bag",
   "schema_version": "v0",
   "minted_at": "2026-06-20",
-  "minted_by": "Kirsten Ritschel",
+  "minted_by": "Linda Gorski",
   "status": "MINTED",
   "current_holder": null,
   "lineage": {
@@ -17,7 +17,7 @@
     {
       "type": "minted",
       "at": "2026-06-20",
-      "by": "Kirsten Ritschel",
+      "by": "Linda Gorski",
       "notes": "QR generated and registered on Agroverse QR codes sheet"
     }
   ],
@@ -26,6 +26,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_CB_20260620_13.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CB_20260620_13",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_CB_20260620_13",
-  "_seeded_at": "2026-06-20T23:22:30Z",
-  "_source": "batch_compiler.py"
+  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_source": "seed_from_sheet.py"
 }

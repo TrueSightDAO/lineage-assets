@@ -4,7 +4,7 @@
   "schema_version": "v0",
   "minted_at": "2025-12-27",
   "minted_by": "Kirsten Ritschel",
-  "status": "MINTED",
+  "status": "SOLD",
   "current_holder": null,
   "lineage": {
     "farm": "Santa Ana Fazenda",
@@ -19,6 +19,11 @@
       "at": "2025-12-27",
       "by": "Kirsten Ritschel",
       "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
     }
   ],
   "owner_email_hash": null,
@@ -26,6 +31,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024SA_20251227_33.png",
   "scan_target": "https://truesight.me/qr/?id=2024SA_20251227_33",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024SA_20251227_33",
-  "_seeded_at": "2026-06-02T23:13:50Z",
+  "_seeded_at": "2026-07-10T21:40:24Z",
   "_source": "seed_from_sheet.py"
 }

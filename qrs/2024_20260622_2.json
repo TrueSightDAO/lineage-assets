@@ -1,0 +1,31 @@
+{
+  "qr_id": "2024_20260622_2",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-06-22",
+  "minted_by": "Gary Teh",
+  "status": "MINTED",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Oscar's Farm",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | 8 Ounce Nibs CP340992735BR | Kirsten 20260620 | San Francisco - AGL4"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-06-22",
+      "by": "Gary Teh",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://agroverse.shop/farms/oscar-bahia/index.html",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024_20260622_2.png",
+  "scan_target": "https://truesight.me/qr/?id=2024_20260622_2",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024_20260622_2",
+  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_source": "seed_from_sheet.py"
+}

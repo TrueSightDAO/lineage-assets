@@ -1,0 +1,36 @@
+{
+  "qr_id": "2024OS_20250613_N_1",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2025-10-21",
+  "minted_by": "Green Gulch Zen Monastery",
+  "status": "SOLD",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Oscar Farm",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "8 Ounce Package Kraft Pouch  CP340992735BR"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2025-10-21",
+      "by": "Green Gulch Zen Monastery",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OS_20250613_N_1.png",
+  "scan_target": "https://truesight.me/qr/?id=2024OS_20250613_N_1",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OS_20250613_N_1",
+  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_source": "seed_from_sheet.py"
+}

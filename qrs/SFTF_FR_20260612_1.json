@@ -7,25 +7,25 @@
   "status": "SAMPLE",
   "current_holder": null,
   "lineage": {
-    "farm": "Oscar's Farm / La do Sitio",
-    "state": "Bahia / Para",
-    "country": "Brazil",
-    "harvest_year": "2024/2025",
-    "sku": "Ceremonial Cacao / Cacao Tea"
+    "farm": "SF Tech Fest",
+    "state": "CA",
+    "country": "USA",
+    "harvest_year": "2026",
+    "sku": "Friends of the Rainforest"
   },
   "events": [
     {
       "type": "minted",
       "at": "2026-06-12",
       "by": "Gary Teh",
-      "notes": "Friends of the Rainforest — SF Tech Fest June 12, 2026. QR on placard next to ceremonial cacao and cacao tea flasks."
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
     }
   ],
   "owner_email_hash": null,
-  "current_landing_page": "https://www.agroverse.shop/friends-of-the-rainforest",
+  "current_landing_page": "https://agroverse.shop/friends-of-the-rainforest",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/SFTF_FR_20260612_1.png",
   "scan_target": "https://truesight.me/qr/?id=SFTF_FR_20260612_1",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=SFTF_FR_20260612_1",
-  "_seeded_at": "2026-06-12T00:00:00Z",
-  "_source": "autopilot"
+  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_source": "seed_from_sheet.py"
 }

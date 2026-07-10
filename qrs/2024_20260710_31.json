@@ -1,0 +1,31 @@
+{
+  "qr_id": "2024_20260710_31",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-07-10",
+  "minted_by": "Gary Teh",
+  "status": "MINTED",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Fazenda São Jorge",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "81% Dark Chocolate Bar 50g | Cacao Almonds KG - Organic (Fazenda São Jorge) | Gary Teh 20260710 | San Francisco"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-07-10",
+      "by": "Gary Teh",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/farms/fazenda-sao-jorge-bahia/",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024_20260710_31.png",
+  "scan_target": "https://truesight.me/qr/?id=2024_20260710_31",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024_20260710_31",
+  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_source": "seed_from_sheet.py"
+}

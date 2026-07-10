@@ -3,8 +3,8 @@
   "asset_type": "cacao_bag",
   "schema_version": "v0",
   "minted_at": "2026-01-21",
-  "minted_by": "Gary Teh",
-  "status": "MINTED",
+  "minted_by": "SOHA - David Campbell",
+  "status": "SOLD",
   "current_holder": null,
   "lineage": {
     "farm": "Oscar Farm",
@@ -17,8 +17,13 @@
     {
       "type": "minted",
       "at": "2026-01-21",
-      "by": "Gary Teh",
+      "by": "SOHA - David Campbell",
       "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
     }
   ],
   "owner_email_hash": null,
@@ -26,6 +31,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_20260121_24.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20260121_24",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20260121_24",
-  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_seeded_at": "2026-07-10T21:40:24Z",
   "_source": "seed_from_sheet.py"
 }

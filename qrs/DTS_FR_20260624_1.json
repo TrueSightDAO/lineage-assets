@@ -1,0 +1,24 @@
+{
+  "qr_id": "DTS_FR_20260624_1",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": null,
+  "minted_by": "",
+  "status": "SAMPLE",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Dual Tech Summit 2026",
+    "state": "",
+    "country": "",
+    "harvest_year": "",
+    "sku": ""
+  },
+  "events": [],
+  "owner_email_hash": null,
+  "current_landing_page": "https://agroverse.shop/friends-of-the-rainforest",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/DTS_FR_20260624_1.png",
+  "scan_target": "https://truesight.me/qr/?id=DTS_FR_20260624_1",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=DTS_FR_20260624_1",
+  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_source": "seed_from_sheet.py"
+}
