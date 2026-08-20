@@ -1,5 +1,5 @@
 {
-  "qr_id": "2024OSCAR_CT_20260820_3",
+  "qr_id": "2024OSCAR_CT_20260820_101",
   "asset_type": "cacao_bag",
   "schema_version": "v0",
   "minted_at": "2026-08-20",
@@ -23,9 +23,9 @@
   ],
   "owner_email_hash": null,
   "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
-  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_CT_20260820_3.png",
-  "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_3",
-  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_CT_20260820_3",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_CT_20260820_101.png",
+  "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_101",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_CT_20260820_101",
   "_seeded_at": "2026-08-20T10:26:09Z",
   "_source": "batch_compiler.py"
 }
