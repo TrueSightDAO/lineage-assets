@@ -7,17 +7,19 @@ NOT key-gated GAS endpoints. This script produces those caches:
   - sunmint_pending.json    {"status":"success","items":[{telegram_message_id,
                              submitted_name, planting_date, latitude, longitude,
                              species, status}]}  -- SunMint rows with Status == NEW
-  - sold_pending_tree.json  {"status":"success","items":[{qr_code, owner_email,
-                             sold_date, ledger, status}]}  -- SOLD QR codes whose
-                             qr_id is NOT yet linked to a SunMint submission
-                             (col R "Linked QR Code" on the SunMint tab)
+  - sold_pending_tree.json  {"status":"success","items":[{qr_code, status, farm,
+                             country, harvest_year, minted_at}]}  -- SOLD QR codes
+                             whose qr_id is NOT yet linked to a SunMint submission
+                             (col R "Linked QR Code" on the SunMint tab).
+
+NO PII in these caches (public repo): owner emails are intentionally omitted.
 
 Source of truth stays the Google Sheet; the JSON is a public mirror the dapp
 fetches via raw.githubusercontent.com (same as dao_members.json in review_queue).
 
 Usage:
     GOOGLE_APPLICATION_CREDENTIALS=/path/to/sa.json python3 scripts/sync_pending_caches.py --dry-run
-    GOOGLE_APPLICATION_CREDENTIALS=/path/to/sa.json python3 scripts/sync_pending_caches.py --push
+    GOOGLE_APPLICATION_CREDENTIALS=/path/to/sa.json GITHUB_TOKEN=... python3 scripts/sync_pending_caches.py --push
     (without --push the two JSON files are written locally to ./)
 """
 from __future__ import annotations
@@ -109,10 +111,11 @@ def build_sold_pending(rows: list, index: dict) -> dict:
             continue
         items.append({
             "qr_code": qr_id,
-            "owner_email": "",
-            "sold_date": "",
-            "ledger": "",
             "status": "SOLD",
+            "farm": rec.get("farm", ""),
+            "country": rec.get("country", ""),
+            "harvest_year": rec.get("harvest_year", ""),
+            "minted_at": rec.get("minted_at", ""),
         })
     return {"status": "success", "count": len(items), "items": items}
 
