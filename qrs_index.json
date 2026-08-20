@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T10:28:22Z",
+  "generated_at": "2026-08-20T11:41:39Z",
   "source": "build_index.py",
   "qr_count": 1776,
   "by_status": {
@@ -852,17 +852,6 @@
       "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_30"
     },
     {
-      "qr_id": "2024OSCAR_CT_20260820_3",
-      "asset_type": "cacao_bag",
-      "status": "MINTED",
-      "farm": "Oscar's Farm",
-      "country": "Brazil",
-      "harvest_year": "2024",
-      "minted_at": "2026-08-20",
-      "current_holder": null,
-      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_3"
-    },
-    {
       "qr_id": "2024OSCAR_CT_20260820_29",
       "asset_type": "cacao_bag",
       "status": "MINTED",
@@ -1081,6 +1070,17 @@
       "minted_at": "2026-08-20",
       "current_holder": null,
       "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_11"
+    },
+    {
+      "qr_id": "2024OSCAR_CT_20260820_101",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-08-20",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_101"
     },
     {
       "qr_id": "2024OSCAR_CT_20260820_100",
