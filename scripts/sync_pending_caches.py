@@ -74,8 +74,14 @@ def _upload(path: str, payload: dict) -> None:
     req = urllib.request.Request(GH_API + path, data=data, method="PUT")
     req.add_header("Authorization", f"Bearer {token}")
     req.add_header("Accept", "application/vnd.github+json")
-    with urllib.request.urlopen(req, timeout=30) as r:
-        print(f"[push] {path} -> {json.load(r).get('commit', {}).get('sha', '?')}")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            print(f"[push] {path} -> {json.load(r).get('commit', {}).get('sha', '?')}")
+    except urllib.error.HTTPError as e:
+        if e.code == 422:
+            print(f"[push] {path} -> unchanged (already current)")
+        else:
+            raise
 
 
 def build_sunmint_pending(rows: list) -> dict:
