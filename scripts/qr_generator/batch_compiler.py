@@ -368,6 +368,39 @@ def check_qr_code_length(qr_code: str, farm_name: str, auto_continue: bool = Fal
             print("Invalid response. Please enter 'y' or 'n'.")
 
 
+def _try_decode(img):
+    """Best-effort decode of a PIL image using the first available decoder
+    (pyzbar -> zxingcpp -> opencv). Returns (decoded_text_or_None, had_decoder)."""
+    tried = 0
+    try:
+        from pyzbar import pyzbar
+        tried += 1
+        res = pyzbar.decode(img)
+        if res:
+            return res[0].data.decode(errors="replace"), True
+    except Exception:
+        pass
+    try:
+        import zxingcpp
+        tried += 1
+        res = zxingcpp.read_barcode(img)
+        if res:
+            return res.text, True
+    except Exception:
+        pass
+    try:
+        import cv2
+        import numpy as np
+        tried += 1
+        arr = np.asarray(img.convert("RGB"))
+        data, _, _ = cv2.QRCodeDetector().detectAndDecode(arr)
+        if data:
+            return data, True
+    except Exception:
+        pass
+    return None, tried > 0
+
+
 def main():
     parser = argparse.ArgumentParser(description="Batch compile QR codes with labels")
     parser.add_argument(
@@ -462,6 +495,10 @@ def main():
         "--auto-continue", dest="auto_continue", action="store_true",
         help="Automatically continue when encountering long QR codes without prompting"
     )
+    parser.add_argument(
+        "--no-verify", dest="verify", action="store_false", default=True,
+        help="Skip the post-mint QR decodability self-check (default: verify ON)"
+    )
     args = parser.parse_args()
     # If requested, disable logo embedding
     if getattr(args, 'no_logo', False):
@@ -543,6 +580,30 @@ def main():
                 print(f"  → lineage-assets PNG: {raw_png_path}")
             except Exception as e:
                 print(f"  [warn] could not save PNG to {args.pngs_dir}: {e}")
+
+        # ─── decodability self-check (default ON; --no-verify to skip) ─────
+        # A label whose QR does not decode (see 2024OSCAR_CT_20260820_3)
+        # silently ships an untraceable packet. Verify the saved label's QR
+        # round-trips to the expected Edgar URL and abort loudly if not.
+        if args.verify:
+            expected = (gdrive.BASE_QR_CHECK_URL if gdrive is not None
+                        else "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=") + qr_code
+            decoded, had_decoder = None, False
+            try:
+                probe = compiled.resize((compiled.width * 4, compiled.height * 4), 1)
+                decoded, had_decoder = _try_decode(probe)
+            except Exception as e:
+                print(f"  [warn] verify threw for {qr_code}: {e}")
+            if not had_decoder:
+                print(f"  [warn] no QR decoder available; skipped verify for {qr_code}")
+            elif decoded is None:
+                print(f"  [FATAL] QR {qr_code} did not decode after mint. Expected {expected}. Aborting batch.")
+                sys.exit(3)
+            elif decoded != expected:
+                print(f"  [FATAL] QR {qr_code} decoded to {decoded!r}, expected {expected!r}. Aborting batch.")
+                sys.exit(3)
+            else:
+                print(f"  ✓ verified {qr_code} -> {decoded}")
 
         # Write the per-QR JSON manifest into ../../qrs so the asset
         # becomes a first-class lineage-asset at mint time. Idempotent —
