@@ -56,6 +56,17 @@ def _iso_date(yyyymmdd: str) -> str:
         return yyyymmdd.strip()
     return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
 
+def _normalize_photo_url(url: str) -> str:
+    """GitHub 'tree' URLs (browse HTML pages) are not renderable as <img>.
+    Rewrite github.com/<o>/<r>/tree/<ref>/... -> raw.githubusercontent.com/<o>/<r>/<ref>/...
+    """
+    url = url.strip()
+    m = re.match(r"^https://github\.com/([^/]+)/([^/]+)/tree/([^/]+)/(.+)$", url)
+    if m:
+        return f"https://raw.githubusercontent.com/{m.group(1)}/{m.group(2)}/{m.group(3)}/{m.group(4)}"
+    return url
+
+
 
 def _fetch(url: str) -> dict:
     with urllib.request.urlopen(url, timeout=30) as r:
@@ -108,7 +119,7 @@ def build_sunmint_pending(rows: list) -> dict:
             "telegram_message_id": msg_id,
             "submitted_name": _cell(row, "name"),
             "planting_date": _iso_date(_cell(row, "status_date")),
-            "photo_url": _cell(row, "photo_url"),
+            "photo_url": _normalize_photo_url(_cell(row, "photo_url")),
             "latitude": _cell(row, "latitude"),
             "longitude": _cell(row, "longitude"),
             "species": _cell(row, "species"),
