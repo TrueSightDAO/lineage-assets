@@ -19,6 +19,7 @@ Usage:
       python3 scripts/sync_tree_links.py --dry-run [--limit N]
     GOOGLE_APPLICATION_CREDENTIALS=... python3 scripts/sync_tree_links.py --execute
 """
+
 from __future__ import annotations
 
 import argparse
@@ -49,15 +50,15 @@ OUT_DIR = _HERE.parent / "qrs"
 # O GitHub Commit URL, P Cost of Tree, Q Tree Planting Time,
 # R Linked QR Code (new), S Linked At (new)
 COL = {
-    "msg_id":      3,   # D
-    "status_date": 6,   # G
-    "photo":       8,   # I
-    "name":        9,   # J
-    "latitude":   10,   # K
-    "longitude":  11,   # L
-    "status":     12,   # M
-    "species":    13,   # N
-    "linked_qr":  17,   # R
+    "msg_id": 3,  # D
+    "status_date": 6,  # G
+    "photo": 8,  # I
+    "name": 9,  # J
+    "latitude": 10,  # K
+    "longitude": 11,  # L
+    "status": 12,  # M
+    "species": 13,  # N
+    "linked_qr": 17,  # R
 }
 
 SCHEMA_VERSION = "v0"
@@ -68,7 +69,9 @@ EDGAR_RESOLVE_BASE = "https://edgar.truesight.me/agroverse/qr-code-check?qr_code
 def _client() -> gspread.Client:
     creds = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
     if not creds or not os.path.isfile(creds):
-        sys.exit("GOOGLE_APPLICATION_CREDENTIALS must point at a valid service account JSON")
+        sys.exit(
+            "GOOGLE_APPLICATION_CREDENTIALS must point at a valid service account JSON"
+        )
     return gspread.service_account(filename=creds)
 
 
@@ -118,7 +121,9 @@ def _merge(existing: dict, fresh: dict) -> dict:
     merged.update({k: v for k, v in fresh.items() if v is not None and v != ""})
     # Preserve any events not written by this script.
     sync_types = {"minted", "linked", "assigned_to_tree"}
-    kept = [e for e in (existing.get("events") or []) if e.get("type") not in sync_types]
+    kept = [
+        e for e in (existing.get("events") or []) if e.get("type") not in sync_types
+    ]
     merged["events"] = (fresh.get("events") or []) + kept
     return merged
 
@@ -159,8 +164,18 @@ def build_tree_record(row: list) -> dict | None:
         "planting_photo_url": _cell(row, "photo"),
     }
     rec["events"] = [
-        {"type": "minted", "at": now, "by": "sync_tree_links.py", "notes": "SunMint tree-planting submission mirrored"},
-        {"type": "linked", "at": now, "by": linked_qr, "notes": f"linked to sold QR {linked_qr}"},
+        {
+            "type": "minted",
+            "at": now,
+            "by": "sync_tree_links.py",
+            "notes": "SunMint tree-planting submission mirrored",
+        },
+        {
+            "type": "linked",
+            "at": now,
+            "by": linked_qr,
+            "notes": f"linked to sold QR {linked_qr}",
+        },
     ]
     return rec
 
@@ -175,7 +190,12 @@ def build_qr_patch(row: list) -> dict | None:
     rec = _base_wrapper(linked_qr, "cacao_bag")
     rec["lineage"] = {"linked_tree": tree_id, "linked_at": now}
     rec["events"] = [
-        {"type": "assigned_to_tree", "at": now, "by": "sync_tree_links.py", "notes": f"linked to tree {tree_id}"},
+        {
+            "type": "assigned_to_tree",
+            "at": now,
+            "by": "sync_tree_links.py",
+            "notes": f"linked to tree {tree_id}",
+        },
     ]
     return rec
 
@@ -191,7 +211,7 @@ def main() -> None:
     gc = _client()
     print(f"[info] Loading {SUNMINT_TAB} …")
     ws = gc.open_by_key(SOURCE_SHEET_ID).worksheet(SUNMINT_TAB)
-    rows = ws.get_all_values()[DATA_START_ROW - 1:]
+    rows = ws.get_all_values()[DATA_START_ROW - 1 :]
     print(f"[info] {len(rows)} SunMint rows to scan")
 
     linked_rows = [r for r in rows if _cell(r, "status").upper() == "LINKED"]
@@ -218,9 +238,13 @@ def main() -> None:
             qr_path = OUT_DIR / f"{safe_filename(qr['qr_id'])}.json"
             created += 0 if tree_path.is_file() else 1
             created += 0 if qr_path.is_file() else 1
-            unchanged += (1 if tree_path.is_file() else 0) + (1 if qr_path.is_file() else 0)
+            unchanged += (1 if tree_path.is_file() else 0) + (
+                1 if qr_path.is_file() else 0
+            )
 
-    print(f"\n[summary] created={created} updated={updated} unchanged={unchanged} skipped={skipped}")
+    print(
+        f"\n[summary] created={created} updated={updated} unchanged={unchanged} skipped={skipped}"
+    )
     if not args.execute:
         print("[summary] --dry-run (default). Pass --execute to write files.")
 
