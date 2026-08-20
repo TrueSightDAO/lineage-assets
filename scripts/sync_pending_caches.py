@@ -41,7 +41,7 @@ GH_API = "https://api.github.com/repos/TrueSightDAO/lineage-assets/contents/"
 
 # SunMint tab columns (0-based): D=msg id, G=status date, J=submitted name,
 # K=lat, L=lng, M=status, N=specie, R=linked QR
-COL = {"msg_id": 3, "status_date": 6, "name": 9, "latitude": 10,
+COL = {"msg_id": 3, "status_date": 6, "name": 9, "photo_url": 8, "latitude": 10,
        "longitude": 11, "status": 12, "species": 13, "linked_qr": 17}
 
 
@@ -108,6 +108,7 @@ def build_sunmint_pending(rows: list) -> dict:
             "telegram_message_id": msg_id,
             "submitted_name": _cell(row, "name"),
             "planting_date": _iso_date(_cell(row, "status_date")),
+            "photo_url": _cell(row, "photo_url"),
             "latitude": _cell(row, "latitude"),
             "longitude": _cell(row, "longitude"),
             "species": _cell(row, "species"),
