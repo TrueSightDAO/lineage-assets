@@ -67,9 +67,20 @@ def _upload(path: str, payload: dict) -> None:
     if not token:
         sys.exit("--push needs GITHUB_TOKEN or GH_TOKEN")
     body = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+    # Fetch the current sha so the PUT updates (not fails) on an existing file.
+    sha = None
+    try:
+        req0 = urllib.request.Request(GH_API + path, method="GET")
+        req0.add_header("Authorization", f"Bearer {token}")
+        req0.add_header("Accept", "application/vnd.github+json")
+        with urllib.request.urlopen(req0, timeout=30) as r0:
+            sha = json.load(r0).get("sha")
+    except urllib.error.HTTPError:
+        pass  # file may not exist yet — PUT without sha creates it
     data = json.dumps({
         "message": f"cache(scripts): refresh {path} (sync_pending_caches.py)",
         "content": base64.b64encode(body.encode()).decode(),
+        "sha": sha,
     }).encode()
     req = urllib.request.Request(GH_API + path, data=data, method="PUT")
     req.add_header("Authorization", f"Bearer {token}")
@@ -112,6 +123,8 @@ def build_sold_pending(rows: list, index: dict) -> dict:
     for rec in index.get("qrs", []):
         if rec.get("status") != "SOLD":
             continue
+        if rec.get("asset_type") != "cacao_bag":
+            continue  # tree records (BEC-era pk-* pledges) are trees themselves, not bags awaiting a link
         qr_id = rec.get("qr_id")
         if not qr_id or qr_id in linked:
             continue
