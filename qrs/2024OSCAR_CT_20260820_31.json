@@ -1,0 +1,31 @@
+{
+  "qr_id": "2024OSCAR_CT_20260820_31",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-08-20",
+  "minted_by": "Gary Teh",
+  "status": "MINTED",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Oscar's Farm",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "Cacao Tea 50g - Oscar's Farm, Bahia Brazil, 2024 (AGL4)"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-08-20",
+      "by": "Gary Teh",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_CT_20260820_31.png",
+  "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_31",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_CT_20260820_31",
+  "_seeded_at": "2026-08-20T10:26:13Z",
+  "_source": "batch_compiler.py"
+}
