@@ -30,7 +30,9 @@
       "type": "planted",
       "at": "2026-08-21",
       "by": "Gary Teh",
-      "notes": "Tree planted in the field"
+      "notes": "Tree planted in the field; LINK event signed and processed (tracking: Tree Planting Link)",
+      "signed_by": "Gary Teh",
+      "sig_ref": "Edgar_20260822114540_033"
     }
   ],
   "owner_email_hash": null,
