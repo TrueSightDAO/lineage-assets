@@ -1,0 +1,43 @@
+{
+  "qr_id": "FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
+  "asset_type": "tree",
+  "schema_version": "v0",
+  "minted_at": "2026-08-21",
+  "minted_by": "Gary Teh",
+  "status": "ASSIGNED_TO_TREE",
+  "current_holder": null,
+  "lineage": {
+    "farm": "FounderHaus",
+    "state": "",
+    "country": "",
+    "harvest_year": "2026",
+    "sku": "SunMint Tree Planting Pledge - QR Code",
+    "planted_at": "2026-08-21",
+    "latitude": "-27.44301",
+    "longitude": "-48.49907",
+    "planting_video_url": "",
+    "seedling_photo_url": "https://github.com/TrueSightDAO/sunmint/tree/main/images/20260821145131_MIIBIjANBgkqhkiG9w0B.jpg",
+    "location_text": "Jurerê Internacional, Florianópolis, SC, Brazil (FounderHaus hub)"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-08-21",
+      "by": "Gary Teh",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "planted",
+      "at": "2026-08-21",
+      "by": "Gary Teh",
+      "notes": "Tree planted in the field"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://truesight.me/qr/?id=FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/FOUNDERHAUS_BOUGAINVILLEA_20260821_1.png",
+  "scan_target": "https://truesight.me/qr/?id=FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
+  "_seeded_at": "2026-08-22T12:12:55Z",
+  "_source": "seed_from_sheet.py"
+}
