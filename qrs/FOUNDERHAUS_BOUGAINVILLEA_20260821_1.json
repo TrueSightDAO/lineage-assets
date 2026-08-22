@@ -8,8 +8,8 @@
   "current_holder": null,
   "lineage": {
     "farm": "FounderHaus",
-    "state": "",
-    "country": "",
+    "state": "Santa Catarina",
+    "country": "Brazil",
     "harvest_year": "2026",
     "sku": "SunMint Tree Planting Pledge - QR Code",
     "planted_at": "2026-08-21",
@@ -40,6 +40,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/FOUNDERHAUS_BOUGAINVILLEA_20260821_1.png",
   "scan_target": "https://truesight.me/qr/?id=FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
-  "_seeded_at": "2026-08-22T12:12:55Z",
+  "_seeded_at": "2026-08-22T12:44:24Z",
   "_source": "seed_from_sheet.py"
 }
