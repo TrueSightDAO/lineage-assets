@@ -16,7 +16,7 @@
     "latitude": "-27.44301",
     "longitude": "-48.49907",
     "planting_video_url": "",
-    "seedling_photo_url": "https://github.com/TrueSightDAO/sunmint/tree/main/images/20260821145131_MIIBIjANBgkqhkiG9w0B.jpg",
+    "seedling_photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260822_130000_FOUNDERHAUS_GROUP.jpg",
     "location_text": "Jurerê Internacional, Florianópolis, SC, Brazil (FounderHaus hub)"
   },
   "events": [
@@ -30,7 +30,7 @@
       "type": "planted",
       "at": "2026-08-21",
       "by": "Gary Teh",
-      "notes": "Tree planted in the field; LINK event signed and processed (tracking: Tree Planting Link)",
+      "notes": "Tree planted in the field",
       "signed_by": "Gary Teh",
       "sig_ref": "Edgar_20260822114540_033"
     }
@@ -40,6 +40,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/FOUNDERHAUS_BOUGAINVILLEA_20260821_1.png",
   "scan_target": "https://truesight.me/qr/?id=FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
-  "_seeded_at": "2026-08-22T12:44:24Z",
+  "_seeded_at": "2026-08-22T13:12:37Z",
   "_source": "seed_from_sheet.py"
 }
