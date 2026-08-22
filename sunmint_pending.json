@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 15,
+  "count": 14,
   "items": [
     {
       "telegram_message_id": "171",
@@ -140,16 +140,6 @@
       "latitude": "",
       "longitude": "",
       "species": "Cacao - Criolla",
-      "status": "NEW"
-    },
-    {
-      "telegram_message_id": "Edgar_20260821175134_006",
-      "submitted_name": "Unknown",
-      "planting_date": "2026-08-21",
-      "photo_url": "https://github.com/TrueSightDAO/sunmint/tree/main/images/20260821145131_MIIBIjANBgkqhkiG9w0B.jpg",
-      "latitude": "",
-      "longitude": "",
-      "species": "Bougainvillea",
       "status": "NEW"
     }
   ]
