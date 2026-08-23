@@ -1,10 +1,10 @@
 {
-  "qr_id": "2024OSCAR_CT_20260820_19",
+  "qr_id": "2024OSCAR_CT_20260820_3",
   "asset_type": "tree",
   "schema_version": "v0",
   "minted_at": "2026-08-20",
   "minted_by": "Paloma",
-  "status": "MINTED",
+  "status": "VOID",
   "current_holder": null,
   "lineage": {
     "farm": "Oscar's Farm",
@@ -29,9 +29,9 @@
   ],
   "owner_email_hash": null,
   "current_landing_page": "https://www.agroverse.shop/product-page/oscar-bahia-cacao-tea-50g/",
-  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_CT_20260820_19.png",
-  "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_19",
-  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_CT_20260820_19",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_CT_20260820_3.png",
+  "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_3",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_CT_20260820_3",
   "_seeded_at": "2026-08-23T16:15:36Z",
   "_source": "seed_from_sheet.py"
 }

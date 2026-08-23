@@ -1,9 +1,9 @@
 {
   "qr_id": "2024OSCAR_CT_20260820_32",
-  "asset_type": "cacao_bag",
+  "asset_type": "tree",
   "schema_version": "v0",
   "minted_at": "2026-08-20",
-  "minted_by": "Gary Teh",
+  "minted_by": "Paloma",
   "status": "MINTED",
   "current_holder": null,
   "lineage": {
@@ -11,21 +11,27 @@
     "state": "Bahia",
     "country": "Brazil",
     "harvest_year": "2024",
-    "sku": "Cacao Tea 50g - Oscar's Farm, Bahia Brazil, 2024 (AGL4)"
+    "sku": "FounderHaus Tree Planting Pledge - QR Code",
+    "planted_at": null,
+    "latitude": "",
+    "longitude": "",
+    "planting_video_url": "",
+    "seedling_photo_url": "",
+    "location_text": ""
   },
   "events": [
     {
       "type": "minted",
       "at": "2026-08-20",
-      "by": "Gary Teh",
+      "by": "Paloma",
       "notes": "QR generated and registered on Agroverse QR codes sheet"
     }
   ],
   "owner_email_hash": null,
-  "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
+  "current_landing_page": "https://www.agroverse.shop/product-page/oscar-bahia-cacao-tea-50g/",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_CT_20260820_32.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_32",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_CT_20260820_32",
-  "_seeded_at": "2026-08-20T10:26:13Z",
-  "_source": "batch_compiler.py"
+  "_seeded_at": "2026-08-23T16:15:36Z",
+  "_source": "seed_from_sheet.py"
 }
