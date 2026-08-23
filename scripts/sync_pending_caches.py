@@ -133,7 +133,7 @@ def build_sold_pending(rows: list, index: dict) -> dict:
     linked = {_cell(r, "linked_qr") for r in rows if _cell(r, "linked_qr")}
     items = []
     for rec in index.get("qrs", []):
-        if rec.get("status") != "SOLD":
+        if rec.get("status") not in ("SOLD", "TREE_PLANTING_FUNDS_TRANSFERRED"):
             continue
         if rec.get("asset_type") != "cacao_bag":
             continue  # tree records (BEC-era pk-* pledges) are trees themselves, not bags awaiting a link
@@ -142,7 +142,7 @@ def build_sold_pending(rows: list, index: dict) -> dict:
             continue
         items.append({
             "qr_code": qr_id,
-            "status": "SOLD",
+            "status": rec.get("status", "SOLD"),
             "farm": rec.get("farm", ""),
             "country": rec.get("country", ""),
             "harvest_year": rec.get("harvest_year", ""),
