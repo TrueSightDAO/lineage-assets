@@ -4,7 +4,7 @@
   "schema_version": "v0",
   "minted_at": "2026-06-20",
   "minted_by": "Kirsten Ritschel",
-  "status": "SOLD",
+  "status": "TREE_PLANTING_FUNDS_TRANSFERRED",
   "current_holder": null,
   "lineage": {
     "farm": "Oscar's Farm",
@@ -24,6 +24,12 @@
       "type": "sold",
       "by": "AGL4",
       "notes": "Per Agroverse QR codes sheet status"
+    },
+    {
+      "type": "tree_planting_funds_transferred",
+      "at": "2026-08-23",
+      "by": "AGL4",
+      "notes": "UAT - funds transferred to farmer, tree pending (per Agroverse QR codes sheet status)"
     }
   ],
   "owner_email_hash": null,
