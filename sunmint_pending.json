@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 17,
+  "count": 18,
   "items": [
     {
       "telegram_message_id": "171",
@@ -169,6 +169,16 @@
       "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260823151303_MIIBIjANBgkqhkiG9w0B.jpg",
       "latitude": "",
       "longitude": "",
+      "species": "Cacao - Criolla",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260829134707_006",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-08-29",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260829134704_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "44.560058",
+      "longitude": "-123.262181",
       "species": "Cacao - Criolla",
       "status": "NEW"
     }
