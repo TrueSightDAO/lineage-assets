@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 18,
+  "count": 19,
   "items": [
     {
       "telegram_message_id": "171",
@@ -179,6 +179,16 @@
       "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260829150128_MIIBIjANBgkqhkiG9w0B.jpg",
       "latitude": "44.56015",
       "longitude": "-123.26225",
+      "species": "Cacao - Criolla",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260830154309_010",
+      "submitted_name": "Gary Teh",
+      "planting_date": "2026-08-30",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260830124302_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "-3.296090303",
+      "longitude": "-52.58318089",
       "species": "Cacao - Criolla",
       "status": "NEW"
     }
