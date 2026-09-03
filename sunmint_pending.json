@@ -1,48 +1,8 @@
 {
   "status": "success",
-  "count": 30,
+  "count": 24,
   "items": [
     {
-      "telegram_message_id": "Edgar_20260831162552_072",
-      "submitted_name": "Gary Teh",
-      "planting_date": "2026-08-31",
-      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260831132547_MIIBIjANBgkqhkiG9w0B.jpg",
-      "latitude": "-3.207541403",
-      "longitude": "-52.22216601",
-      "species": "Cacao - Criolla",
-      "status": "NEW"
-    },
-    {
-      "telegram_message_id": "Edgar_20260831195934_005",
-      "submitted_name": "Unknown",
-      "planting_date": "2026-08-31",
-      "photo_url": "N/A",
-      "latitude": "N/A",
-      "longitude": "N/A",
-      "species": "Unknown",
-      "status": "NEW"
-    },
-    {
-      "telegram_message_id": "Edgar_20260902202927_049",
-      "submitted_name": "Gary Teh",
-      "planting_date": "2026-09-02",
-      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260902172923_MIIBIjANBgkqhkiG9w0B.jpg",
-      "latitude": "-3.094390257",
-      "longitude": "-52.09593134",
-      "species": "Cacao - Criolla",
-      "status": "NEW"
-    },
-    {
-      "telegram_message_id": "Edgar_20260903071844_075",
-      "submitted_name": "Sophia Truesight",
-      "planting_date": "2026-09-03",
-      "photo_url": "N/A",
-      "latitude": "N/A",
-      "longitude": "N/A",
-      "species": "Cacau - Hybrid",
-      "status": "NEW"
-    },
-    {
       "telegram_message_id": "Edgar_20260903072613_077",
       "submitted_name": "Sophia Truesight",
       "planting_date": "2026-09-03",
@@ -50,26 +10,6 @@
       "latitude": "N/A",
       "longitude": "N/A",
       "species": "Cacau - Hybrid",
-      "status": "NEW"
-    },
-    {
-      "telegram_message_id": "Edgar_20260903072613_077",
-      "submitted_name": "Sophia Truesight",
-      "planting_date": "2026-09-03",
-      "photo_url": "N/A",
-      "latitude": "N/A",
-      "longitude": "N/A",
-      "species": "Cacau - Hybrid",
-      "status": "NEW"
-    },
-    {
-      "telegram_message_id": "Edgar_20260903082307_081",
-      "submitted_name": "Unknown",
-      "planting_date": "2026-09-03",
-      "photo_url": "N/A",
-      "latitude": "N/A",
-      "longitude": "N/A",
-      "species": "Cacao - Criolla",
       "status": "NEW"
     },
     {
