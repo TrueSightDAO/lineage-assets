@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 6,
+  "count": 7,
   "items": [
     {
       "telegram_message_id": "Edgar_20260831162552_072",
@@ -60,6 +60,16 @@
       "latitude": "N/A",
       "longitude": "N/A",
       "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260903082307_081",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-03",
+      "photo_url": "N/A",
+      "latitude": "N/A",
+      "longitude": "N/A",
+      "species": "Cacao - Criolla",
       "status": "NEW"
     }
   ]
