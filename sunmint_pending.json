@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 3,
+  "count": 6,
   "items": [
     {
       "telegram_message_id": "Edgar_20260831162552_072",
@@ -30,6 +30,36 @@
       "latitude": "-3.094390257",
       "longitude": "-52.09593134",
       "species": "Cacao - Criolla",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260903071844_075",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-03",
+      "photo_url": "N/A",
+      "latitude": "N/A",
+      "longitude": "N/A",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260903072613_077",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-03",
+      "photo_url": "N/A",
+      "latitude": "N/A",
+      "longitude": "N/A",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260903072613_077",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-03",
+      "photo_url": "N/A",
+      "latitude": "N/A",
+      "longitude": "N/A",
+      "species": "Cacau - Hybrid",
       "status": "NEW"
     }
   ]
