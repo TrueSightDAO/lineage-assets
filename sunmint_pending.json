@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 24,
+  "count": 112,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903072613_077",
@@ -239,6 +239,886 @@
       "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260902_bomsucesso_tree10.jpg",
       "latitude": "-3.094528",
       "longitude": "-52.095314",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908005833_045",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3882278",
+      "longitude": "-51.8517528",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908005838_047",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3896833",
+      "longitude": "-51.8509472",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908005843_049",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899861",
+      "longitude": "-51.8525056",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010203_053",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3879722",
+      "longitude": "-51.8514333",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010207_055",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899833",
+      "longitude": "-51.8518861",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010213_057",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3904361",
+      "longitude": "-51.8519389",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010220_059",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3904611",
+      "longitude": "-51.8519667",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010224_061",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.389975",
+      "longitude": "-51.8524639",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010229_063",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897",
+      "longitude": "-51.8524778",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010234_065",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3896389",
+      "longitude": "-51.8526806",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010239_067",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3883694",
+      "longitude": "-51.8525472",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010243_069",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3884028",
+      "longitude": "-51.8522139",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010248_071",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3882306",
+      "longitude": "-51.8524556",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010253_073",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3882028",
+      "longitude": "-51.8522917",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010257_075",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3882333",
+      "longitude": "-51.8524583",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010301_077",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3882139",
+      "longitude": "-51.8524778",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010309_081",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3896778",
+      "longitude": "-51.8509861",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010317_085",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.389725",
+      "longitude": "-51.8509222",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010326_089",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.38975",
+      "longitude": "-51.8509444",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010336_093",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897306",
+      "longitude": "-51.8509667",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010345_097",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897222",
+      "longitude": "-51.8509833",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010354_101",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897139",
+      "longitude": "-51.8510333",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010404_105",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897472",
+      "longitude": "-51.8509833",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010412_109",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897583",
+      "longitude": "-51.8509611",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010936_121",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897722",
+      "longitude": "-51.8509417",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010940_123",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897444",
+      "longitude": "-51.8509333",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010945_125",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897361",
+      "longitude": "-51.8509056",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010949_127",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897806",
+      "longitude": "-51.8508861",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010954_129",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898",
+      "longitude": "-51.8509167",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908010958_131",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897972",
+      "longitude": "-51.8509556",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011004_133",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897972",
+      "longitude": "-51.8509833",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011008_135",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898167",
+      "longitude": "-51.8509778",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011017_137",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898194",
+      "longitude": "-51.8510028",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011024_139",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898278",
+      "longitude": "-51.8509667",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011029_141",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898083",
+      "longitude": "-51.8509333",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011034_143",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898056",
+      "longitude": "-51.850875",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011038_145",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898056",
+      "longitude": "-51.8508556",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011043_147",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898417",
+      "longitude": "-51.85085",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011048_149",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898389",
+      "longitude": "-51.8508722",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011052_151",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898444",
+      "longitude": "-51.8509056",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011057_153",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898444",
+      "longitude": "-51.8509444",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011102_155",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898472",
+      "longitude": "-51.8509722",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011106_157",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898444",
+      "longitude": "-51.8510028",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011112_159",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898583",
+      "longitude": "-51.851025",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011118_161",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898917",
+      "longitude": "-51.8509861",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011123_163",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898472",
+      "longitude": "-51.8508556",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011128_165",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898806",
+      "longitude": "-51.8508611",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011133_167",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898722",
+      "longitude": "-51.8509139",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011138_169",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898389",
+      "longitude": "-51.8509861",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011143_171",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898333",
+      "longitude": "-51.8510139",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011147_173",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898278",
+      "longitude": "-51.85105",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011152_175",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898222",
+      "longitude": "-51.8510778",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011156_177",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898389",
+      "longitude": "-51.8511278",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011201_179",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898667",
+      "longitude": "-51.8510778",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011206_181",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898833",
+      "longitude": "-51.85105",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011211_183",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898917",
+      "longitude": "-51.8510194",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011216_185",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899056",
+      "longitude": "-51.8509917",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011221_187",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899028",
+      "longitude": "-51.8509556",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011226_189",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899111",
+      "longitude": "-51.8509333",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011230_191",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899111",
+      "longitude": "-51.8509028",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011234_193",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899278",
+      "longitude": "-51.8508806",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011238_195",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899444",
+      "longitude": "-51.8508833",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011242_197",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899056",
+      "longitude": "-51.8509972",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011247_199",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898806",
+      "longitude": "-51.8510583",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011251_201",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898722",
+      "longitude": "-51.8510889",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011255_203",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898556",
+      "longitude": "-51.8511389",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011300_205",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.38985",
+      "longitude": "-51.8511694",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011304_207",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898444",
+      "longitude": "-51.8512028",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011309_209",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898389",
+      "longitude": "-51.8512278",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011314_211",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898333",
+      "longitude": "-51.8512611",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011318_213",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898472",
+      "longitude": "-51.8512917",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011322_215",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.389875",
+      "longitude": "-51.8512389",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011326_217",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898917",
+      "longitude": "-51.8514333",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011330_219",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899389",
+      "longitude": "-51.8513917",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011335_221",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899583",
+      "longitude": "-51.851375",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011342_223",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3900972",
+      "longitude": "-51.8514167",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011346_225",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3901278",
+      "longitude": "-51.8514556",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011350_227",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899583",
+      "longitude": "-51.8517111",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011355_229",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3902",
+      "longitude": "-51.8527222",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011359_231",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3899778",
+      "longitude": "-51.8525583",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011404_233",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3900028",
+      "longitude": "-51.8525694",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011408_235",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898639",
+      "longitude": "-51.8523722",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011412_237",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897139",
+      "longitude": "-51.8525194",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011416_239",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898667",
+      "longitude": "-51.8526694",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011420_241",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3898389",
+      "longitude": "-51.8527028",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011424_243",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897278",
+      "longitude": "-51.8527667",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011432_245",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3897278",
+      "longitude": "-51.8527861",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908011436_247",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.3896722",
+      "longitude": "-51.8526278",
       "species": "Cacau - Hybrid",
       "status": "NEW"
     }
