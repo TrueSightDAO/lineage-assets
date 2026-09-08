@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 112,
+  "count": 113,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903072613_077",
@@ -1120,6 +1120,16 @@
       "latitude": "-3.3896722",
       "longitude": "-51.8526278",
       "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260908192852_259",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-08",
+      "photo_url": "N/A",
+      "latitude": "-3.413931",
+      "longitude": "-52.634933",
+      "species": "Cacau",
       "status": "NEW"
     }
   ]
