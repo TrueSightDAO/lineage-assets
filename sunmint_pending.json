@@ -1,17 +1,7 @@
 {
   "status": "success",
-  "count": 113,
+  "count": 112,
   "items": [
-    {
-      "telegram_message_id": "Edgar_20260903072613_077",
-      "submitted_name": "Sophia Truesight",
-      "planting_date": "2026-09-03",
-      "photo_url": "N/A",
-      "latitude": "N/A",
-      "longitude": "N/A",
-      "species": "Cacau - Hybrid",
-      "status": "NEW"
-    },
     {
       "telegram_message_id": "Edgar_20260903083411_001",
       "submitted_name": "Sophia Truesight",
