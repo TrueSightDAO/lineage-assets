@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 112,
+  "count": 138,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903083411_001",
@@ -1120,6 +1120,266 @@
       "latitude": "-3.413931",
       "longitude": "-52.634933",
       "species": "Cacau",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910171200_353",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/96d595b2bb9340878daa041e53dc7051.jpg",
+      "latitude": "-3.557308",
+      "longitude": "-51.103183",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213054_373",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909103833_5b9d50a4.jpg",
+      "latitude": "-3.609353",
+      "longitude": "-51.033675",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213111_375",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909104243_625c775c.jpg",
+      "latitude": "-3.609264",
+      "longitude": "-51.033661",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213115_377",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909110414_376f7da7.jpg",
+      "latitude": "-3.609242",
+      "longitude": "-51.034175",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213119_379",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909105034_87eb2018.jpg",
+      "latitude": "-3.609283",
+      "longitude": "-51.033592",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213122_381",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909112036_e4b1c2cf.jpg",
+      "latitude": "-3.609353",
+      "longitude": "-51.034236",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213126_383",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909115450_55a98845.jpg",
+      "latitude": "-3.557314",
+      "longitude": "-51.103175",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213130_385",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909115720_d1899316.jpg",
+      "latitude": "-3.557775",
+      "longitude": "-51.103533",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213133_387",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909115737_f03e90a3.jpg",
+      "latitude": "-3.557842",
+      "longitude": "-51.103642",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213137_389",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909115910_2bcb7ee0.jpg",
+      "latitude": "-3.557819",
+      "longitude": "-51.104167",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213141_391",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909115919_d1e3669d.jpg",
+      "latitude": "-3.557758",
+      "longitude": "-51.104106",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213145_393",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909120105_3bbb7750.jpg",
+      "latitude": "-3.557103",
+      "longitude": "-51.104233",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213148_395",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909120209_4b62dd3a.jpg",
+      "latitude": "-3.557189",
+      "longitude": "-51.103875",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213152_397",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909120256_0297dd5c.jpg",
+      "latitude": "-3.557206",
+      "longitude": "-51.103547",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213155_399",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909120330_590ed044.jpg",
+      "latitude": "-3.5573",
+      "longitude": "-51.103328",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213159_401",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909120343_9984b3cb.jpg",
+      "latitude": "-3.557306",
+      "longitude": "-51.103222",
+      "species": "Cacau - Hybrid",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213204_403",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909124200_ca3a9775.jpg",
+      "latitude": "-3.539358",
+      "longitude": "-51.145286",
+      "species": "Cumaru",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213208_405",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909124455_25affbf4.jpg",
+      "latitude": "-3.539158",
+      "longitude": "-51.145336",
+      "species": "Cumaru",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213212_407",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909124530_f829f2c6.jpg",
+      "latitude": "-3.539186",
+      "longitude": "-51.145467",
+      "species": "Cumaru",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213216_409",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909124614_8a47d86c.jpg",
+      "latitude": "-3.539325",
+      "longitude": "-51.145503",
+      "species": "Cumaru",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213220_411",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909124653_4e018749.jpg",
+      "latitude": "-3.539478",
+      "longitude": "-51.145542",
+      "species": "Cumaru",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213224_413",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909124813_3b7e3bcf.jpg",
+      "latitude": "-3.539433",
+      "longitude": "-51.145469",
+      "species": "Cumaru",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213228_415",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909124843_a568ee06.jpg",
+      "latitude": "-3.539647",
+      "longitude": "-51.145469",
+      "species": "Cumaru",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213232_417",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909125436_3ab14b18.jpg",
+      "latitude": "-3.539972",
+      "longitude": "-51.145011",
+      "species": "Cumaru",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213235_419",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909125736_82967a1e.jpg",
+      "latitude": "-3.539456",
+      "longitude": "-51.144553",
+      "species": "Cumaru",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260910213239_421",
+      "submitted_name": "Sophia Truesight",
+      "planting_date": "2026-09-10",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260909132137_89a2eed9.jpg",
+      "latitude": "-3.529844",
+      "longitude": "-51.145114",
+      "species": "Cumaru",
       "status": "NEW"
     }
   ]
