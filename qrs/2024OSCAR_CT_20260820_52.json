@@ -4,7 +4,7 @@
   "schema_version": "v0",
   "minted_at": "2026-08-20",
   "minted_by": "Paloma",
-  "status": "MINTED",
+  "status": "SOLD",
   "current_holder": null,
   "lineage": {
     "farm": "Oscar's Farm",
@@ -25,6 +25,11 @@
       "at": "2026-08-20",
       "by": "Paloma",
       "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
     }
   ],
   "owner_email_hash": null,
@@ -32,6 +37,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_CT_20260820_52.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_CT_20260820_52",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_CT_20260820_52",
-  "_seeded_at": "2026-08-23T16:15:36Z",
+  "_seeded_at": "2026-09-11T18:41:45Z",
   "_source": "seed_from_sheet.py"
 }
