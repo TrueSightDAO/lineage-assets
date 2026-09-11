@@ -1,0 +1,36 @@
+{
+  "qr_id": "2024OSCAR_AGL14_20260911_2",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-09-11",
+  "minted_by": "Matheus Reis",
+  "status": "SOLD",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Oscar's Farm",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "Cacao Almonds KG from Oscar's farm - AGL14"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-09-11",
+      "by": "Matheus Reis",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL14",
+      "notes": "Per Agroverse QR codes sheet status"
+    }
+  ],
+  "owner_email_hash": null,
+  "current_landing_page": "https://www.agroverse.shop/shipments/agl14",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_AGL14_20260911_2.png",
+  "scan_target": "https://truesight.me/qr/?id=2024OSCAR_AGL14_20260911_2",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_AGL14_20260911_2",
+  "_seeded_at": "2026-09-11T18:32:41Z",
+  "_source": "seed_from_sheet.py"
+}
