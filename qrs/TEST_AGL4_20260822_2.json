@@ -4,7 +4,7 @@
   "schema_version": "v0",
   "minted_at": "2026-08-22",
   "minted_by": "",
-  "status": "ASSIGNED_TO_TREE",
+  "status": "INVALIDATED",
   "current_holder": null,
   "lineage": {
     "farm": "",
@@ -38,6 +38,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/TEST_AGL4_20260822_2.png",
   "scan_target": "https://truesight.me/qr/?id=TEST_AGL4_20260822_2",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=TEST_AGL4_20260822_2",
-  "_seeded_at": "2026-08-22T23:46:57Z",
+  "_seeded_at": "2026-09-11T18:41:45Z",
   "_source": "seed_from_sheet.py"
 }
