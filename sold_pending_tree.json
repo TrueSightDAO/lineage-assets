@@ -1,7 +1,399 @@
 {
   "status": "success",
-  "count": 414,
+  "count": 472,
   "items": [
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_9",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_8",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_7",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_6",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_5",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_40",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_4",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_39",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_38",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_37",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_36",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_35",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_34",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_33",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_32",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_31",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_30",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_3",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_29",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_28",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_27",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_26",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_25",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_24",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_23",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_22",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_21",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_20",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_2",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_19",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_18",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_17",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_16",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_15",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_14",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_13",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_12",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_11",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_10",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024OSCAR_AGL14_20260911_1",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-11"
+    },
+    {
+      "qr_code": "2024_20260710_24",
+      "status": "SOLD",
+      "farm": "Fazenda São Jorge",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-07-10"
+    },
+    {
+      "qr_code": "2024_20260710_22",
+      "status": "SOLD",
+      "farm": "Fazenda São Jorge",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-07-10"
+    },
+    {
+      "qr_code": "2024_20260710_21",
+      "status": "SOLD",
+      "farm": "Fazenda São Jorge",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-07-10"
+    },
+    {
+      "qr_code": "2024_20260710_20",
+      "status": "SOLD",
+      "farm": "Fazenda São Jorge",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-07-10"
+    },
+    {
+      "qr_code": "2024_20260710_19",
+      "status": "SOLD",
+      "farm": "Fazenda São Jorge",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-07-10"
+    },
+    {
+      "qr_code": "2024_20260710_18",
+      "status": "SOLD",
+      "farm": "Fazenda São Jorge",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-07-10"
+    },
+    {
+      "qr_code": "2024_20260710_17",
+      "status": "SOLD",
+      "farm": "Fazenda São Jorge",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-07-10"
+    },
+    {
+      "qr_code": "2024_20260710_16",
+      "status": "SOLD",
+      "farm": "Fazenda São Jorge",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-07-10"
+    },
+    {
+      "qr_code": "2024_20260710_11",
+      "status": "SOLD",
+      "farm": "Fazenda São Jorge",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-07-10"
+    },
     {
       "qr_code": "2024OSCAR_CC_20260620_3",
       "status": "SOLD",
@@ -20,6 +412,22 @@
     },
     {
       "qr_code": "2024OSCAR_CC_20260620_1",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20"
+    },
+    {
+      "qr_code": "2024OSCAR_CB_20260620_9",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20"
+    },
+    {
+      "qr_code": "2024OSCAR_CB_20260620_8",
       "status": "SOLD",
       "farm": "Oscar's Farm",
       "country": "Brazil",
@@ -68,6 +476,46 @@
     },
     {
       "qr_code": "2024OSCAR_CB_20260620_2",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20"
+    },
+    {
+      "qr_code": "2024OSCAR_CB_20260620_14",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20"
+    },
+    {
+      "qr_code": "2024OSCAR_CB_20260620_13",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20"
+    },
+    {
+      "qr_code": "2024OSCAR_CB_20260620_12",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20"
+    },
+    {
+      "qr_code": "2024OSCAR_CB_20260620_11",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-06-20"
+    },
+    {
+      "qr_code": "2024OSCAR_CB_20260620_10",
       "status": "SOLD",
       "farm": "Oscar's Farm",
       "country": "Brazil",
@@ -721,6 +1169,14 @@
       "country": "Brazil",
       "harvest_year": "2024",
       "minted_at": "2026-01-22"
+    },
+    {
+      "qr_code": "2024OSCAR_20260121_9",
+      "status": "SOLD",
+      "farm": "Oscar Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-01-21"
     },
     {
       "qr_code": "2024OSCAR_20260121_8",
@@ -2500,6 +2956,14 @@
     },
     {
       "qr_code": "2024OSCAR_20250711_NIBS_23",
+      "status": "SOLD",
+      "farm": "Oscar Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2025-07-11"
+    },
+    {
+      "qr_code": "2024OSCAR_20250711_NIBS_21",
       "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
