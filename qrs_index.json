@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-11T18:42:08Z",
+  "generated_at": "2026-09-24T18:13:44Z",
   "source": "build_index.py",
-  "qr_count": 1820,
+  "qr_count": 1823,
   "by_status": {
-    "SOLD": 587,
-    "INVALIDATED": 2,
-    "ASSIGNED_TO_TREE": 1,
-    "MINTED": 1098,
+    "MINTED": 1099,
+    "SOLD": 586,
+    "INVALIDATED": 4,
+    "ASSIGNED_TO_TREE": 2,
     "VOID": 1,
     "SAMPLE": 90,
     "ON CONSIGNMENT": 35,
@@ -15,9 +15,20 @@
   },
   "by_asset_type": {
     "cacao_bag": 1302,
-    "tree": 518
+    "tree": 521
   },
   "qrs": [
+    {
+      "qr_id": "2024_20260913_1",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "minted_at": "2026-09-13",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024_20260913_1"
+    },
     {
       "qr_id": "2024OSCAR_AGL14_20260911_9",
       "asset_type": "cacao_bag",
@@ -479,6 +490,28 @@
       "minted_at": "2026-08-22",
       "current_holder": null,
       "scan_target": "https://truesight.me/qr/?id=TEST_AGL4_20260822_2"
+    },
+    {
+      "qr_id": "2026TEST_20260822_1",
+      "asset_type": "tree",
+      "status": "INVALIDATED",
+      "farm": "E2E Test Farm",
+      "country": "USA",
+      "harvest_year": "2026",
+      "minted_at": "2026-08-22",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2026TEST_20260822_1"
+    },
+    {
+      "qr_id": "20260821_E2ETEST_SEF_1",
+      "asset_type": "tree",
+      "status": "INVALIDATED",
+      "farm": "Sacred Earth Farms",
+      "country": "USA",
+      "harvest_year": "2025",
+      "minted_at": "2026-08-22",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=20260821_E2ETEST_SEF_1"
     },
     {
       "qr_id": "FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
@@ -2770,8 +2803,8 @@
     },
     {
       "qr_id": "2024OSCAR_CB_20260620_1",
-      "asset_type": "cacao_bag",
-      "status": "SOLD",
+      "asset_type": "tree",
+      "status": "ASSIGNED_TO_TREE",
       "farm": "Oscar's Farm",
       "country": "Brazil",
       "harvest_year": "2024",
