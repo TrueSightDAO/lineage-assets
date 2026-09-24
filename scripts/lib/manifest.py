@@ -44,9 +44,6 @@ COL = {
     "ledger_name":      21,
 }
 
-SEED_EVENT_TYPES = {"minted", "planted", "consigned", "sold"}
-
-
 def cell(row: list, key: str) -> str:
     idx = COL[key]
     if idx >= len(row):
@@ -210,16 +207,50 @@ def build_manifest(
 
 
 def merge_preserve_events(existing: dict, fresh: dict) -> dict:
+    """Merge a freshly-seeded manifest over the file already on disk.
+
+    History is APPEND-ONLY. The seed regenerates only the events implied by the
+    sheet's *current* state, but that state moves on. A bag that was `SOLD` and
+    is later linked to a tree stops being `SOLD`, so a naive
+    `fresh + custom` merge DROPS the `sold` event and rewrites history (this is
+    the bug that erased `sold` from 2024OSCAR_CB_20260620_1).
+
+    Here: any event recorded previously whose type the seed no longer emits is
+    retained; events the seed still emits are refreshed in place; event types
+    the seed emits for the first time are appended. Non-seed ("custom") events
+    appended by other flows are retained as well.
+    """
     existing_events = existing.get("events") or []
-    custom_events = [e for e in existing_events if e.get("type") not in SEED_EVENT_TYPES]
+    fresh_events = fresh.get("events") or []
+    fresh_by_type = {e.get("type"): e for e in fresh_events}
+
+    merged_events: list = []
+    emitted: set = set()
+    for ev in existing_events:
+        t = ev.get("type")
+        if t in fresh_by_type and t not in emitted:
+            merged_events.append(fresh_by_type[t])  # refresh in place
+            emitted.add(t)
+        else:
+            merged_events.append(ev)                # retain history
+    for ev in fresh_events:
+        if ev.get("type") not in emitted:
+            merged_events.append(ev)                # append a brand-new type
+            emitted.add(ev.get("type"))
+
     merged = dict(fresh)
-    merged["events"] = fresh["events"] + custom_events
+    merged["events"] = merged_events
     return merged
 
 
-def write_manifest(out_dir: Path, manifest: dict) -> tuple[Path, str]:
+def write_manifest(
+    out_dir: Path, manifest: dict, dry_run: bool = False
+) -> tuple[Path, str]:
     """Write or merge a manifest. Returns (path, action) where action is
-    'created', 'updated', or 'unchanged'."""
+    'created', 'updated', or 'unchanged'.
+
+    With ``dry_run=True`` the diff is still computed (so the action is REAL,
+    not a guess) but nothing is written to disk."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / f"{safe_filename(manifest['qr_id'])}.json"
@@ -233,7 +264,9 @@ def write_manifest(out_dir: Path, manifest: dict) -> tuple[Path, str]:
         merged_no_seeded = {k: v for k, v in merged.items() if k != "_seeded_at"}
         if existing_no_seeded == merged_no_seeded:
             return path, "unchanged"
-        path.write_text(json.dumps(merged, indent=2, ensure_ascii=False) + "\n")
+        if not dry_run:
+            path.write_text(json.dumps(merged, indent=2, ensure_ascii=False) + "\n")
         return path, "updated"
-    path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
+    if not dry_run:
+        path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
     return path, "created"
