@@ -253,21 +253,16 @@ def main() -> None:
         if manifest is None:
             skipped += 1
             continue
-        if args.execute:
-            _, action = write_manifest(OUT_DIR, manifest)
-            if action == "created":
-                created += 1
-            elif action == "updated":
-                updated += 1
-            else:
-                unchanged += 1
+        # Always diff via write_manifest (dry_run only suppresses the write),
+        # so --dry-run reports REAL created/updated/unchanged counts instead of
+        # guessing "unchanged" for every file that already exists.
+        _, action = write_manifest(OUT_DIR, manifest, dry_run=not args.execute)
+        if action == "created":
+            created += 1
+        elif action == "updated":
+            updated += 1
         else:
-            # Dry-run: just count
-            path = OUT_DIR / f"{manifest['qr_id']}.json"
-            if path.is_file():
-                unchanged += 1  # rough approximation; real run would diff
-            else:
-                created += 1
+            unchanged += 1
 
     print(
         f"\n[summary] created={created} updated={updated} unchanged={unchanged} "
