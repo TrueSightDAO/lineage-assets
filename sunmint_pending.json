@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 144,
+  "count": 151,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903083411_001",
@@ -1440,6 +1440,76 @@
       "latitude": "",
       "longitude": "",
       "species": "Cacao - Forestero",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924122114_057",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924092058_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "-3.513513514",
+      "longitude": "-51.5744182",
+      "species": "Sumaúma",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924122120_059",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924092058_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "-3.513513514",
+      "longitude": "-51.5744182",
+      "species": "Sumaúma",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924122114_057",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924092058_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "-3.513513514",
+      "longitude": "-51.5744182",
+      "species": "Sumaúma",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924122120_059",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924092058_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "-3.513513514",
+      "longitude": "-51.5744182",
+      "species": "Sumaúma",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924122125_061",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924092058_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "-3.513513514",
+      "longitude": "-51.5744182",
+      "species": "Sumaúma",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924122125_061",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924092058_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "-3.513513514",
+      "longitude": "-51.5744182",
+      "species": "Sumaúma",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924122129_063",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924092058_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "-3.513513514",
+      "longitude": "-51.5744182",
+      "species": "Sumaúma",
       "status": "NEW"
     }
   ]
