@@ -54,7 +54,11 @@ referencing the prior event.
   "state":        "string",       // e.g. Bahia
   "country":      "string",       // e.g. Brazil
   "harvest_year": "string",       // e.g. 2024
-  "sku":          "string"        // e.g. 8-ounce-organic-cacao-nibs
+  "sku":          "string",       // e.g. 8-ounce-organic-cacao-nibs
+  "linked_tree":  "string",       // optional — tree record id this bag financed
+                                  // (SunMint Tree Planting col R -> col D; seeded
+                                  // by seed_from_sheet.py, never a hand edit)
+  "linked_at":    "ISO 8601"      // optional — when the link was recorded
 }
 ```
 

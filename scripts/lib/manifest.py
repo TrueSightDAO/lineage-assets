@@ -155,7 +155,11 @@ def build_events(row: list, asset_type: str) -> list:
     return events
 
 
-def build_manifest(row: list, source: str = "seed_from_sheet.py") -> dict | None:
+def build_manifest(
+    row: list,
+    source: str = "seed_from_sheet.py",
+    tree_links: dict | None = None,
+) -> dict | None:
     qr_id = cell(row, "qr_id")
     if not qr_id:
         return None
@@ -171,6 +175,20 @@ def build_manifest(row: list, source: str = "seed_from_sheet.py") -> dict | None
             "partner_name": ledger_name,
         }
 
+    lineage = build_lineage(row, asset_type)
+    # Mirror the SunMint Tree Planting linkage (col R -> col D) into the manifest
+    # AT SEED TIME. Doing it here, rather than via a bolt-on sync, is what makes
+    # the JSON cache self-regenerating: merge_preserve_events() keeps only the
+    # fresh dict + custom events, so anything a separate script writes into
+    # `lineage` afterwards is clobbered on the next re-seed.
+    link = (tree_links or {}).get(qr_id)
+    if link:
+        entry = link if isinstance(link, dict) else {"tree_id": link}
+        if entry.get("tree_id"):
+            lineage["linked_tree"] = entry["tree_id"]
+        if entry.get("linked_at"):
+            lineage["linked_at"] = entry["linked_at"]
+
     return {
         "qr_id":                qr_id,
         "asset_type":           asset_type,
@@ -179,7 +197,7 @@ def build_manifest(row: list, source: str = "seed_from_sheet.py") -> dict | None
         "minted_by":            manager,
         "status":               status,
         "current_holder":       current_holder,
-        "lineage":              build_lineage(row, asset_type),
+        "lineage":              lineage,
         "events":               build_events(row, asset_type),
         "owner_email_hash":     None,
         "current_landing_page": cell(row, "landing_page"),

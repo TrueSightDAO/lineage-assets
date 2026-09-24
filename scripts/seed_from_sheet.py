@@ -5,6 +5,11 @@ Reads the `Agroverse QR codes` tab on the DAO Main Ledger spreadsheet
 and emits one JSON file per QR row into ../qrs/<qr_id>.json. Idempotent;
 preserves any non-seed events appended by other flows.
 
+Also joins the `SunMint Tree Planting` tab (col R "Linked QR Code" -> col D tree
+id) so each bag manifest carries `lineage.linked_tree` at SEED TIME. That makes
+the per-QR JSON cache self-regenerating, instead of relying on a bolt-on sync
+whose write into `lineage` a re-seed would clobber.
+
 Manifest shape lives in lib/manifest.py — shared with batch_compiler.py
 so seed and per-mint outputs are identical.
 
@@ -34,6 +39,19 @@ SHEET_ID = "1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU"
 QR_TAB = "Agroverse QR codes"
 DATA_START_ROW = 2
 OUT_DIR = _HERE.parent / "qrs"
+
+# --- SunMint tree-link join -------------------------------------------------
+# The `SunMint Tree Planting` tab ties a planted tree to the bag QR that
+# financed it: col D = tree/message id, col M = status, col R = "Linked QR Code",
+# col S = "Linked At". Reading that join HERE (as part of the seed) is what makes
+# the JSON cache self-regenerating — see module docstring.
+#
+# Reading this tab requires a service account with access to BOTH sheets.
+# agroverse-qr-code-manager@get-data-io has it; the default Main-Ledger SA does
+# not. A reader without access degrades (loudly) to seeding without links.
+SUNMINT_SHEET_ID = "1qbZZhf-_7xzmDTriaJVWj6OZshyQsFkdsAV8-pyzASQ"
+SUNMINT_TAB = "SunMint Tree Planting"
+SUNMINT_COL = {"msg_id": 3, "status": 12, "linked_qr": 17, "linked_at": 18}
 
 # --- Header contract -------------------------------------------------------
 # Canonical column layout for the `Agroverse QR codes` tab.
@@ -108,6 +126,53 @@ def validate_headers(sheet_headers: list[str]) -> list[str]:
     return problems
 
 
+def _sunmint_cell(row: list, key: str) -> str:
+    idx = SUNMINT_COL[key]
+    val = row[idx] if idx < len(row) else ""
+    return str(val).strip() if val is not None else ""
+
+
+def load_tree_links(gc: gspread.Client) -> dict:
+    """Return {qr_id: {"tree_id", "linked_at"}} from the SunMint tab.
+
+    Maps each non-empty `Linked QR Code` (col R) to its tree id (col D). Rows
+    whose Status (col M) is `LINKED` win over rows that merely carry a QR. Any
+    failure (missing permission, renamed tab, API error) is reported LOUDLY and
+    returns {}: the QR seed must still complete, but the operator sees that tree
+    links were skipped rather than silently getting a link-less cache.
+    """
+    try:
+        ws = gc.open_by_key(SUNMINT_SHEET_ID).worksheet(SUNMINT_TAB)
+        values = ws.get_all_values()
+    except Exception as e:  # noqa: BLE001 - degrade, but never silently
+        print(
+            f"[warn] could not read {SUNMINT_TAB!r} on {SUNMINT_SHEET_ID} "
+            f"({e.__class__.__name__}: {e}) — seeding WITHOUT tree links. "
+            f"Grant the seeding service account read access to that sheet to "
+            f"populate lineage.linked_tree."
+        )
+        return {}
+
+    links: dict[str, dict] = {}
+    for row in values[1:]:
+        qr = _sunmint_cell(row, "linked_qr")
+        tree = _sunmint_cell(row, "msg_id")
+        if not qr or not tree:
+            continue
+        status = _sunmint_cell(row, "status").upper()
+        prior = links.get(qr)
+        if prior and prior.get("_status") == "LINKED" and status != "LINKED":
+            continue  # keep the authoritative LINKED row
+        links[qr] = {
+            "tree_id": tree,
+            "linked_at": _sunmint_cell(row, "linked_at"),
+            "_status": status,
+        }
+    for entry in links.values():
+        entry.pop("_status", None)
+    return links
+
+
 def _client() -> gspread.Client:
     creds = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
     if not creds or not os.path.isfile(creds):
@@ -123,6 +188,13 @@ def main() -> None:
     g.add_argument("--dry-run", action="store_true", default=False)
     g.add_argument("--execute", action="store_true")
     p.add_argument("--limit", type=int, default=None)
+    p.add_argument(
+        "--no-sunmint-links",
+        dest="sunmint_links",
+        action="store_false",
+        default=True,
+        help="Skip the SunMint tree-link join (seed lineage without linked_tree).",
+    )
     p.add_argument(
         "--allow-header-drift",
         action="store_true",
@@ -162,13 +234,22 @@ def main() -> None:
     qr_rows = all_values[DATA_START_ROW - 1 :]
     print(f"[info] {len(qr_rows)} QR rows to process")
 
+    tree_links: dict = {}
+    if args.sunmint_links:
+        tree_links = load_tree_links(gc)
+        print(f"[info] {len(tree_links)} tree link(s) resolved from {SUNMINT_TAB!r}")
+    else:
+        print("[info] --no-sunmint-links: skipping tree-link join")
+
     if args.limit:
         qr_rows = qr_rows[: args.limit]
         print(f"[info] limited to first {len(qr_rows)} rows")
 
     created = updated = unchanged = skipped = 0
     for row in qr_rows:
-        manifest = build_manifest(row, source="seed_from_sheet.py")
+        manifest = build_manifest(
+            row, source="seed_from_sheet.py", tree_links=tree_links
+        )
         if manifest is None:
             skipped += 1
             continue
@@ -189,7 +270,8 @@ def main() -> None:
                 created += 1
 
     print(
-        f"\n[summary] created={created} updated={updated} unchanged={unchanged} skipped={skipped}"
+        f"\n[summary] created={created} updated={updated} unchanged={unchanged} "
+        f"skipped={skipped} tree_links={len(tree_links)}"
     )
     if not args.execute:
         print("[summary] --dry-run (default). Pass --execute to write files.")
