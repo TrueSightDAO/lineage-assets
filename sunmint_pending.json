@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 138,
+  "count": 144,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903083411_001",
@@ -1380,6 +1380,66 @@
       "latitude": "-3.5229198",
       "longitude": "-51.5749711",
       "species": "Cacao - Criolla",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924115448_047",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924085437_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "",
+      "longitude": "",
+      "species": "Cacao - Forestero",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924115503_049",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924085437_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "",
+      "longitude": "",
+      "species": "Cacao - Forestero",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924115503_049",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924085437_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "",
+      "longitude": "",
+      "species": "Cacao - Forestero",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924115509_051",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924085437_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "",
+      "longitude": "",
+      "species": "Cacao - Forestero",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924115509_051",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924085437_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "",
+      "longitude": "",
+      "species": "Cacao - Forestero",
+      "status": "NEW"
+    },
+    {
+      "telegram_message_id": "Edgar_20260924115515_053",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-09-24",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260924085437_MIIBIjANBgkqhkiG9w0B.jpg",
+      "latitude": "",
+      "longitude": "",
+      "species": "Cacao - Forestero",
       "status": "NEW"
     }
   ]
