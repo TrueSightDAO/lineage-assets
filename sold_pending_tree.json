@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 469,
+  "count": 468,
   "items": [
     {
       "qr_code": "2024OSCAR_AGL14_20260911_9",
@@ -2332,14 +2332,6 @@
     },
     {
       "qr_code": "2024PAULO_20250804_3",
-      "status": "SOLD",
-      "farm": "La do Sitio",
-      "country": "Brazil",
-      "harvest_year": "2024",
-      "minted_at": "2025-08-04"
-    },
-    {
-      "qr_code": "2024PAULO_20250804_20",
       "status": "SOLD",
       "farm": "La do Sitio",
       "country": "Brazil",
