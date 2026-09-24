@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 471,
+  "count": 469,
   "items": [
     {
       "qr_code": "2024OSCAR_AGL14_20260911_9",
@@ -571,14 +571,6 @@
       "minted_at": "2026-04-12"
     },
     {
-      "qr_code": "2024OSR_81PB_20260412_3",
-      "status": "SOLD",
-      "farm": "Oscar Farm",
-      "country": "Brazil",
-      "harvest_year": "2024",
-      "minted_at": "2026-04-12"
-    },
-    {
       "qr_code": "2024OSR_81PB_20260412_23",
       "status": "SOLD",
       "farm": "Oscar Farm",
@@ -852,14 +844,6 @@
     },
     {
       "qr_code": "2023SA_81PB_20260412_10",
-      "status": "SOLD",
-      "farm": "Santa Ana Fazenda",
-      "country": "Brazil",
-      "harvest_year": "2023",
-      "minted_at": "2026-04-12"
-    },
-    {
-      "qr_code": "2023SA_81PB_20260412_1",
       "status": "SOLD",
       "farm": "Santa Ana Fazenda",
       "country": "Brazil",
