@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 472,
+  "count": 471,
   "items": [
     {
       "qr_code": "2024OSCAR_AGL14_20260911_9",
@@ -516,14 +516,6 @@
     },
     {
       "qr_code": "2024OSCAR_CB_20260620_10",
-      "status": "SOLD",
-      "farm": "Oscar's Farm",
-      "country": "Brazil",
-      "harvest_year": "2024",
-      "minted_at": "2026-06-20"
-    },
-    {
-      "qr_code": "2024OSCAR_CB_20260620_1",
       "status": "SOLD",
       "farm": "Oscar's Farm",
       "country": "Brazil",
