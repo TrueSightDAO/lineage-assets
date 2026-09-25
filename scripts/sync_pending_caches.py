@@ -9,7 +9,7 @@ NOT key-gated GAS endpoints. This script produces those caches:
                              species, status}]}  -- SunMint rows with Status == NEW
   - sold_pending_tree.json  {"status":"success","items":[{qr_code, status, farm,
                              country, harvest_year, product, product_image, price,
-                             minted_at}]}  -- SOLD QR codes
+                             owner_email_present, minted_at}]}  -- SOLD QR codes
                              whose qr_id is NOT yet linked to a SunMint submission
                              (col R "Linked QR Code" on the SunMint tab).
 
@@ -152,6 +152,8 @@ def build_sold_pending(rows: list, index: dict) -> dict:
             "product": rec.get("product", ""),
             "product_image": rec.get("product_image", ""),
             "price": rec.get("price", ""),
+            # Boolean only — never the email itself (PII stays out of the public cache).
+            "owner_email_present": bool(rec.get("owner_email_present")),
             "minted_at": rec.get("minted_at", ""),
         })
     return {"status": "success", "count": len(items), "items": items}

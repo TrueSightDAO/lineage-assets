@@ -202,6 +202,11 @@ def build_manifest(
         "lineage":              lineage,
         "events":               build_events(row, asset_type),
         "owner_email_hash":     None,
+        # Non-PII signal: is this QR linked to a buyer/owner email at all?
+        # A boolean derived from col L leaks NO PII but lets ops pages show a
+        # "linked to owner" badge (e.g. an unlinked SOLD bag = sale not yet
+        # attributed).
+        "owner_email_present":  bool(cell(row, "owner_email")),
         "current_landing_page": cell(row, "landing_page"),
         "qr_image_url":         f"{QR_IMAGE_BASE}/{safe_filename(qr_id)}.png",
         "scan_target":          f"{TRUESIGHT_QR_BASE}/?id={qr_id}",
