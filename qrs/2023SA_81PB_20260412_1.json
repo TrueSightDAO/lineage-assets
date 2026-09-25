@@ -1,17 +1,27 @@
 {
   "qr_id": "2023SA_81PB_20260412_1",
-  "asset_type": "cacao_bag",
+  "asset_type": "tree",
   "schema_version": "v0",
   "minted_at": "2026-04-12",
   "minted_by": "Kirsten Ritschel",
-  "status": "SOLD",
+  "status": "ASSIGNED_TO_TREE",
   "current_holder": null,
   "lineage": {
     "farm": "Santa Ana Fazenda",
     "state": "Bahia",
     "country": "Brazil",
     "harvest_year": "2023",
-    "sku": "81% Dark Chocolate Bar 50grams - Santa Anna Fazenda, Brazil 2023 San Francisco"
+    "sku": "81% Dark Chocolate Bar 50grams - Santa Anna Fazenda, Brazil 2023 San Francisco",
+    "product_image": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
+    "price": "10",
+    "planted_at": "2026-09-03",
+    "latitude": "-3.094528",
+    "longitude": "-52.095314",
+    "planting_video_url": "",
+    "seedling_photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260902_bomsucesso_tree10.jpg",
+    "location_text": "https://github.com/TrueSightDAO/tokenomics/tree/main/python_scripts/agroverse_qr_code_generator/package_qr_codes/compiled_Santa_Ana_Fazenda_2023SA_81PB_20260412_1.png",
+    "linked_tree": "Edgar_20260903083555_019",
+    "linked_at": "2026-09-24T19:13:17.929Z"
   },
   "events": [
     {
@@ -24,13 +34,22 @@
       "type": "sold",
       "by": "AGL4",
       "notes": "Per Agroverse QR codes sheet status"
+    },
+    {
+      "type": "planted",
+      "at": "2026-09-03",
+      "by": "Kirsten Ritschel",
+      "notes": "Tree planted in the field"
     }
   ],
   "owner_email_hash": null,
-  "current_landing_page": "https://www.agroverse.shop/shipments/agl2",
+  "owner_email_present": true,
+  "sheet_row": 1397,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1397",
+  "current_landing_page": "https://agroverse.shop/shipments/agl2",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2023SA_81PB_20260412_1.png",
   "scan_target": "https://truesight.me/qr/?id=2023SA_81PB_20260412_1",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2023SA_81PB_20260412_1",
-  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_seeded_at": "2026-09-25T18:00:26Z",
   "_source": "seed_from_sheet.py"
 }

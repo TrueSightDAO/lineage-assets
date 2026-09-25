@@ -11,7 +11,9 @@
     "state": "Bahia",
     "country": "Brazil",
     "harvest_year": "2024",
-    "sku": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 + 8 Ounce Package Kraft Pouch CP340992735BR | Kirsten 20260121"
+    "sku": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 + 8 Ounce Package Kraft Pouch CP340992735BR | Kirsten 20260121",
+    "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+    "price": "25"
   },
   "events": [
     {
@@ -27,10 +29,13 @@
     }
   ],
   "owner_email_hash": null,
-  "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
+  "owner_email_present": true,
+  "sheet_row": 1371,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1371",
+  "current_landing_page": "https://agroverse.shop/shipments/agl4",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_20260330_36.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20260330_36",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20260330_36",
-  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_seeded_at": "2026-09-25T18:00:26Z",
   "_source": "seed_from_sheet.py"
 }

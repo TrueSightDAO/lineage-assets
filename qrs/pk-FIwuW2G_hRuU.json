@@ -12,6 +12,8 @@
     "country": "",
     "harvest_year": "",
     "sku": "Butterfly Effect Club Tree Planting Pledge - QR Code",
+    "product_image": "",
+    "price": "1",
     "planted_at": null,
     "latitude": "",
     "longitude": "",
@@ -33,10 +35,13 @@
     }
   ],
   "owner_email_hash": null,
+  "owner_email_present": false,
+  "sheet_row": 1506,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1506",
   "current_landing_page": "https://truesight.me/programs/butterfly-effect/credentials/#pk-FIwuW2G_hRuU",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/pk-FIwuW2G_hRuU.png",
   "scan_target": "https://truesight.me/qr/?id=pk-FIwuW2G_hRuU",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=pk-FIwuW2G_hRuU",
-  "_seeded_at": "2026-06-02T23:13:50Z",
+  "_seeded_at": "2026-09-25T18:00:26Z",
   "_source": "seed_from_sheet.py"
 }

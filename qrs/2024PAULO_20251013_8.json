@@ -11,7 +11,9 @@
     "state": "Para",
     "country": "Brazil",
     "harvest_year": "2024",
-    "sku": "Ceremonial Cacao Kraft Pouch - 20250219006 | Cacao Mass | 200 grams | Paulo 2024 | Santos 018-2025 016-2025 || Ilheus - AGL8"
+    "sku": "Ceremonial Cacao Kraft Pouch - 20250219006 | Cacao Mass | 200 grams | Paulo 2024 | Santos 018-2025 016-2025 || Ilheus - AGL8",
+    "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+    "price": "25"
   },
   "events": [
     {
@@ -27,10 +29,13 @@
     }
   ],
   "owner_email_hash": null,
-  "current_landing_page": "https://www.agroverse.shop/shipments/agl8",
+  "owner_email_present": false,
+  "sheet_row": 1011,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1011",
+  "current_landing_page": "https://agroverse.shop/shipments/agl8",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024PAULO_20251013_8.png",
   "scan_target": "https://truesight.me/qr/?id=2024PAULO_20251013_8",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024PAULO_20251013_8",
-  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_seeded_at": "2026-09-25T18:00:26Z",
   "_source": "seed_from_sheet.py"
 }

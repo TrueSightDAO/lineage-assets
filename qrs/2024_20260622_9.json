@@ -11,7 +11,9 @@
     "state": "Bahia",
     "country": "Brazil",
     "harvest_year": "2024",
-    "sku": "Agroverse 81% Cacao Chocolate Bar 50g | 8 Ounce Nibs CP340992735BR | Kirsten 20260620 | San Francisco - AGL4"
+    "sku": "Agroverse 81% Cacao Chocolate Bar 50g | 8 Ounce Nibs CP340992735BR | Kirsten 20260620 | San Francisco - AGL4",
+    "product_image": "",
+    "price": "25"
   },
   "events": [
     {
@@ -22,10 +24,13 @@
     }
   ],
   "owner_email_hash": null,
+  "owner_email_present": false,
+  "sheet_row": 1598,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1598",
   "current_landing_page": "https://agroverse.shop/farms/oscar-bahia/index.html",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024_20260622_9.png",
   "scan_target": "https://truesight.me/qr/?id=2024_20260622_9",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024_20260622_9",
-  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_seeded_at": "2026-09-25T18:00:26Z",
   "_source": "seed_from_sheet.py"
 }

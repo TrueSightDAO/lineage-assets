@@ -12,6 +12,8 @@
     "country": "USA",
     "harvest_year": "2025",
     "sku": "SunMint Tree Planting Pledge - QR Code",
+    "product_image": "https://static.wixstatic.com/media/0e2cde_2aecaf0554b248e3a96a80dcdc631f87~mv2.jpg/v1/fill/w_1360,h_764,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+    "price": "5",
     "planted_at": null,
     "latitude": "",
     "longitude": "",
@@ -33,10 +35,13 @@
     }
   ],
   "owner_email_hash": null,
+  "owner_email_present": false,
+  "sheet_row": 188,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A188",
   "current_landing_page": "https://www.truesight.me/sunmint-tree-planting-pledges/pp1",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/20250716_PRISM_PERCUSSIONS_1.png",
   "scan_target": "https://truesight.me/qr/?id=20250716_PRISM_PERCUSSIONS_1",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=20250716_PRISM_PERCUSSIONS_1",
-  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_seeded_at": "2026-09-25T18:00:25Z",
   "_source": "seed_from_sheet.py"
 }

@@ -12,6 +12,8 @@
     "country": "USA",
     "harvest_year": "2025",
     "sku": "NovaGaia Tree Planting Pledge - QR Code",
+    "product_image": "https://static.wixstatic.com/media/0e2cde_1111b2934f3d479a94a0fd9685ea56cb~mv2.png",
+    "price": "5",
     "planted_at": null,
     "latitude": "",
     "longitude": "",
@@ -28,10 +30,13 @@
     }
   ],
   "owner_email_hash": null,
+  "owner_email_present": false,
+  "sheet_row": 311,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A311",
   "current_landing_page": "https://www.truesight.me/sunmint-tree-planting-pledges/sef1",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/20250716_SEF_32.png",
   "scan_target": "https://truesight.me/qr/?id=20250716_SEF_32",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=20250716_SEF_32",
-  "_seeded_at": "2026-05-20T20:18:04Z",
+  "_seeded_at": "2026-09-25T18:00:25Z",
   "_source": "seed_from_sheet.py"
 }

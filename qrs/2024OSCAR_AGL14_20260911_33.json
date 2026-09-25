@@ -11,7 +11,9 @@
     "state": "Bahia",
     "country": "Brazil",
     "harvest_year": "2024",
-    "sku": "Cacao Almonds KG from Oscar's farm - AGL14"
+    "sku": "Cacao Almonds KG from Oscar's farm - AGL14",
+    "product_image": "",
+    "price": "20"
   },
   "events": [
     {
@@ -27,10 +29,13 @@
     }
   ],
   "owner_email_hash": null,
-  "current_landing_page": "https://www.agroverse.shop/shipments/agl14",
+  "owner_email_present": true,
+  "sheet_row": 1816,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1816",
+  "current_landing_page": "https://agroverse.shop/shipments/agl14",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_AGL14_20260911_33.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_AGL14_20260911_33",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_AGL14_20260911_33",
-  "_seeded_at": "2026-09-11T18:32:41Z",
+  "_seeded_at": "2026-09-25T18:00:26Z",
   "_source": "seed_from_sheet.py"
 }

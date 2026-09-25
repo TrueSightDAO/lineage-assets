@@ -1,17 +1,27 @@
 {
   "qr_id": "2024SA_20251227_35",
-  "asset_type": "cacao_bag",
+  "asset_type": "tree",
   "schema_version": "v0",
   "minted_at": "2025-12-27",
   "minted_by": "SOHA - David Campbell",
-  "status": "SOLD",
+  "status": "ASSIGNED_TO_TREE",
   "current_holder": null,
   "lineage": {
     "farm": "Santa Ana Fazenda",
     "state": "Bahia",
     "country": "Brazil",
     "harvest_year": "2023",
-    "sku": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Santa Ana 2023 | Kirsten 20251227 | San Francisco - AGL2"
+    "sku": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Santa Ana 2023 | Kirsten 20251227 | San Francisco - AGL2",
+    "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+    "price": "25",
+    "planted_at": "2026-09-08",
+    "latitude": "-3.3882278",
+    "longitude": "-51.8517528",
+    "planting_video_url": "",
+    "seedling_photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260908005833_046.jpg",
+    "location_text": "https://github.com/TrueSightDAO/tokenomics/tree/main/python_scripts/agroverse_qr_code_generator/package_qr_codes/compiled_Santa_Ana_Fazenda_2024SA_20251227_35.png",
+    "linked_tree": "Edgar_20260908005833_045",
+    "linked_at": "2026-09-25T03:50:31.362Z"
   },
   "events": [
     {
@@ -24,13 +34,22 @@
       "type": "sold",
       "by": "AGL4",
       "notes": "Per Agroverse QR codes sheet status"
+    },
+    {
+      "type": "planted",
+      "at": "2026-09-08",
+      "by": "SOHA - David Campbell",
+      "notes": "Tree planted in the field"
     }
   ],
   "owner_email_hash": null,
-  "current_landing_page": "https://www.agroverse.shop/shipments/agl2",
+  "owner_email_present": true,
+  "sheet_row": 1250,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1250",
+  "current_landing_page": "https://agroverse.shop/shipments/agl2",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024SA_20251227_35.png",
   "scan_target": "https://truesight.me/qr/?id=2024SA_20251227_35",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024SA_20251227_35",
-  "_seeded_at": "2026-07-10T21:40:24Z",
+  "_seeded_at": "2026-09-25T18:00:26Z",
   "_source": "seed_from_sheet.py"
 }
