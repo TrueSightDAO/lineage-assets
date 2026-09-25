@@ -1,10 +1,10 @@
 {
   "qr_id": "2024OSCAR_20250711_NIBS_2",
-  "asset_type": "cacao_bag",
+  "asset_type": "tree",
   "schema_version": "v0",
   "minted_at": "2025-07-11",
   "minted_by": "Gary Teh",
-  "status": "SOLD",
+  "status": "ASSIGNED_TO_TREE",
   "current_holder": null,
   "lineage": {
     "farm": "Oscar Farm",
@@ -13,7 +13,15 @@
     "harvest_year": "2024",
     "sku": "8 Ounce Package Kraft Pouch  CP340992735BR",
     "product_image": "https://static.wixstatic.com/media/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg/v1/fill/w_1000,h_1000,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg",
-    "price": "25"
+    "price": "25",
+    "planted_at": "2026-09-08",
+    "latitude": "-3.3896833",
+    "longitude": "-51.8509472",
+    "planting_video_url": "",
+    "seedling_photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260908005838_048.jpg",
+    "location_text": "https://github.com/TrueSightDAO/tokenomics/tree/main/python_scripts/agroverse_qr_code_generator/package_qr_codes/compiled_Oscar_Farm_2024OSCAR_20250711_NIBS_2.png",
+    "linked_tree": "Edgar_20260908005838_047",
+    "linked_at": "2026-09-25T18:24:41.877Z"
   },
   "events": [
     {
@@ -26,6 +34,12 @@
       "type": "sold",
       "by": "AGL4",
       "notes": "Per Agroverse QR codes sheet status"
+    },
+    {
+      "type": "planted",
+      "at": "2026-09-08",
+      "by": "Gary Teh",
+      "notes": "Tree planted in the field"
     }
   ],
   "owner_email_hash": null,
@@ -36,6 +50,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_20250711_NIBS_2.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20250711_NIBS_2",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20250711_NIBS_2",
-  "_seeded_at": "2026-09-25T18:00:25Z",
+  "_seeded_at": "2026-09-25T18:34:47Z",
   "_source": "seed_from_sheet.py"
 }
