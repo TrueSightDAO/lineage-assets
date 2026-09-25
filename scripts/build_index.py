@@ -47,6 +47,7 @@ def _row_for(manifest: dict) -> dict:
         "product":        lineage.get("sku", "") or "",
         "product_image":  lineage.get("product_image", "") or "",
         "price":          lineage.get("price", "") or "",
+        "owner_email_present": bool(manifest.get("owner_email_present")),
         "minted_at":      manifest.get("minted_at", "") or "",
         "current_holder": holder_name,
         "scan_target":    manifest.get("scan_target",
