@@ -19,6 +19,13 @@ TRUESIGHT_QR_BASE = "https://truesight.me/qr"
 EDGAR_RESOLVE_BASE = "https://edgar.truesight.me/agroverse/qr-code-check?qr_code="
 SCHEMA_VERSION = "v0"
 
+# The Agroverse QR codes tab in the Main Ledger. Safe to publish: the ledger is
+# NOT publicly readable (anonymous export returns HTTP 401), so a deep link is a
+# pointer that only resolves for a viewer who is ALREADY authorised — it leaks
+# no PII. The sheet id + gid are already present elsewhere in this repo.
+SHEET_ID = "1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU"
+QR_TAB_GID = "472328231"  # tab: "Agroverse QR codes"
+
 COL = {
     "qr_id":             0,
     "landing_page":      1,
@@ -161,6 +168,7 @@ def build_manifest(
     row: list,
     source: str = "seed_from_sheet.py",
     tree_links: dict | None = None,
+    sheet_row: int | None = None,
 ) -> dict | None:
     qr_id = cell(row, "qr_id")
     if not qr_id:
@@ -207,6 +215,16 @@ def build_manifest(
         # "linked to owner" badge (e.g. an unlinked SOLD bag = sale not yet
         # attributed).
         "owner_email_present":  bool(cell(row, "owner_email")),
+        # Deep link back to THIS row in the Main Ledger. Requires the viewer's
+        # own Google auth (sheet is not public, 401 for anon), so it exposes no
+        # PII while letting a governor jump straight to the owner's email.
+        "sheet_row":            sheet_row,
+        "sheet_url":            (
+            f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/edit"
+            f"#gid={QR_TAB_GID}&range=A{sheet_row}"
+            if sheet_row
+            else ""
+        ),
         "current_landing_page": cell(row, "landing_page"),
         "qr_image_url":         f"{QR_IMAGE_BASE}/{safe_filename(qr_id)}.png",
         "scan_target":          f"{TRUESIGHT_QR_BASE}/?id={qr_id}",

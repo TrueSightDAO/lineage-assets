@@ -246,9 +246,12 @@ def main() -> None:
         print(f"[info] limited to first {len(qr_rows)} rows")
 
     created = updated = unchanged = skipped = 0
-    for row in qr_rows:
+    for offset, row in enumerate(qr_rows):
         manifest = build_manifest(
-            row, source="seed_from_sheet.py", tree_links=tree_links
+            row,
+            source="seed_from_sheet.py",
+            tree_links=tree_links,
+            sheet_row=DATA_START_ROW + offset,
         )
         if manifest is None:
             skipped += 1
