@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-25T18:36:28Z",
+  "generated_at": "2026-09-25T21:48:17Z",
   "source": "build_index.py",
   "qr_count": 1823,
   "by_status": {
     "MINTED": 1091,
-    "SOLD": 583,
+    "SOLD": 580,
     "INVALIDATED": 4,
-    "ASSIGNED_TO_TREE": 12,
+    "ASSIGNED_TO_TREE": 15,
     "EXPENSED": 4,
     "VOID": 1,
     "SAMPLE": 90,
@@ -14,8 +14,8 @@
     "GIFT": 3
   },
   "by_asset_type": {
-    "cacao_bag": 1292,
-    "tree": 531
+    "cacao_bag": 1289,
+    "tree": 534
   },
   "qrs": [
     {
@@ -11682,8 +11682,8 @@
     },
     {
       "qr_id": "2024OSCAR_20251124_13",
-      "asset_type": "cacao_bag",
-      "status": "SOLD",
+      "asset_type": "tree",
+      "status": "ASSIGNED_TO_TREE",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -23905,8 +23905,8 @@
     },
     {
       "qr_id": "2024OSCAR_20251020_11",
-      "asset_type": "cacao_bag",
-      "status": "SOLD",
+      "asset_type": "tree",
+      "status": "ASSIGNED_TO_TREE",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -25979,8 +25979,8 @@
     },
     {
       "qr_id": "2024OSCAR_20250711_NIBS_19",
-      "asset_type": "cacao_bag",
-      "status": "SOLD",
+      "asset_type": "tree",
+      "status": "ASSIGNED_TO_TREE",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",

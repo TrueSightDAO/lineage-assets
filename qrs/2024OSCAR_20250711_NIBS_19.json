@@ -14,10 +14,14 @@
     "sku": "8 Ounce Package Kraft Pouch  CP340992735BR",
     "product_image": "https://static.wixstatic.com/media/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg/v1/fill/w_1000,h_1000,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg",
     "price": "25",
-    "latitude": -3.3899833,
-    "longitude": -51.8518861,
+    "planted_at": "2026-09-08",
+    "latitude": "-3.3899833",
+    "longitude": "-51.8518861",
+    "planting_video_url": "",
+    "seedling_photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260908010207_056.jpg",
+    "location_text": "https://github.com/TrueSightDAO/tokenomics/tree/main/python_scripts/agroverse_qr_code_generator/package_qr_codes/compiled_Oscar_Farm_2024OSCAR_20250711_NIBS_19.png",
     "linked_tree": "Edgar_20260908010207_055",
-    "linked_at": "2026-09-25T21:39:41.000Z"
+    "linked_at": "2026-09-25T21:39:41.694Z"
   },
   "events": [
     {
@@ -46,6 +50,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_20250711_NIBS_19.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20250711_NIBS_19",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20250711_NIBS_19",
-  "_seeded_at": "2026-09-25T18:36:28Z",
+  "_seeded_at": "2026-09-25T21:48:16Z",
   "_source": "seed_from_sheet.py"
 }

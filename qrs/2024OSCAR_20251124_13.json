@@ -1,51 +1,55 @@
 {
- "qr_id": "2024OSCAR_20251124_13",
- "asset_type": "tree",
- "schema_version": "v0",
- "minted_at": "2025-11-24",
- "minted_by": "Jae Nice",
- "status": "ASSIGNED_TO_TREE",
- "current_holder": null,
- "lineage": {
-  "farm": "Oscar Farm",
-  "state": "Bahia",
-  "country": "Brazil",
-  "harvest_year": "2024",
-  "sku": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Oscar 2024 | CP340993988BR San Francisco | Kirsten 20251124 | San Francisco - AGL4",
-  "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
-  "price": "25",
-  "latitude": -3.3879722,
-  "longitude": -51.8514333,
-  "linked_tree": "Edgar_20260908010203_053",
-  "linked_at": "2026-09-25T19:46:56.000Z"
- },
- "events": [
-  {
-   "type": "minted",
-   "at": "2025-11-24",
-   "by": "Jae Nice",
-   "notes": "QR generated and registered on Agroverse QR codes sheet"
+  "qr_id": "2024OSCAR_20251124_13",
+  "asset_type": "tree",
+  "schema_version": "v0",
+  "minted_at": "2025-11-24",
+  "minted_by": "Jae Nice",
+  "status": "ASSIGNED_TO_TREE",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Oscar Farm",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2024",
+    "sku": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Oscar 2024 | CP340993988BR San Francisco | Kirsten 20251124 | San Francisco - AGL4",
+    "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+    "price": "25",
+    "planted_at": "2026-09-08",
+    "latitude": "-3.3879722",
+    "longitude": "-51.8514333",
+    "planting_video_url": "",
+    "seedling_photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260908010203_054.jpg",
+    "location_text": "https://github.com/TrueSightDAO/tokenomics/tree/main/python_scripts/agroverse_qr_code_generator/package_qr_codes/compiled_Oscar_Farm_2024OSCAR_20251124_13.png",
+    "linked_tree": "Edgar_20260908010203_053",
+    "linked_at": "2026-09-25T19:46:53.894Z"
   },
-  {
-   "type": "sold",
-   "by": "AGL4",
-   "notes": "Per Agroverse QR codes sheet status"
-  },
-  {
-   "type": "planted",
-   "at": "2026-09-08",
-   "by": "Gary Teh",
-   "notes": "Tree planted in the field"
-  }
- ],
- "owner_email_hash": "93d396590df90d9a",
- "owner_email_present": true,
- "sheet_row": 1109,
- "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1109",
- "current_landing_page": "https://agroverse.shop/shipments/agl4",
- "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_20251124_13.png",
- "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20251124_13",
- "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20251124_13",
- "_seeded_at": "2026-09-25T18:36:28Z",
- "_source": "seed_from_sheet.py"
+  "events": [
+    {
+      "type": "minted",
+      "at": "2025-11-24",
+      "by": "Jae Nice",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL4",
+      "notes": "Per Agroverse QR codes sheet status"
+    },
+    {
+      "type": "planted",
+      "at": "2026-09-08",
+      "by": "Jae Nice",
+      "notes": "Tree planted in the field"
+    }
+  ],
+  "owner_email_hash": "93d396590df90d9a",
+  "owner_email_present": true,
+  "sheet_row": 1109,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1109",
+  "current_landing_page": "https://agroverse.shop/shipments/agl4",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_20251124_13.png",
+  "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20251124_13",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20251124_13",
+  "_seeded_at": "2026-09-25T21:48:17Z",
+  "_source": "seed_from_sheet.py"
 }
