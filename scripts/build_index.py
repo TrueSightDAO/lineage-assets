@@ -48,6 +48,7 @@ def _row_for(manifest: dict) -> dict:
         "product_image":  lineage.get("product_image", "") or "",
         "price":          lineage.get("price", "") or "",
         "owner_email_present": bool(manifest.get("owner_email_present")),
+        "owner_email_hash":   manifest.get("owner_email_hash") or "",
         "sheet_url":      manifest.get("sheet_url", "") or "",
         "minted_at":      manifest.get("minted_at", "") or "",
         "current_holder": holder_name,

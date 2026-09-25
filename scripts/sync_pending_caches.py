@@ -155,6 +155,10 @@ def build_sold_pending(rows: list, index: dict) -> dict:
             "price": rec.get("price", ""),
             # Boolean only — never the email itself (PII stays out of the public cache).
             "owner_email_present": bool(rec.get("owner_email_present")),
+            # Peppered blind-index token (HMAC-SHA256 of the email). Same email
+            # -> same token, so the app can match "my bags" without the email
+            # ever being stored or published. Empty when no pepper is set.
+            "owner_email_hash": rec.get("owner_email_hash", "") or "",
             # Deep link to the ledger row (auth-gated by Google, not PII).
             "sheet_url": rec.get("sheet_url", ""),
             "minted_at": rec.get("minted_at", ""),

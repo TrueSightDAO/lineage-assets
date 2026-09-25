@@ -44,6 +44,25 @@ Events are append-only — never edit historical events, only append new
 ones. If a status correction is needed, append a `corrected` event
 referencing the prior event.
 
+## PII & the owner blind index
+
+The wrapper and index carry **no raw PII**. Owner attribution is exposed only
+as a peppered **blind index** so the app can answer *"which bags are mine?"*
+without the email ever being stored or published:
+
+```jsonc
+"owner_email_hash":    "string|null"  // HMAC_SHA256(pepper,lower(email))[:16]
+"owner_email_present": true|false     // is an owner email on file at all?
+```
+
+- Same email -> same token (16 hex chars), so bags can be grouped by owner.
+- The **pepper** (`OWNER_EMAIL_PEPPER`, env only) is a secret and is never
+  committed or written into any JSON. **With no pepper set the field is
+  `null`/empty** -- an unpeppered hash would be guessable, so we fail closed.
+- Rotating the pepper invalidates every published token: a key ceremony.
+- Trade-off: equal tokens publicly link one owner's bags to *each other* (not
+  to their identity) -- inherent to a blind index, accepted deliberately.
+
 ## Asset-type extensions
 
 ### `cacao_bag` (v0 — shipping today)

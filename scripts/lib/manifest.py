@@ -14,6 +14,11 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+try:  # imported as part of the `lib` package (seed_from_sheet.py)
+    from .blind_index import compute_owner_email_hash
+except ImportError:  # pragma: no cover - run as a top-level module
+    from blind_index import compute_owner_email_hash  # type: ignore
+
 QR_IMAGE_BASE = "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs"
 TRUESIGHT_QR_BASE = "https://truesight.me/qr"
 EDGAR_RESOLVE_BASE = "https://edgar.truesight.me/agroverse/qr-code-check?qr_code="
@@ -209,7 +214,11 @@ def build_manifest(
         "current_holder":       current_holder,
         "lineage":              lineage,
         "events":               build_events(row, asset_type),
-        "owner_email_hash":     None,
+        # Peppered blind index (HMAC-SHA256(pepper, normalized email)). Same
+        # email -> same token, so the app can match "my bags" without the email
+        # ever being stored or published. None when no OWNER_EMAIL_PEPPER is
+        # configured (fail closed -- never emit an unpeppered hash).
+        "owner_email_hash":     compute_owner_email_hash(cell(row, "owner_email")),
         # Non-PII signal: is this QR linked to a buyer/owner email at all?
         # A boolean derived from col L leaks NO PII but lets ops pages show a
         # "linked to owner" badge (e.g. an unlinked SOLD bag = sale not yet
