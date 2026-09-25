@@ -1,17 +1,25 @@
 {
   "qr_id": "2024OSCAR_20251011_2",
-  "asset_type": "cacao_bag",
+  "asset_type": "tree",
   "schema_version": "v0",
   "minted_at": "2025-07-28",
   "minted_by": "Green Gulch Zen Monastery",
-  "status": "SOLD",
+  "status": "ASSIGNED_TO_TREE",
   "current_holder": null,
   "lineage": {
     "farm": "Oscar Farm",
     "state": "Bahia",
     "country": "Brazil",
     "harvest_year": "2024",
-    "sku": "Ceremonial Cacao Kraft Pouch - 20250219006 + Cacao Mass Bar CP340993299BR  San Francisco"
+    "sku": "Ceremonial Cacao Kraft Pouch - 20250219006 + Cacao Mass Bar CP340993299BR  San Francisco",
+    "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+    "price": "25",
+    "planted_at": "2026-09-24",
+    "latitude": "-3.5229189",
+    "longitude": "-51.5749705",
+    "planting_video_url": "",
+    "seedling_photo_url": "https://github.com/TrueSightDAO/sunmint/tree/main/images/20260924102330_MIIBIjANBgkqhkiG9w0B.jpg",
+    "location_text": "https://github.com/TrueSightDAO/tokenomics/tree/main/python_scripts/agroverse_qr_code_generator/package_qr_codes/compiled_Oscar_Farm_2024OSCAR_20251011_2.png"
   },
   "events": [
     {
@@ -24,13 +32,22 @@
       "type": "sold",
       "by": "AGL4",
       "notes": "Per Agroverse QR codes sheet status"
+    },
+    {
+      "type": "planted",
+      "at": "2026-09-24",
+      "by": "Green Gulch Zen Monastery",
+      "notes": "Tree planted in the field"
     }
   ],
   "owner_email_hash": null,
-  "current_landing_page": "https://www.agroverse.shop/shipments/agl4",
+  "owner_email_present": true,
+  "sheet_row": null,
+  "sheet_url": "",
+  "current_landing_page": "https://agroverse.shop/shipments/agl4",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_20251011_2.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20251011_2",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20251011_2",
-  "_seeded_at": "2026-07-10T21:40:23Z",
+  "_seeded_at": "2026-09-25T17:57:56Z",
   "_source": "seed_from_sheet.py"
 }
