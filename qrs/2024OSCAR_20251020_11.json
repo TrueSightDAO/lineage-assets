@@ -1,10 +1,10 @@
 {
   "qr_id": "2024OSCAR_20251020_11",
-  "asset_type": "cacao_bag",
+  "asset_type": "tree",
   "schema_version": "v0",
   "minted_at": "2025-07-28",
   "minted_by": "Kirsten Ritschel",
-  "status": "SOLD",
+  "status": "ASSIGNED_TO_TREE",
   "current_holder": null,
   "lineage": {
     "farm": "Oscar Farm",
@@ -13,7 +13,14 @@
     "harvest_year": "2024",
     "sku": "Ceremonial Cacao Kraft Pouch - 20250219006 + Cacao Mass Bar CP340993299BR  San Francisco",
     "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
-    "price": "25"
+    "price": "25",
+    "planted_at": "2026-09-08",
+    "latitude": "-3.3899861",
+    "longitude": "-51.8525056",
+    "planting_video_url": "",
+    "seedling_photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260908005843_050.jpg",
+    "linked_tree": "Edgar_20260908005843_049",
+    "linked_at": "2026-09-25T19:29:11.671Z"
   },
   "events": [
     {
@@ -26,6 +33,12 @@
       "type": "sold",
       "by": "AGL4",
       "notes": "Per Agroverse QR codes sheet status"
+    },
+    {
+      "type": "planted",
+      "at": "2026-09-08",
+      "by": "Gary Teh",
+      "notes": "Tree planted in the field"
     }
   ],
   "owner_email_hash": "5f5c4239851afae6",
