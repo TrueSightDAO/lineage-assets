@@ -98,6 +98,11 @@ def build_lineage(row: list, asset_type: str) -> dict:
         "country":      cell(row, "country"),
         "harvest_year": cell(row, "year"),
         "sku":          cell(row, "currency"),
+        # Non-PII product context (cols S/T on the Agroverse QR codes sheet).
+        # Surfaced so governor ops pages can show WHAT was sold without exposing
+        # owner emails in the public cache.
+        "product_image": cell(row, "product_image"),
+        "price":         cell(row, "price"),
     }
     if asset_type == "tree":
         base.update({
