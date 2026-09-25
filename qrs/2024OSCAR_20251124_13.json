@@ -28,7 +28,7 @@
       "notes": "Per Agroverse QR codes sheet status"
     }
   ],
-  "owner_email_hash": null,
+  "owner_email_hash": "93d396590df90d9a",
   "owner_email_present": true,
   "sheet_row": 1109,
   "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1109",
@@ -36,6 +36,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_20251124_13.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20251124_13",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20251124_13",
-  "_seeded_at": "2026-09-25T18:00:26Z",
+  "_seeded_at": "2026-09-25T18:36:28Z",
   "_source": "seed_from_sheet.py"
 }
