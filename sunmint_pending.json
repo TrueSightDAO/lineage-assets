@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 148,
+  "count": 147,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903083532_007",
@@ -39,16 +39,6 @@
       "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260902_bomsucesso_tree09.jpg",
       "latitude": "-3.094333",
       "longitude": "-52.096053",
-      "species": "Cacau - Hybrid",
-      "status": "NEW"
-    },
-    {
-      "telegram_message_id": "Edgar_20260908010207_055",
-      "submitted_name": "Sophia Truesight",
-      "planting_date": "2026-09-08",
-      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260908010207_056.jpg",
-      "latitude": "-3.3899833",
-      "longitude": "-51.8518861",
       "species": "Cacau - Hybrid",
       "status": "NEW"
     },
