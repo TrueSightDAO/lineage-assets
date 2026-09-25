@@ -19,7 +19,9 @@
     "longitude": "-51.5749705",
     "planting_video_url": "",
     "seedling_photo_url": "https://github.com/TrueSightDAO/sunmint/tree/main/images/20260924102330_MIIBIjANBgkqhkiG9w0B.jpg",
-    "location_text": "https://github.com/TrueSightDAO/tokenomics/tree/main/python_scripts/agroverse_qr_code_generator/package_qr_codes/compiled_Oscar_Farm_2024OSCAR_20251011_2.png"
+    "location_text": "https://github.com/TrueSightDAO/tokenomics/tree/main/python_scripts/agroverse_qr_code_generator/package_qr_codes/compiled_Oscar_Farm_2024OSCAR_20251011_2.png",
+    "linked_tree": "Edgar_20260924132334_099",
+    "linked_at": "2026-09-25T17:24:50.421Z"
   },
   "events": [
     {
@@ -48,6 +50,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024OSCAR_20251011_2.png",
   "scan_target": "https://truesight.me/qr/?id=2024OSCAR_20251011_2",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024OSCAR_20251011_2",
-  "_seeded_at": "2026-09-25T17:57:56Z",
+  "_seeded_at": "2026-09-25T17:58:34Z",
   "_source": "seed_from_sheet.py"
 }
