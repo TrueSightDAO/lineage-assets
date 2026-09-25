@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 466,
+  "count": 465,
   "items": [
     {
       "qr_code": "2024OSCAR_AGL14_20260911_9",
@@ -1452,14 +1452,6 @@
     },
     {
       "qr_code": "2024SA_20251227_36",
-      "status": "SOLD",
-      "farm": "Santa Ana Fazenda",
-      "country": "Brazil",
-      "harvest_year": "2023",
-      "minted_at": "2025-12-27"
-    },
-    {
-      "qr_code": "2024SA_20251227_35",
       "status": "SOLD",
       "farm": "Santa Ana Fazenda",
       "country": "Brazil",
