@@ -1,0 +1,3 @@
+# Third-party deps for scripts/ (everything else is stdlib).
+# The autopilot box installs these globally; CI installs them here.
+gspread>=6.0

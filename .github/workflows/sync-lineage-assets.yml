@@ -1,0 +1,91 @@
+# Scheduled regeneration of the lineage-assets cache.
+#
+# WHY: nothing scheduled scripts/sync_lineage_assets.py, so qrs/*.json +
+# qrs_index.json drifted from the sheets (index was frozen 2026-09-24 until a
+# manual re-seed -- the P0n staleness bug). This workflow owns that job instead
+# of a human/agent running it by hand.
+#
+# The run is a no-op when the sheets and the cache already agree: the
+# orchestrator commits + pushes ONLY when the working tree actually changed.
+#
+# Required repository secrets:
+#   GOOGLE_CREDENTIALS_JSON -- contents of the Agroverse ledger-manager service
+#     account JSON (read access to the Main Ledger + the SunMint Tree Planting
+#     sheet). Used to build the manifests.
+#   OWNER_EMAIL_PEPPER     -- the HMAC blind-index pepper (see scripts/lib/
+#     blind_index.py). If it is unset the sync STILL RUNS but every
+#     owner_email_hash comes out blank (fail-closed) and a warning is raised.
+#
+# GITHUB_TOKEN (built-in) is used for the commit + push -- no extra PAT needed.
+# Pushes made with GITHUB_TOKEN do not re-trigger workflows, which is what we
+# want (no accidental loop with any other workflow).
+
+name: Sync lineage assets (seed + index)
+
+on:
+  workflow_dispatch: # manual "run now"
+  schedule:
+    # Hourly, offset from :00/:30 (box crons) and :27 (advisory snapshot).
+    # If this repo is PUBLIC (Actions minutes are free), tighten to "13,43 * * * *"
+    # to match the box's 30-minute downstream cache cadence.
+    - cron: "13 * * * *"
+
+concurrency:
+  group: sync-lineage-assets
+  cancel-in-progress: false # the job pushes; never race two of them
+
+permissions:
+  contents: write # commit + push qrs_index.json back to main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout lineage-assets
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --quiet --upgrade pip
+          python3 -m pip install --quiet -r requirements.txt
+
+      - name: Fail fast if required secrets are missing
+        env:
+          SA: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          PEPPER: ${{ secrets.OWNER_EMAIL_PEPPER }}
+        run: |
+          [ -n "$SA" ] || { echo "::error::Repo secret GOOGLE_CREDENTIALS_JSON is not set"; exit 1; }
+          [ -n "$PEPPER" ] || echo "::warning::OWNER_EMAIL_PEPPER is not set -- owner_email_hash will be published blank"
+
+      - name: Write Google service-account JSON (outside the repo)
+        # NOTE: the orchestrator runs `git clean -fdq` on the repo dir, so the
+        # creds MUST live outside $GITHUB_WORKSPACE or they would be deleted.
+        env:
+          SA: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/creds"
+          printf '%s' "$SA" > "$RUNNER_TEMP/creds/sa.json"
+          chmod 600 "$RUNNER_TEMP/creds/sa.json"
+
+      - name: Configure git identity
+        run: |
+          git config --global user.name "truesight-bot"
+          git config --global user.email "sophia@truesight.me"
+
+      - name: Seed manifests + rebuild index, commit + push if changed
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/creds/sa.json
+          OWNER_EMAIL_PEPPER: ${{ secrets.OWNER_EMAIL_PEPPER }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/sync_lineage_assets.py \
+            --repo-dir "$GITHUB_WORKSPACE" \
+            --creds "$GOOGLE_APPLICATION_CREDENTIALS" \
+            --push

@@ -17,6 +17,12 @@ could brute-force.
 
 Rotating the pepper invalidates every previously published token (all lookups
 break) -- treat it as a key ceremony, not a config tweak.
+
+The pepper is DISTRIBUTED to CI under a dedicated RSA key pair (envelope
+encryption): the secret travels only as an RSA-encrypted blob, the private key
+lives in the vault, the public key in the Actions repo. That is separate from
+the index math — the index itself is always HMAC (a public-key index would be
+guessable AND non-deterministic; see SCHEMA.md).
 """
 from __future__ import annotations
 
