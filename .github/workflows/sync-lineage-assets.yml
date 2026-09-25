@@ -25,10 +25,11 @@ name: Sync lineage assets (seed + index)
 on:
   workflow_dispatch: # manual "run now"
   schedule:
-    # Hourly, offset from :00/:30 (box crons) and :27 (advisory snapshot).
-    # If this repo is PUBLIC (Actions minutes are free), tighten to "13,43 * * * *"
-    # to match the box's 30-minute downstream cache cadence.
-    - cron: "13 * * * *"
+    # Every 30 min, offset from :00/:30 (box crons) and :27 (advisory snapshot).
+    # This repo is PUBLIC, so Actions minutes are free -- the 30-min cadence
+    # matches the box's downstream cache refresh. (If it ever goes private,
+    # loosen to hourly "13 * * * *" to stay inside the 2,000 free min/month.)
+    - cron: "13,43 * * * *"
 
 concurrency:
   group: sync-lineage-assets
