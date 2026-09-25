@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 468,
+  "count": 466,
   "items": [
     {
       "qr_code": "2024OSCAR_AGL14_20260911_9",
@@ -3006,19 +3006,6 @@
       "minted_at": "2025-11-24"
     },
     {
-      "qr_code": "2024OSCAR_20251124_13",
-      "status": "SOLD",
-      "farm": "Oscar Farm",
-      "country": "Brazil",
-      "harvest_year": "2024",
-      "product": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Oscar 2024 | CP340993988BR San Francisco | Kirsten 20251124 | San Francisco - AGL4",
-      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
-      "price": "25",
-      "owner_email_present": true,
-      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1109",
-      "minted_at": "2025-11-24"
-    },
-    {
       "qr_code": "2024OSCAR_20251124_1",
       "status": "SOLD",
       "farm": "Oscar Farm",
@@ -4186,19 +4173,6 @@
       "price": "25",
       "owner_email_present": false,
       "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1025",
-      "minted_at": "2025-07-28"
-    },
-    {
-      "qr_code": "2024OSCAR_20251020_11",
-      "status": "SOLD",
-      "farm": "Oscar Farm",
-      "country": "Brazil",
-      "harvest_year": "2024",
-      "product": "Ceremonial Cacao Kraft Pouch - 20250219006 + Cacao Mass Bar CP340993299BR  San Francisco",
-      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
-      "price": "25",
-      "owner_email_present": true,
-      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1024",
       "minted_at": "2025-07-28"
     },
     {
