@@ -6,16 +6,19 @@ NOT key-gated GAS endpoints. This script produces those caches:
 
   - sunmint_pending.json    {"status":"success","items":[{telegram_message_id,
                              submitted_name, planting_date, latitude, longitude,
-                             species, status, submission_source}]}
+                             species, status, submission_source, program}]}
                              -- SunMint rows with Status == NEW.
                              `submission_source` is the origin of the submission
                              (the app URL/host it was generated from, e.g.
-                             https://cfr.truesight.me/). The dapp program filter
-                             resolves its host -> program slug via the registry
-                             (lineage-engine/scripts/sunmint_program_registry.json),
-                             so the CRF-Anapu "View cohort" payout list can narrow
-                             to trees submitted via cfr.truesight.me. It is a host /
-                             sentinel, never a person.
+                             https://cfr.truesight.me/). `program` is that origin
+                             RESOLVED to a lineage-credentials program slug via the
+                             registry (lineage-engine/scripts/
+                             sunmint_program_registry.json) -- e.g. cfr.truesight.me
+                             -> "crf-anapu". It is EMPTY when the submission is not
+                             attributable to any registered program, so the dapp
+                             program filter is a strict equality match: a tree shows
+                             under a program only when its `program` equals it.
+                             Both fields are host/sentinel-level, never a person.
   - sold_pending_tree.json  {"status":"success","items":[{qr_code, status, farm,
                              country, harvest_year, product, product_image, price,
                              owner_email_present, sheet_url, minted_at}]}
@@ -33,6 +36,7 @@ Usage:
     GOOGLE_APPLICATION_CREDENTIALS=/path/to/sa.json GITHUB_TOKEN=... python3 scripts/sync_pending_caches.py --push
     (without --push the two JSON files are written locally to ./)
 """
+
 from __future__ import annotations
 
 import argparse
@@ -47,14 +51,32 @@ import gspread
 
 SOURCE_SHEET_ID = "1qbZZhf-_7xzmDTriaJVWj6OZshyQsFkdsAV8-pyzASQ"
 SUNMINT_TAB = "SunMint Tree Planting"
-QRS_INDEX_URL = "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/qrs_index.json"
+QRS_INDEX_URL = (
+    "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/qrs_index.json"
+)
 GH_API = "https://api.github.com/repos/TrueSightDAO/lineage-assets/contents/"
+# host -> program slug (Option B attribution). Same registry the sibling
+# lineage-engine/scripts/sync_sunmint_program_activity.py uses.
+PROGRAM_REGISTRY_URL = (
+    "https://raw.githubusercontent.com/TrueSightDAO/lineage-engine/main/"
+    "scripts/sunmint_program_registry.json"
+)
+_URL_HOST_RE = re.compile(r"^[a-zA-Z][\w+.-]*://([^/?#]+)")
 
 # SunMint tab columns (0-based): D=msg id, F=contribution (origin lives here),
 # G=status date, J=submitted name, K=lat, L=lng, M=status, N=specie, R=linked QR
-COL = {"msg_id": 3, "source": 5, "status_date": 6, "name": 9, "photo_url": 8,
-       "latitude": 10, "longitude": 11, "status": 12, "species": 13,
-       "linked_qr": 17}
+COL = {
+    "msg_id": 3,
+    "source": 5,
+    "status_date": 6,
+    "name": 9,
+    "photo_url": 8,
+    "latitude": 10,
+    "longitude": 11,
+    "status": 12,
+    "species": 13,
+    "linked_qr": 17,
+}
 
 # The submission origin is NOT a dedicated column: it rides inside the
 # "Contribution Made" cell (col F), either as a "Submission Source: <url>" line or,
@@ -62,7 +84,8 @@ COL = {"msg_id": 3, "source": 5, "status_date": 6, "name": 9, "photo_url": 8,
 # Mirrors the parsing already used by
 # lineage-engine/scripts/sync_sunmint_program_activity.py so attribution agrees.
 _SUBMISSION_SOURCE_RE = re.compile(
-    r"^\s*[-*]?\s*Submission\s*Source\s*:\s*(.+?)\s*$", re.MULTILINE)
+    r"^\s*[-*]?\s*Submission\s*Source\s*:\s*(.+?)\s*$", re.MULTILINE
+)
 _GENERATED_USING_RE = re.compile(r"generated using\s+(\S+)", re.IGNORECASE)
 
 
@@ -84,6 +107,36 @@ def _submission_source(text: str) -> str:
     return ""
 
 
+def _source_host(value: str) -> str:
+    """Normalise a Submission Source value to a lowercase host, when it is a URL.
+
+    A non-URL sentinel (e.g. "autopilot-sophia") is returned lowercased unchanged,
+    so it simply fails the host-registry lookup instead of raising. Mirrors
+    lineage-engine/scripts/sync_sunmint_program_activity.py:source_host.
+    """
+    if not value:
+        return ""
+    m = _URL_HOST_RE.match(value.strip())
+    if m:
+        return m.group(1).lower()
+    return value.strip().lower()
+
+
+def _load_registry(payload: dict | None) -> dict:
+    """Return {host: program_slug} from a fetched registry payload."""
+    hosts = (payload or {}).get("hosts") or {}
+    return {str(k).lower(): str(v) for k, v in hosts.items()}
+
+
+def _resolve_program(submission_source: str, registry: dict) -> str:
+    """Resolve a Submission Source to a program slug ('' when unregistered).
+
+    The dapp filters strictly on this: an unattributable submission gets '' and
+    therefore matches no program, rather than silently appearing under all.
+    """
+    return registry.get(_source_host(submission_source), "")
+
+
 def _cell(row: list, key: str) -> str:
     idx = COL[key]
     return (row[idx] if idx < len(row) else "").strip()
@@ -95,6 +148,7 @@ def _iso_date(yyyymmdd: str) -> str:
         return yyyymmdd.strip()
     return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
 
+
 def _normalize_photo_url(url: str) -> str:
     """GitHub 'tree' URLs (browse HTML pages) are not renderable as <img>.
     Rewrite github.com/<o>/<r>/tree/<ref>/... -> raw.githubusercontent.com/<o>/<r>/<ref>/...
@@ -104,7 +158,6 @@ def _normalize_photo_url(url: str) -> str:
     if m:
         return f"https://raw.githubusercontent.com/{m.group(1)}/{m.group(2)}/{m.group(3)}/{m.group(4)}"
     return url
-
 
 
 def _fetch(url: str) -> dict:
@@ -127,11 +180,13 @@ def _upload(path: str, payload: dict) -> None:
             sha = json.load(r0).get("sha")
     except urllib.error.HTTPError:
         pass  # file may not exist yet — PUT without sha creates it
-    data = json.dumps({
-        "message": f"cache(scripts): refresh {path} (sync_pending_caches.py)",
-        "content": base64.b64encode(body.encode()).decode(),
-        "sha": sha,
-    }).encode()
+    data = json.dumps(
+        {
+            "message": f"cache(scripts): refresh {path} (sync_pending_caches.py)",
+            "content": base64.b64encode(body.encode()).decode(),
+            "sha": sha,
+        }
+    ).encode()
     req = urllib.request.Request(GH_API + path, data=data, method="PUT")
     req.add_header("Authorization", f"Bearer {token}")
     req.add_header("Accept", "application/vnd.github+json")
@@ -145,7 +200,8 @@ def _upload(path: str, payload: dict) -> None:
             raise
 
 
-def build_sunmint_pending(rows: list) -> dict:
+def build_sunmint_pending(rows: list, registry: dict | None = None) -> dict:
+    registry = registry or {}
     items = []
     for row in rows:
         status = _cell(row, "status").upper()
@@ -154,19 +210,23 @@ def build_sunmint_pending(rows: list) -> dict:
         msg_id = _cell(row, "msg_id")
         if not msg_id:
             continue
-        items.append({
-            "telegram_message_id": msg_id,
-            "submitted_name": _cell(row, "name"),
-            "planting_date": _iso_date(_cell(row, "status_date")),
-            "photo_url": _normalize_photo_url(_cell(row, "photo_url")),
-            "latitude": _cell(row, "latitude"),
-            "longitude": _cell(row, "longitude"),
-            "species": _cell(row, "species"),
-            "status": "NEW",
-            # Origin host/sentinel (host -> slug resolved by the dapp via the
-            # registry). Host or sentinel only -- never a person, never PII.
-            "submission_source": _submission_source(_cell(row, "source")),
-        })
+        source = _submission_source(_cell(row, "source"))
+        items.append(
+            {
+                "telegram_message_id": msg_id,
+                "submitted_name": _cell(row, "name"),
+                "planting_date": _iso_date(_cell(row, "status_date")),
+                "photo_url": _normalize_photo_url(_cell(row, "photo_url")),
+                "latitude": _cell(row, "latitude"),
+                "longitude": _cell(row, "longitude"),
+                "species": _cell(row, "species"),
+                "status": "NEW",
+                # Origin host/sentinel plus that origin RESOLVED to a program slug
+                # ('' when not attributable). Host/sentinel only -- never a person.
+                "submission_source": source,
+                "program": _resolve_program(source, registry),
+            }
+        )
     return {"status": "success", "count": len(items), "items": items}
 
 
@@ -182,27 +242,29 @@ def build_sold_pending(rows: list, index: dict) -> dict:
         qr_id = rec.get("qr_id")
         if not qr_id or qr_id in linked:
             continue
-        items.append({
-            "qr_code": qr_id,
-            "status": rec.get("status", "SOLD"),
-            "farm": rec.get("farm", ""),
-            "country": rec.get("country", ""),
-            "harvest_year": rec.get("harvest_year", ""),
-            # Non-PII product context so the governor link page can show the
-            # product image + the price it sold at (owner email stays out).
-            "product": rec.get("product", ""),
-            "product_image": rec.get("product_image", ""),
-            "price": rec.get("price", ""),
-            # Boolean only — never the email itself (PII stays out of the public cache).
-            "owner_email_present": bool(rec.get("owner_email_present")),
-            # Peppered blind-index token (HMAC-SHA256 of the email). Same email
-            # -> same token, so the app can match "my bags" without the email
-            # ever being stored or published. Empty when no pepper is set.
-            "owner_email_hash": rec.get("owner_email_hash", "") or "",
-            # Deep link to the ledger row (auth-gated by Google, not PII).
-            "sheet_url": rec.get("sheet_url", ""),
-            "minted_at": rec.get("minted_at", ""),
-        })
+        items.append(
+            {
+                "qr_code": qr_id,
+                "status": rec.get("status", "SOLD"),
+                "farm": rec.get("farm", ""),
+                "country": rec.get("country", ""),
+                "harvest_year": rec.get("harvest_year", ""),
+                # Non-PII product context so the governor link page can show the
+                # product image + the price it sold at (owner email stays out).
+                "product": rec.get("product", ""),
+                "product_image": rec.get("product_image", ""),
+                "price": rec.get("price", ""),
+                # Boolean only — never the email itself (PII stays out of the public cache).
+                "owner_email_present": bool(rec.get("owner_email_present")),
+                # Peppered blind-index token (HMAC-SHA256 of the email). Same email
+                # -> same token, so the app can match "my bags" without the email
+                # ever being stored or published. Empty when no pepper is set.
+                "owner_email_hash": rec.get("owner_email_hash", "") or "",
+                # Deep link to the ledger row (auth-gated by Google, not PII).
+                "sheet_url": rec.get("sheet_url", ""),
+                "minted_at": rec.get("minted_at", ""),
+            }
+        )
     return {"status": "success", "count": len(items), "items": items}
 
 
@@ -225,11 +287,18 @@ def main() -> None:
     print(f"[info] sunmint pending: {sunmint['count']}")
 
     index = _fetch(QRS_INDEX_URL)
+    registry = _load_registry(_fetch(PROGRAM_REGISTRY_URL))
+    print(f"[info] program registry: {registry}")
+    sunmint = build_sunmint_pending(rows, registry)
+    print(f"[info] sunmint pending: {sunmint['count']}")
+
     sold = build_sold_pending(rows, index)
     print(f"[info] sold pending tree link: {sold['count']}")
 
-    for path, payload in (("sunmint_pending.json", sunmint),
-                          ("sold_pending_tree.json", sold)):
+    for path, payload in (
+        ("sunmint_pending.json", sunmint),
+        ("sold_pending_tree.json", sold),
+    ):
         if args.push:
             _upload(path, payload)
         else:
