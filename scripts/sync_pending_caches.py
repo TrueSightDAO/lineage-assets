@@ -6,7 +6,8 @@ NOT key-gated GAS endpoints. This script produces those caches:
 
   - sunmint_pending.json    {"status":"success","items":[{telegram_message_id,
                              submitted_name, planting_date, latitude, longitude,
-                             species, status, submission_source, program}]}
+                             species, status, submission_source, program,
+                             request_txid}]}
                              -- SunMint rows with Status == NEW.
                              `submission_source` is the origin of the submission
                              (the app URL/host it was generated from, e.g.
@@ -76,6 +77,8 @@ COL = {
     "status": 12,
     "species": 13,
     "linked_qr": 17,
+    # V request_transaction_id — the signed txid (col V, 0-based 21). PUBLIC by design.
+    "request_txid": 21,
 }
 
 # The submission origin is NOT a dedicated column: it rides inside the
@@ -225,6 +228,12 @@ def build_sunmint_pending(rows: list, registry: dict | None = None) -> dict:
                 # ('' when not attributable). Host/sentinel only -- never a person.
                 "submission_source": source,
                 "program": _resolve_program(source, registry),
+                # The signed Request Transaction ID (col V). PUBLIC by design — it IS the
+                # signature over the payload and is what makes the submission verifiable
+                # + gives the dapp a stable dup/join key (see
+                # agentic_ai_context/conventions/DEDUP_KEY_CONVENTION.md §2.6). Empty on
+                # rows that predate the txid column.
+                "request_txid": _cell(row, "request_txid"),
             }
         )
     return {"status": "success", "count": len(items), "items": items}
