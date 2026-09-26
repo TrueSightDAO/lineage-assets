@@ -13,7 +13,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from sync_pending_caches import _submission_source, build_sunmint_pending
+from sync_pending_caches import (
+    _load_registry,
+    _resolve_program,
+    _source_host,
+    _submission_source,
+    build_sunmint_pending,
+)
 
 
 def test_source_from_submission_source_line():
@@ -82,3 +88,70 @@ def test_non_new_rows_are_skipped():
         )
     ]
     assert build_sunmint_pending(rows)["count"] == 0
+
+
+# --- program resolution (Option B attribution) -----------------------------
+
+_REG = {"cfr.truesight.me": "crf-anapu", "beta.cfr.truesight.me": "crf-anapu"}
+
+
+def test_source_host_extracts_url_host():
+    assert _source_host("https://cfr.truesight.me/") == "cfr.truesight.me"
+    assert _source_host("https://cfr.truesight.me/x?y=1") == "cfr.truesight.me"
+
+
+def test_source_host_passes_sentinel_through_lowercased():
+    assert _source_host("autopilot-sophia") == "autopilot-sophia"
+    assert _source_host("") == ""
+
+
+def test_resolve_program_matches_registered_host():
+    assert _resolve_program("https://cfr.truesight.me/", _REG) == "crf-anapu"
+    assert _resolve_program("https://beta.cfr.truesight.me/", _REG) == "crf-anapu"
+
+
+def test_resolve_program_empty_for_unregistered():
+    # Gary's rule: no explicit program association -> EMPTY, so it shows under none.
+    assert _resolve_program("autopilot-sophia", _REG) == ""
+    assert _resolve_program("https://localhost/", _REG) == ""
+    assert _resolve_program("", _REG) == ""
+    assert _resolve_program("https://cfr.truesight.me/", {}) == ""
+
+
+def test_load_registry_normalises_hosts():
+    assert _load_registry({"hosts": {"CFR.TrueSight.ME": "crf-anapu"}}) == {
+        "cfr.truesight.me": "crf-anapu"
+    }
+    assert _load_registry(None) == {}
+
+
+def _rows_with_source(src):
+    # Minimal row: cols are 0-based per COL (3=msg_id, 5=source, 9=name, 12=status)
+    r = [""] * 18
+    r[3] = "12345"
+    r[5] = src
+    r[9] = "Farmer"
+    r[12] = "NEW"
+    return [r]
+
+
+def test_builder_emits_resolved_program():
+    it = build_sunmint_pending(
+        _rows_with_source("Submission Source: https://cfr.truesight.me/"), _REG
+    )["items"][0]
+    assert it["program"] == "crf-anapu"
+
+
+def test_builder_program_empty_when_unattributable():
+    it = build_sunmint_pending(
+        _rows_with_source("Submission Source: autopilot-sophia"), _REG
+    )["items"][0]
+    assert it["program"] == ""
+    assert it["submission_source"] == "autopilot-sophia"
+
+
+def test_builder_still_works_without_registry():
+    it = build_sunmint_pending(
+        _rows_with_source("Submission Source: https://cfr.truesight.me/")
+    )["items"][0]
+    assert it["program"] == ""  # no registry -> nothing resolves
