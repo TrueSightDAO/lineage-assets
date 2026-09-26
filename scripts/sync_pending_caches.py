@@ -6,7 +6,16 @@ NOT key-gated GAS endpoints. This script produces those caches:
 
   - sunmint_pending.json    {"status":"success","items":[{telegram_message_id,
                              submitted_name, planting_date, latitude, longitude,
-                             species, status}]}  -- SunMint rows with Status == NEW
+                             species, status, submission_source}]}
+                             -- SunMint rows with Status == NEW.
+                             `submission_source` is the origin of the submission
+                             (the app URL/host it was generated from, e.g.
+                             https://cfr.truesight.me/). The dapp program filter
+                             resolves its host -> program slug via the registry
+                             (lineage-engine/scripts/sunmint_program_registry.json),
+                             so the CRF-Anapu "View cohort" payout list can narrow
+                             to trees submitted via cfr.truesight.me. It is a host /
+                             sentinel, never a person.
   - sold_pending_tree.json  {"status":"success","items":[{qr_code, status, farm,
                              country, harvest_year, product, product_image, price,
                              owner_email_present, sheet_url, minted_at}]}
@@ -41,10 +50,38 @@ SUNMINT_TAB = "SunMint Tree Planting"
 QRS_INDEX_URL = "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/qrs_index.json"
 GH_API = "https://api.github.com/repos/TrueSightDAO/lineage-assets/contents/"
 
-# SunMint tab columns (0-based): D=msg id, G=status date, J=submitted name,
-# K=lat, L=lng, M=status, N=specie, R=linked QR
-COL = {"msg_id": 3, "status_date": 6, "name": 9, "photo_url": 8, "latitude": 10,
-       "longitude": 11, "status": 12, "species": 13, "linked_qr": 17}
+# SunMint tab columns (0-based): D=msg id, F=contribution (origin lives here),
+# G=status date, J=submitted name, K=lat, L=lng, M=status, N=specie, R=linked QR
+COL = {"msg_id": 3, "source": 5, "status_date": 6, "name": 9, "photo_url": 8,
+       "latitude": 10, "longitude": 11, "status": 12, "species": 13,
+       "linked_qr": 17}
+
+# The submission origin is NOT a dedicated column: it rides inside the
+# "Contribution Made" cell (col F), either as a "Submission Source: <url>" line or,
+# in older rows, only in the "This submission was generated using <url>" footer.
+# Mirrors the parsing already used by
+# lineage-engine/scripts/sync_sunmint_program_activity.py so attribution agrees.
+_SUBMISSION_SOURCE_RE = re.compile(
+    r"^\s*[-*]?\s*Submission\s*Source\s*:\s*(.+?)\s*$", re.MULTILINE)
+_GENERATED_USING_RE = re.compile(r"generated using\s+(\S+)", re.IGNORECASE)
+
+
+def _submission_source(text: str) -> str:
+    """Return the submission origin (a URL or a sentinel like 'autopilot-sophia').
+
+    Prefers an explicit ``Submission Source:`` line; falls back to the
+    ``This submission was generated using <url>`` footer the older forms emit.
+    Never returns anything but a host/URL/sentinel -- the cell around it can carry
+    a base64 signature blob, which we must NOT leak into the public cache.
+    """
+    text = text or ""
+    m = _SUBMISSION_SOURCE_RE.search(text)
+    if m:
+        return m.group(1).strip().strip('"').strip()
+    m = _GENERATED_USING_RE.search(text)
+    if m:
+        return m.group(1).strip()
+    return ""
 
 
 def _cell(row: list, key: str) -> str:
@@ -126,6 +163,9 @@ def build_sunmint_pending(rows: list) -> dict:
             "longitude": _cell(row, "longitude"),
             "species": _cell(row, "species"),
             "status": "NEW",
+            # Origin host/sentinel (host -> slug resolved by the dapp via the
+            # registry). Host or sentinel only -- never a person, never PII.
+            "submission_source": _submission_source(_cell(row, "source")),
         })
     return {"status": "success", "count": len(items), "items": items}
 
