@@ -155,3 +155,32 @@ def test_builder_still_works_without_registry():
         _rows_with_source("Submission Source: https://cfr.truesight.me/")
     )["items"][0]
     assert it["program"] == ""  # no registry -> nothing resolves
+
+
+# --- public signature (Request Transaction ID, col V) ----------------------
+# A signature is public by construction (DEDUP_KEY_CONVENTION §2.6): the public
+# pending cache carries the raw txid so the dapp can dedup/join on it.
+
+
+def _row_with_txid(msg_id, txid, status="NEW"):
+    r = [""] * 22
+    r[3] = msg_id
+    r[5] = "- Submission Source: https://cfr.truesight.me/"
+    r[9] = "Farmer"
+    r[12] = status
+    r[21] = txid  # col V
+    return r
+
+
+def test_builder_emits_raw_request_txid():
+    it = build_sunmint_pending([_row_with_txid("Edgar_1", "SIGabc===")])["items"][0]
+    assert it["request_txid"] == "SIGabc==="
+
+
+def test_builder_request_txid_empty_when_row_predates_column():
+    # A legacy 20-col row (no col V) must not raise and must emit "".
+    r = [""] * 20
+    r[3] = "Edgar_2"
+    r[12] = "NEW"
+    it = build_sunmint_pending([r])["items"][0]
+    assert it["request_txid"] == ""
