@@ -13,6 +13,7 @@ __pycache__/
 venv/
 
 # Generator scratch / outputs
+scripts/burnin_gps_cache.json
 scripts/qr_generator/package_qr_codes/
 scripts/qr_generator/to_print/
 scripts/qr_generator/output/
