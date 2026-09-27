@@ -49,7 +49,6 @@ import sys
 import urllib.request
 
 import gspread
-
 from burnin_gps import load_cache, save_cache
 from coord_pipeline import DEFAULT_MAX_LLM_CALLS, CoordResolver, parse_submitted
 from coord_resolution import format_coord
