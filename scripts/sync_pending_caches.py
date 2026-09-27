@@ -220,6 +220,10 @@ def build_sunmint_pending(
 ) -> dict:
     registry = registry or {}
     items = []
+    # Tracks rows already emitted so a tree the SOURCE SHEET double-emitted (a
+    # status change appends a second row, so the same submission can appear twice)
+    # is only published once -- see the dedup_key comment below.
+    seen = set()
     for row in rows:
         status = _cell(row, "status").upper()
         if status != "NEW":
@@ -229,6 +233,17 @@ def build_sunmint_pending(
             continue
         source = _submission_source(_cell(row, "source"))
         photo_url = _normalize_photo_url(_cell(row, "photo_url"))
+        txid = _cell(row, "request_txid")
+        # Collapse a row that is the SAME tree as one already emitted: same Telegram
+        # message, same photo AND same signed request txid. The source sheet
+        # double-emits some submissions (a status change appends a second row), and
+        # publishing both would double-count the tree AND raise a phantom duplicate
+        # flag on the dapp. Distinct multi-tree messages are unaffected -- they differ
+        # in photo_url and/or txid -- so this never drops a genuinely separate tree.
+        dedup_key = (msg_id, photo_url, txid)
+        if dedup_key in seen:
+            continue
+        seen.add(dedup_key)
         lat_s = _cell(row, "latitude")
         lng_s = _cell(row, "longitude")
         # Coordinate priority chain (governor-approved 2026-09-27):
@@ -266,7 +281,7 @@ def build_sunmint_pending(
                 # + gives the dapp a stable dup/join key (see
                 # agentic_ai_context/conventions/DEDUP_KEY_CONVENTION.md §2.6). Empty on
                 # rows that predate the txid column.
-                "request_txid": _cell(row, "request_txid"),
+                "request_txid": txid,
             }
         )
     return {"status": "success", "count": len(items), "items": items}

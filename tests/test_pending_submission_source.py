@@ -184,3 +184,56 @@ def test_builder_request_txid_empty_when_row_predates_column():
     r[12] = "NEW"
     it = build_sunmint_pending([r])["items"][0]
     assert it["request_txid"] == ""
+
+
+# --- source-sheet double-emission dedup ------------------------------------
+# The sheet appends a second row on some status changes, so the SAME tree can be
+# NEW twice. Publishing both double-counts the tree and raises a phantom duplicate
+# flag on the dapp. The builder must collapse rows sharing
+# (msg_id, photo_url, request_txid) -- while keeping genuinely distinct trees.
+
+
+def _tree_row(msg_id, photo_url, txid, status="NEW", lat="1", lng="2"):
+    r = [""] * 22
+    r[3], r[8], r[9], r[10], r[11], r[12], r[21] = (
+        msg_id,
+        photo_url,
+        "Farmer",
+        lat,
+        lng,
+        status,
+        txid,
+    )
+    return r
+
+
+def test_builder_dedups_exact_double_emitted_row():
+    rows = [
+        _tree_row("Edgar_1", "https://x/p.jpg", "SIG1"),
+        _tree_row("Edgar_1", "https://x/p.jpg", "SIG1"),  # same tree, re-appended
+    ]
+    out = build_sunmint_pending(rows)
+    assert out["count"] == 1
+    assert out["items"][0]["telegram_message_id"] == "Edgar_1"
+
+
+def test_builder_keeps_multi_tree_message_distinct_photos():
+    # One Telegram message reporting TWO trees -> two photos -> both must survive.
+    rows = [
+        _tree_row("Edgar_2", "https://x/a.jpg", "SIGa"),
+        _tree_row("Edgar_2", "https://x/b.jpg", "SIGb"),
+    ]
+    out = build_sunmint_pending(rows)
+    assert out["count"] == 2
+
+
+def test_builder_dedup_prefers_single_canonical_row_over_status_dup():
+    # A NEW + INVALID pair for the same tree: only the NEW survives (already
+    # guaranteed by the status filter) and it lands exactly once.
+    rows = [
+        _tree_row("Edgar_3", "https://x/c.jpg", "SIGc", status="NEW"),
+        _tree_row("Edgar_3", "https://x/c.jpg", "SIGc", status="INVALID"),
+    ]
+    out = build_sunmint_pending(rows)
+    assert out["count"] == 1
+    assert out["items"][0]["status"] == "NEW"
