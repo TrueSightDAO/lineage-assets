@@ -52,6 +52,7 @@ import gspread
 from burnin_gps import load_cache, save_cache
 from coord_pipeline import DEFAULT_MAX_LLM_CALLS, CoordResolver, parse_submitted
 from coord_resolution import format_coord
+from photo_hash import dhash_hex
 
 SOURCE_SHEET_ID = "1qbZZhf-_7xzmDTriaJVWj6OZshyQsFkdsAV8-pyzASQ"
 SUNMINT_TAB = "SunMint Tree Planting"
@@ -171,6 +172,11 @@ def _fetch(url: str) -> dict:
         return json.load(r)
 
 
+def _fetch_bytes(url: str, timeout: int = 30) -> bytes:
+    with urllib.request.urlopen(url, timeout=timeout) as r:
+        return r.read()
+
+
 def _upload(path: str, payload: dict) -> None:
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     if not token:
@@ -210,6 +216,7 @@ def build_sunmint_pending(
     rows: list,
     registry: dict | None = None,
     resolve_coord=None,
+    photo_hash=None,
 ) -> dict:
     registry = registry or {}
     items = []
@@ -240,6 +247,9 @@ def build_sunmint_pending(
                 "submitted_name": _cell(row, "name"),
                 "planting_date": _iso_date(_cell(row, "status_date")),
                 "photo_url": photo_url,
+                # 64-bit perceptual hash (hex) of the photo, for the dapp's
+                # duplicate safety net (the SAME picture re-ingested under a NEW url).
+                "photo_hash": (photo_hash(photo_url) if photo_hash else ""),
                 "latitude": lat_out,
                 "longitude": lng_out,
                 # Which link of the chain supplied latitude/longitude:
@@ -320,6 +330,13 @@ def main() -> None:
         ),
         help="Path to the sha256-keyed burner-read cache (loaded/saved per run).",
     )
+    p.add_argument(
+        "--photo-hash-cache",
+        default=os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), "photo_hash_cache.json"
+        ),
+        help="Path to the url-keyed perceptual-hash cache (loaded/saved per run).",
+    )
     p.add_argument("--max-llm-calls", type=int, default=DEFAULT_MAX_LLM_CALLS)
     args = p.parse_args()
 
@@ -340,6 +357,23 @@ def main() -> None:
             f"max_llm_calls={args.max_llm_calls}, cached={len(resolver.cache)})"
         )
 
+    hash_cache = load_cache(args.photo_hash_cache)
+
+    def _photo_hash(url: str) -> str:
+        """64-bit dHash for a photo, cached by url (immutable once published)."""
+        if not url:
+            return ""
+        if url in hash_cache:
+            return hash_cache[url]
+        try:
+            data = _fetch_bytes(url)
+        except Exception:  # noqa: BLE001 - unreachable photo => no hash (fail-open)
+            return ""
+        h = dhash_hex(data)
+        if h:
+            hash_cache[url] = h
+        return h
+
     gc = gspread.service_account(filename=creds)
     ws = gc.open_by_key(SOURCE_SHEET_ID).worksheet(SUNMINT_TAB)
     rows = ws.get_all_values()[1:]
@@ -348,7 +382,7 @@ def main() -> None:
     index = _fetch(QRS_INDEX_URL)
     registry = _load_registry(_fetch(PROGRAM_REGISTRY_URL))
     print(f"[info] program registry: {registry}")
-    sunmint = build_sunmint_pending(rows, registry, resolve_coord)
+    sunmint = build_sunmint_pending(rows, registry, resolve_coord, _photo_hash)
     print(f"[info] sunmint pending: {sunmint['count']}")
 
     if resolver is not None:
@@ -358,6 +392,10 @@ def main() -> None:
             + ", ".join(f"{k}={v}" for k, v in resolver.stats.items() if v)
             + f" | cache size={len(resolver.cache)}"
         )
+
+    if hash_cache:
+        save_cache(args.photo_hash_cache, hash_cache)
+        print(f"[info] photo hashes cached: {len(hash_cache)}")
 
     sold = build_sold_pending(rows, index)
     print(f"[info] sold pending tree link: {sold['count']}")
