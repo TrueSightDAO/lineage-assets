@@ -49,6 +49,9 @@ import sys
 import urllib.request
 
 import gspread
+from burnin_gps import load_cache, save_cache
+from coord_pipeline import DEFAULT_MAX_LLM_CALLS, CoordResolver, parse_submitted
+from coord_resolution import format_coord
 
 SOURCE_SHEET_ID = "1qbZZhf-_7xzmDTriaJVWj6OZshyQsFkdsAV8-pyzASQ"
 SUNMINT_TAB = "SunMint Tree Planting"
@@ -203,7 +206,11 @@ def _upload(path: str, payload: dict) -> None:
             raise
 
 
-def build_sunmint_pending(rows: list, registry: dict | None = None) -> dict:
+def build_sunmint_pending(
+    rows: list,
+    registry: dict | None = None,
+    resolve_coord=None,
+) -> dict:
     registry = registry or {}
     items = []
     for row in rows:
@@ -214,14 +221,30 @@ def build_sunmint_pending(rows: list, registry: dict | None = None) -> dict:
         if not msg_id:
             continue
         source = _submission_source(_cell(row, "source"))
+        photo_url = _normalize_photo_url(_cell(row, "photo_url"))
+        lat_s = _cell(row, "latitude")
+        lng_s = _cell(row, "longitude")
+        # Coordinate priority chain (governor-approved 2026-09-27):
+        # EXIF > burned-in watermark > DApp-submitted. Only runs when a resolver
+        # is supplied (--resolve-coords); otherwise the submitted values pass
+        # through unchanged and coord_source is derived from them.
+        if resolve_coord is not None:
+            r_lat, r_lng, coord_source = resolve_coord(photo_url, lat_s, lng_s)
+            lat_out, lng_out = format_coord(r_lat), format_coord(r_lng)
+        else:
+            lat_out, lng_out = lat_s, lng_s
+            coord_source = "submitted" if parse_submitted(lat_s, lng_s) else ""
         items.append(
             {
                 "telegram_message_id": msg_id,
                 "submitted_name": _cell(row, "name"),
                 "planting_date": _iso_date(_cell(row, "status_date")),
-                "photo_url": _normalize_photo_url(_cell(row, "photo_url")),
-                "latitude": _cell(row, "latitude"),
-                "longitude": _cell(row, "longitude"),
+                "photo_url": photo_url,
+                "latitude": lat_out,
+                "longitude": lng_out,
+                # Which link of the chain supplied latitude/longitude:
+                # "exif" | "burnin" | "submitted" | "".
+                "coord_source": coord_source,
                 "species": _cell(row, "species"),
                 "status": "NEW",
                 # Origin host/sentinel plus that origin RESOLVED to a program slug
@@ -281,25 +304,60 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--dry-run", action="store_true", default=True)
     p.add_argument("--push", action="store_true")
+    p.add_argument(
+        "--resolve-coords",
+        action="store_true",
+        help=(
+            "Resolve each row's coordinate through EXIF > burned-in watermark > "
+            "DApp-submitted (burn-in reads call the Grok API). Off by default so a "
+            "plain run never incurs vision-LLM calls."
+        ),
+    )
+    p.add_argument(
+        "--burnin-cache",
+        default=os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), "burnin_gps_cache.json"
+        ),
+        help="Path to the sha256-keyed burner-read cache (loaded/saved per run).",
+    )
+    p.add_argument("--max-llm-calls", type=int, default=DEFAULT_MAX_LLM_CALLS)
     args = p.parse_args()
 
     creds = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
     if not creds or not os.path.isfile(creds):
         sys.exit("GOOGLE_APPLICATION_CREDENTIALS must point at a service account JSON")
 
+    resolve_coord = None
+    resolver = None
+    if args.resolve_coords:
+        resolver = CoordResolver(
+            cache=load_cache(args.burnin_cache),
+            max_llm_calls=args.max_llm_calls,
+        )
+        resolve_coord = resolver.resolve
+        print(
+            f"[info] coord resolution ON (Grok burn-in; cache={args.burnin_cache}, "
+            f"max_llm_calls={args.max_llm_calls}, cached={len(resolver.cache)})"
+        )
+
     gc = gspread.service_account(filename=creds)
     ws = gc.open_by_key(SOURCE_SHEET_ID).worksheet(SUNMINT_TAB)
     rows = ws.get_all_values()[1:]
     print(f"[info] {len(rows)} SunMint rows")
 
-    sunmint = build_sunmint_pending(rows)
-    print(f"[info] sunmint pending: {sunmint['count']}")
-
     index = _fetch(QRS_INDEX_URL)
     registry = _load_registry(_fetch(PROGRAM_REGISTRY_URL))
     print(f"[info] program registry: {registry}")
-    sunmint = build_sunmint_pending(rows, registry)
+    sunmint = build_sunmint_pending(rows, registry, resolve_coord)
     print(f"[info] sunmint pending: {sunmint['count']}")
+
+    if resolver is not None:
+        save_cache(args.burnin_cache, resolver.cache)
+        print(
+            "[info] coord sources: "
+            + ", ".join(f"{k}={v}" for k, v in resolver.stats.items() if v)
+            + f" | cache size={len(resolver.cache)}"
+        )
 
     sold = build_sold_pending(rows, index)
     print(f"[info] sold pending tree link: {sold['count']}")
