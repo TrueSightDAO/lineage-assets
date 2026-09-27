@@ -51,7 +51,7 @@ def dhash_hex(image_bytes: bytes) -> str:
         return ""
     try:
         from PIL import Image
-    except ImportError:  # noqa: BLE001 - Pillow optional; no hash rather than a crash
+    except ImportError:  # Pillow optional; no hash rather than a crash
         return ""
     try:
         with Image.open(io.BytesIO(image_bytes)) as im:
