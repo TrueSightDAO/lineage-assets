@@ -7,7 +7,14 @@ NOT key-gated GAS endpoints. This script produces those caches:
   - sunmint_pending.json    {"status":"success","items":[{telegram_message_id,
                              submitted_name, planting_date, latitude, longitude,
                              species, status, submission_source, program,
-                             request_txid}]}
+                             request_txid, recipient_pk_hash}]}
+                             `recipient_pk_hash` is the planter's ONE-WAY signer
+                             identity (the same opaque `pk-...` value already
+                             published in qrs_index.json; see conventions/
+                             DEDUP_KEY_CONVENTION.md SS2.6), joined from the
+                             private `tree planting` tab so the dapp can autofill
+                             the payout recipient with NO GAS call. "" when the
+                             tree has no registration yet. Never raw PII.
                              -- SunMint rows with Status == NEW.
                              `submission_source` is the origin of the submission
                              (the app URL/host it was generated from, e.g.
@@ -56,6 +63,14 @@ from photo_hash import dhash_hex
 
 SOURCE_SHEET_ID = "1qbZZhf-_7xzmDTriaJVWj6OZshyQsFkdsAV8-pyzASQ"
 SUNMINT_TAB = "SunMint Tree Planting"
+# The governor-only `cfr program` workbook (SS11.3). Its `tree planting` tab is the
+# ONLY place a `tree_id` and its `pk_hash` co-exist, so it is the authoritative
+# source for the recipient lookup the dapp previously fetched from GAS
+# (getTreeRecipientMap). Folding it into this public cache removes that call from
+# the page-load critical path. Private-by-ACL, never link-shared; the id itself is
+# not a secret (access is ACL-gated) -- same posture as SOURCE_SHEET_ID above.
+CFR_PROGRAM_SHEET_ID = "17KwmxYOpTVR89ybRlOkDXoN9PF3UcaNu3REg2wNa83w"
+CFR_TREE_TAB = "tree planting"
 QRS_INDEX_URL = (
     "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/qrs_index.json"
 )
@@ -212,13 +227,43 @@ def _upload(path: str, payload: dict) -> None:
             raise
 
 
+def build_tree_recipient_map(rows: list) -> dict:
+    """Map `tree_id` -> `pk_hash` from the private `tree planting` tab.
+
+    `pk_hash` is the ONE-WAY signer identity and is PUBLIC by design
+    (conventions/DEDUP_KEY_CONVENTION.md SS2.6); raw PII (PIX/CPF/email/phone)
+    never appears here. First row wins per tree_id -- mirroring the GAS
+    `getTreeRecipientMap` read the dapp used to depend on, so the cache and the
+    endpoint agree during the migration window.
+
+    Returns {} when the tab headers lack `tree_id`/`pk_hash` (fail-open).
+    """
+    if not rows:
+        return {}
+    header = [str(h or "").strip() for h in rows[0]]
+    try:
+        t_col = header.index("tree_id")
+        p_col = header.index("pk_hash")
+    except ValueError:
+        return {}
+    out: dict[str, str] = {}
+    for row in rows[1:]:
+        tree_id = row[t_col].strip() if t_col < len(row) else ""
+        pk = row[p_col].strip() if p_col < len(row) else ""
+        if tree_id and pk and tree_id not in out:
+            out[tree_id] = pk
+    return out
+
+
 def build_sunmint_pending(
     rows: list,
     registry: dict | None = None,
     resolve_coord=None,
     photo_hash=None,
+    recipient_map: dict | None = None,
 ) -> dict:
     registry = registry or {}
+    recipient_map = recipient_map or {}
     items = []
     # Tracks rows already emitted so a tree the SOURCE SHEET double-emitted (a
     # status change appends a second row, so the same submission can appear twice)
@@ -282,6 +327,13 @@ def build_sunmint_pending(
                 # agentic_ai_context/conventions/DEDUP_KEY_CONVENTION.md §2.6). Empty on
                 # rows that predate the txid column.
                 "request_txid": txid,
+                # The planter's ONE-WAY signer identity for this tree, joined from
+                # the private `tree planting` tab (tree_id -> pk_hash). PUBLIC by
+                # design -- it is the same opaque `pk-...` value already published
+                # in qrs_index.json (conventions/DEDUP_KEY_CONVENTION.md SS2.6).
+                # This is what lets the dapp autofill the payout recipient WITHOUT
+                # a GAS call. "" when the tree has no registration yet.
+                "recipient_pk_hash": recipient_map.get(msg_id, ""),
             }
         )
     return {"status": "success", "count": len(items), "items": items}
@@ -397,7 +449,24 @@ def main() -> None:
     index = _fetch(QRS_INDEX_URL)
     registry = _load_registry(_fetch(PROGRAM_REGISTRY_URL))
     print(f"[info] program registry: {registry}")
-    sunmint = build_sunmint_pending(rows, registry, resolve_coord, _photo_hash)
+    # Recipient lookup (tree_id -> pk_hash) is read from the private `tree planting`
+    # tab and folded into the PUBLIC cache as an opaque pk_hash
+    # (conventions/DEDUP_KEY_CONVENTION.md SS2.6) -- so the dapp autofills the payout
+    # recipient from the JSON cache with NO GAS call (Gary, 2026-09-28).
+    # Fail-open: an unreadable private tab must never break the cache refresh.
+    recipient_map: dict[str, str] = {}
+    try:
+        tree_rows = (
+            gc.open_by_key(CFR_PROGRAM_SHEET_ID).worksheet(CFR_TREE_TAB).get_all_values()
+        )
+        recipient_map = build_tree_recipient_map(tree_rows)
+        print(f"[info] recipient map: {len(recipient_map)} tree_id -> pk_hash")
+    except Exception as e:  # noqa: BLE001 - degrade, never crash the sync
+        print(f"[warn] recipient map unavailable ({type(e).__name__}: {e})")
+
+    sunmint = build_sunmint_pending(
+        rows, registry, resolve_coord, _photo_hash, recipient_map
+    )
     print(f"[info] sunmint pending: {sunmint['count']}")
 
     if resolver is not None:
