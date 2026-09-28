@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 137,
+  "count": 139,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903083532_007",
@@ -2193,6 +2193,38 @@
       "program": "crf-anapu",
       "request_txid": "Ue+j2agnMMG6Fn4G84P5uGXifnbrPcSuGRZvlfFyXBl+KNdiVU+cl2kptpalqHgIUCSzdrnGC71qmyU8u3EH/po+zbqattCVDgPSFP1rFFN+NL0Y98ksXyW7tRHCcBxtTxaNx4Fwkxz78ARY/1xghiRm6nuTixovuwQLEyd0bSWU/OzzpwrGRLs6MAfvcWj7hHLBnerTPrk3KnFJ8QOhbPJhIdUAUYF8VDW490RiozuBkG/Fn1hwxfAvdimoq7sZ3JA5/w+ueMk2ChppLOIW2oi2x6OUT1AUGDhYhQlH1+W4Moo1TrbhH2QlMM3ZjrOMxTphI81vf5VUo/VyUp1Sfg==",
       "recipient_pk_hash": "pk-qkejKJJW3IAD"
+    },
+    {
+      "telegram_message_id": "Edgar_20260928203759_087",
+      "submitted_name": "Gary Teh",
+      "planting_date": "2026-09-28",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260928173755_MIIBIjANBgkqhkiG9w0B.jpg",
+      "photo_hash": "0004801cc4054703",
+      "latitude": "",
+      "longitude": "",
+      "coord_source": "",
+      "species": "Cacao - Criolla",
+      "status": "NEW",
+      "submission_source": "https://beta.sunmint.truesight.me/",
+      "program": "",
+      "request_txid": "Orb7KlyqdpszL2/FbsuYMGVgiA9X5A5kkrdbKvsa7XZf+dTLoyptlPNR43mDpI1FA6fgh9NQ/spazGecbNDnzMPmE7lnkymYBmwb/n/qW/kzEk3HgPfVorxST7Gp2c65Cks5WzKKHLzpOC0XN07VNB/u8EkKFP5++PZ/+x/ouylY0ccOcagRfyw/0zrtWGKeqGZpgHzTlppH6SO8lFGRQTCYRH+7iyN+E6DSUEHxyrHq15rDXmHPabq6WKsYMFXJON9TpUwPDj8bvQ/GgI9XkIIquoMipASdDrXOnezUuUD/VRu9geNYrNqaVZIJDoeTXX8UPbTCXSUYTHOMEZKWiQ==",
+      "recipient_pk_hash": ""
+    },
+    {
+      "telegram_message_id": "Edgar_20260928203818_089",
+      "submitted_name": "Gary Teh",
+      "planting_date": "2026-09-28",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260928173815_MIIBIjANBgkqhkiG9w0B.jpg",
+      "photo_hash": "0000801844054603",
+      "latitude": "",
+      "longitude": "",
+      "coord_source": "",
+      "species": "Cacao - Criolla",
+      "status": "NEW",
+      "submission_source": "https://beta.sunmint.truesight.me/",
+      "program": "",
+      "request_txid": "MB76x/xWa/fA4Z5JMzSL+OkeWk73DE4HlfZbdzWxZ3D9lNzfJDcQWIrzPtxYa674Klvv0zo0TBUxMGNi95AQ3M0T0Cbp77ycqPJNur4WQfXLs3MZ0Bxllfwf7+yH9Siihg2c13rpjIYSivmPGkUUZzq7JJHPea01QaUREnEpawSdZQDXMEwMKDZYt063IJ4hqaBFeUV74twmfZCFvHjxmTakXIENNL39qXihxuNUQ9R3j4FDXsIFpcHfu5T5EyZOjXykJRf/135Nfc1vwdI3QEtfh+IExrrljM2colQ3a08L1cUMYu6D03JwqznZYMTK5vvvwcnpAvrwrSghSkAzkA==",
+      "recipient_pk_hash": ""
     }
   ]
 }
