@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 465,
+  "count": 467,
   "items": [
     {
       "qr_code": "2024OSCAR_AGL14_20260911_9",
@@ -1778,6 +1778,34 @@
       "owner_email_present": true,
       "owner_email_hash": "3dcdfcf0c132f3e7",
       "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1338",
+      "minted_at": "2026-03-30"
+    },
+    {
+      "qr_code": "2024OSCAR_20260330_24",
+      "status": "SOLD",
+      "farm": "Oscar Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "product": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 + 8 Ounce Package Kraft Pouch CP340992735BR | Kirsten 20260121",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "24bb3747b325b1b8",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1359",
+      "minted_at": "2026-03-30"
+    },
+    {
+      "qr_code": "2024OSCAR_20260330_23",
+      "status": "SOLD",
+      "farm": "Oscar Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "product": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 + 8 Ounce Package Kraft Pouch CP340992735BR | Kirsten 20260121",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "24bb3747b325b1b8",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1358",
       "minted_at": "2026-03-30"
     },
     {
