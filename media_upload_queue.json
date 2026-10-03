@@ -1,0 +1,82 @@
+{
+  "status": "success",
+  "count": 12,
+  "generated_at": "2026-10-03T23:52:17Z",
+  "source": "gary-mac truesight_media_courier",
+  "daemon_running": true,
+  "items": [
+    {
+      "filename": "cic_20260929.zip",
+      "size_bytes": 3878494867,
+      "status": "queued",
+      "added_at": "2026-10-03T23:46:41Z"
+    },
+    {
+      "filename": "cic_complete.zip",
+      "size_bytes": 6065814316,
+      "status": "uploading",
+      "sha256": "10cc746d901627fca9d68fa8c849856e797b0c3e823ba1f86d440973dfaf17ae",
+      "added_at": "2026-09-03T08:26:37Z"
+    },
+    {
+      "filename": "ilheus_warehouse.zip",
+      "size_bytes": 2412258210,
+      "status": "queued",
+      "added_at": "2026-09-30T22:48:35Z"
+    },
+    {
+      "filename": "ilheus_warehouse_2.zip",
+      "size_bytes": 4039858,
+      "status": "queued",
+      "added_at": "2026-09-30T22:50:11Z"
+    },
+    {
+      "filename": "la_do_sitio_20260907_patch_2.zip",
+      "size_bytes": 112173002,
+      "status": "queued",
+      "added_at": "2026-09-07T23:34:31Z"
+    },
+    {
+      "filename": "la_do_sitio_fda_fsvp_20260907.zip",
+      "size_bytes": 10479125,
+      "status": "queued",
+      "added_at": "2026-09-07T23:38:49Z"
+    },
+    {
+      "filename": "la_do_sitio_patch_20260907_1.zip",
+      "size_bytes": 477499192,
+      "status": "queued",
+      "added_at": "2026-09-07T23:31:19Z"
+    },
+    {
+      "filename": "la_do_sitio_trees.zip",
+      "size_bytes": 425237182,
+      "status": "queued",
+      "added_at": "2026-09-08T00:01:26Z"
+    },
+    {
+      "filename": "oscar_fazenda_2026.zip",
+      "size_bytes": 13289922842,
+      "status": "queued",
+      "added_at": "2026-10-03T21:20:00Z"
+    },
+    {
+      "filename": "santa_anna_farzenda_bahia.zip",
+      "size_bytes": 3600525711,
+      "status": "queued",
+      "added_at": "2026-09-02T18:02:15Z"
+    },
+    {
+      "filename": "santa_anna_fazenda_bahia_complete.zip",
+      "size_bytes": 3768799404,
+      "status": "queued",
+      "added_at": "2026-09-03T08:09:15Z"
+    },
+    {
+      "filename": "santos_complete.zip",
+      "size_bytes": 2842252936,
+      "status": "queued",
+      "added_at": "2026-09-03T08:17:55Z"
+    }
+  ]
+}
