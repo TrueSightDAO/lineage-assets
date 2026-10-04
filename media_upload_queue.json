@@ -1,7 +1,7 @@
 {
   "status": "success",
   "count": 5,
-  "generated_at": "2026-10-04T09:12:20Z",
+  "generated_at": "2026-10-04T09:17:23Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
   "items": [
@@ -15,6 +15,7 @@
       "filename": "oscar_fazenda_2026.zip",
       "size_bytes": 13289922842,
       "status": "uploading",
+      "sha256": "903f4d96d276a24928298704564881baf9cbc2b92282357776140cee7ddd62f0",
       "added_at": "2026-10-03T21:20:00Z"
     },
     {
