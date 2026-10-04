@@ -1,7 +1,7 @@
 {
   "status": "success",
-  "count": 6,
-  "generated_at": "2026-10-04T09:07:17Z",
+  "count": 5,
+  "generated_at": "2026-10-04T09:12:20Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
   "items": [
@@ -12,16 +12,9 @@
       "added_at": "2026-10-03T23:46:41Z"
     },
     {
-      "filename": "la_do_sitio_trees.zip",
-      "size_bytes": 425237182,
-      "status": "uploading",
-      "sha256": "318f8a356da42460eb58d007447cd2f9859050916c178a24c4d61c6b783079f9",
-      "added_at": "2026-09-08T00:01:26Z"
-    },
-    {
       "filename": "oscar_fazenda_2026.zip",
       "size_bytes": 13289922842,
-      "status": "queued",
+      "status": "uploading",
       "added_at": "2026-10-03T21:20:00Z"
     },
     {
