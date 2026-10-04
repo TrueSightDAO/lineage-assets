@@ -1,7 +1,7 @@
 {
   "status": "success",
   "count": 3,
-  "generated_at": "2026-10-04T21:24:32Z",
+  "generated_at": "2026-10-04T21:29:35Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
   "items": [
@@ -15,6 +15,7 @@
       "filename": "santa_anna_fazenda_bahia_complete.zip",
       "size_bytes": 3768799404,
       "status": "uploading",
+      "sha256": "0a99fdee710a7b29450857f5ba75e1e99502e619b78ad79bc033598b35fd9a18",
       "added_at": "2026-09-03T08:09:15Z"
     },
     {
