@@ -1,7 +1,7 @@
 {
   "status": "success",
-  "count": 12,
-  "generated_at": "2026-10-04T06:36:23Z",
+  "count": 11,
+  "generated_at": "2026-10-04T06:46:27Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
   "items": [
@@ -12,16 +12,10 @@
       "added_at": "2026-10-03T23:46:41Z"
     },
     {
-      "filename": "cic_complete.zip",
-      "size_bytes": 6065814316,
-      "status": "uploading",
-      "sha256": "10cc746d901627fca9d68fa8c849856e797b0c3e823ba1f86d440973dfaf17ae",
-      "added_at": "2026-09-03T08:26:37Z"
-    },
-    {
       "filename": "ilheus_warehouse.zip",
       "size_bytes": 2412258210,
-      "status": "queued",
+      "status": "uploading",
+      "sha256": "464cbd3ac7d0a971d56443a6cc2aba45a47d0eb320e0d2d6e07deb306bd9bd03",
       "added_at": "2026-09-30T22:48:35Z"
     },
     {
