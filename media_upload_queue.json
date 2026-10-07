@@ -1,7 +1,7 @@
 {
   "status": "success",
-  "count": 2,
-  "generated_at": "2026-10-06T07:04:44Z",
+  "count": 1,
+  "generated_at": "2026-10-07T02:36:50Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
   "items": [
@@ -10,13 +10,6 @@
       "size_bytes": 3878494867,
       "status": "queued",
       "added_at": "2026-10-03T23:46:41Z"
-    },
-    {
-      "filename": "santos_complete.zip",
-      "size_bytes": 2842252936,
-      "status": "uploading",
-      "sha256": "40d42b12eda17c9c8506e26b812a965175bb76ca37d8a072d50a65aa8b2d845a",
-      "added_at": "2026-09-03T08:17:55Z"
     }
   ]
 }
