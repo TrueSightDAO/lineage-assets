@@ -1,16 +1,8 @@
 {
   "status": "success",
-  "count": 1,
-  "generated_at": "2026-10-07T03:04:21Z",
+  "count": 0,
+  "generated_at": "2026-10-07T03:44:26Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
-  "items": [
-    {
-      "filename": "cic_20260929.zip",
-      "size_bytes": 3878494867,
-      "status": "uploading",
-      "sha256": "6d94d366dcae16813b4b210fd930d6dc2f39bc1f6140b11a56fba48b7c9360a3",
-      "added_at": "2026-10-03T23:46:41Z"
-    }
-  ]
+  "items": []
 }
