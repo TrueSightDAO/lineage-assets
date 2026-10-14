@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 214,
+  "count": 216,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903083532_007",
@@ -3424,6 +3424,38 @@
       "submission_source": "https://cfr.truesight.me/",
       "program": "crf-anapu",
       "request_txid": "ak9gchCiNcXSwKrlnFlNwT8V6kSLIUCy4ERyvz0OsexcfIbLzj1I6FQlNnzzUn6tEGzx3uQnyh5DBkz+lRvNgJ/KZuskBhm0+lmT+ygs4gjf3r0J1BtlHJMEaCjH7tb1YqVFGb71Mul1sbzNGQ5GWw4D0iz8R86Dn1vRnT7AGdVfrTVz2/3B2GRGW2BKtsdmXeMsSe/j7kOF1JHLkxzlwdaONx5YbQ8duCS24afytRv9s7ZKtPk9+QcefHvcL1Hmrz76tOUNZTxcv+q6AaKpRUUi3J+x8GsBbjh6olPdpG0eLzVP8tD4VCULk/9fQcPtUnB3/KINJD74PN6YtGQY7A==",
+      "recipient_pk_hash": "pk-qkejKJJW3IAD"
+    },
+    {
+      "telegram_message_id": "Edgar_20261014095620_481",
+      "submitted_name": "",
+      "planting_date": "2026-10-14",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20261014065615_MIIBIjANBgkqhkiG9w0B.jpg",
+      "photo_hash": "3b938c3625a0724a",
+      "latitude": "-3.522716",
+      "longitude": "-51.574659",
+      "coord_source": "burnin",
+      "species": "Cacao - Forestero",
+      "status": "NEW",
+      "submission_source": "https://cfr.truesight.me/",
+      "program": "crf-anapu",
+      "request_txid": "agZ4MckZRCIiocYACEfTc3y/sIkPaDnDF2HsP/hNIMkyEWAgdTWlyMBHk60BwE7PVLAxJZJ7wrcReZcopA5R+3Dc+pBWtLFqFPeXeH7tHQRRmo8B1fRRmVYWY//zynIsmBD0vtN/2grhR7kufrKL5JqRdnyWe6LU0rwjzEXAUrybuvZ7RkDQDPssnqZworhQhV2+YsXcP6TfLzKxAr8+jqtE4SvivK1Z92766DcvIqi4APA4Q6BEIRcclH86olKc+ehPV/0xER58rqEq6SC4Hr3tXrfsc/QCUACohf+4m2CSjNO9QQYhg5/LrZmddMBM0dMB2MTq/DuGxi9/Jgg2Uw==",
+      "recipient_pk_hash": "pk-qkejKJJW3IAD"
+    },
+    {
+      "telegram_message_id": "Edgar_20261014095636_483",
+      "submitted_name": "",
+      "planting_date": "2026-10-14",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20261014065633_MIIBIjANBgkqhkiG9w0B.jpg",
+      "photo_hash": "bbcfcddac9e94e0c",
+      "latitude": "-3.522644",
+      "longitude": "-51.574717",
+      "coord_source": "burnin",
+      "species": "Cacao - Forestero",
+      "status": "NEW",
+      "submission_source": "https://cfr.truesight.me/",
+      "program": "crf-anapu",
+      "request_txid": "KHsDMl/dJ+Y/OR8BZyQhr5uITtyAMdH4KYL6tHwuOP/PwPAa1r0CyErFmWjm4bZsQNd9tHrKrXXjkUdhrLJXoYVLZhAznIMspqzyyC4xXWEinh2eun7NYPDuk2jMF8qf1OJbLBjiZ0Tt9BmuNJCswKTvgefrsfRmYjLX9EdBtwzKcP5pBFxyRjSxI20ITnLtVVAnhSxUkgnF4hhRfFI9w7/S+TIMsrUiFh75Bs/MBUWLddC6gt90jcZpy7QO7CE2P4wJwawWVzLLMGnytAJb1E1Pp4/doYRIkMkKNA/Fvda2lsp20gn4KoECUagywXwZTbsGqCZamDVX+PQyN6Ij1A==",
       "recipient_pk_hash": "pk-qkejKJJW3IAD"
     }
   ]
