@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 231,
+  "count": 233,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903083532_007",
@@ -3697,6 +3697,38 @@
       "program": "crf-anapu",
       "request_txid": "YDI2GBieqEBl0ao8RfgzUnRhTBVapgOtZkgVzzKHgGR9etiNnyOFKBQrQN+2b8HFUxmQyVbF73iZdm7oXFJ8b4KfX1NRt5lHyptgiyb7uc29Mehhsof6MkperPBvmb40dj7ehV1cMUUZnOObU3TTb18xXMEWq1PrR7d0BGsBwLNyUOyXmP1nSI4Sr1an4ugUz2vC6KpyokXAgilZO65o/Glb+RrZlyCGcrnOnwMZ3JGDjGlghNvKMHb7kdecFMe8cQ/c1Zii/GZKkEJ4hTB1NVt27YEezuR7IBB8RoDDrjU4k998T/VRhHogwUfF6zvgggbD9Dwqg43kX+3Juync7A==",
       "recipient_pk_hash": "pk-qkejKJJW3IAD"
+    },
+    {
+      "telegram_message_id": "Edgar_20261015215825_177",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-10-15",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260929145727_MIIBIjANBgkqhkiG9w0B.jpg",
+      "photo_hash": "dae0ac99b4ac9d35",
+      "latitude": "-3.672322",
+      "longitude": "-51.326778",
+      "coord_source": "submitted",
+      "species": "Cacao - Forestero",
+      "status": "NEW",
+      "submission_source": "https://cfr.truesight.me/",
+      "program": "crf-anapu",
+      "request_txid": "ZsidVabQWoLAQVH95rAw/oL0/krRlA7t95KAQt6onPvAvOMjq3bsF/6YOFBsmdKZLjT6PHvlAWJQoJZxHpw6y1cMtvQ0wSd60DMRwvq1Ll7EKBZEmBQI05iP56wYHbM1CTNarzOmYlI1jGeJotKhfivxVOILrnvYuved4uQLJ50ORDlTc4XfNzrhYp6MH3cIpnNIJRYl53cpaqTtDOdIzvgxKPetI7Ud5BYhruafvr21ntXe3YMx5GpzTvSIOc46WjxhETDeOy4ieoyypNYN3jYE6xohG3aKlqgKJ0W/ufbhIaWK2d529G8M3j7Ay/Xs4NfblhNW+Y3cR+ODBbguWw==",
+      "recipient_pk_hash": "pk-3CTNgLAl82Lp"
+    },
+    {
+      "telegram_message_id": "Edgar_20261015215831_179",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-10-15",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260929151627_MIIBIjANBgkqhkiG9w0B.jpg",
+      "photo_hash": "ab8b2b14e44d9493",
+      "latitude": "",
+      "longitude": "",
+      "coord_source": "",
+      "species": "Cacao - Forestero",
+      "status": "NEW",
+      "submission_source": "https://cfr.truesight.me/",
+      "program": "crf-anapu",
+      "request_txid": "XFCAfBG5QcPcly7Wv0z28TBSFcTKJ8BftO7Qwo18QBvQt33jSq8l8U/BZcXZilDgyrwmtZl0vr25l82jHXP3E/PKT2lEI2qEpOA3D9bXbbMON6HYMoD8/lci0kvLBPrFyC8rdAbZMG6QwcdBFY1oVv8gWkTvKEGBhn0Ec/doQtsMYvfDIWSDvRUSxTgDmc87VvICFSf0Ar8elOA6iRBYgLEkHrS408m2kasqEybHobUP24DLZM9V/w3g+GNGdayYM9VGSAWPPHTGk+2eTGM6i+QHI/3bpPW554g+/1yYWIQRe19SE1kKVWYOl+a5NkdOTFBOCvke+hTZLsRxLeIo5A==",
+      "recipient_pk_hash": "pk-3CTNgLAl82Lp"
     }
   ]
 }
