@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 233,
+  "count": 234,
   "items": [
     {
       "telegram_message_id": "Edgar_20260903083532_007",
@@ -3728,6 +3728,22 @@
       "submission_source": "https://cfr.truesight.me/",
       "program": "crf-anapu",
       "request_txid": "XFCAfBG5QcPcly7Wv0z28TBSFcTKJ8BftO7Qwo18QBvQt33jSq8l8U/BZcXZilDgyrwmtZl0vr25l82jHXP3E/PKT2lEI2qEpOA3D9bXbbMON6HYMoD8/lci0kvLBPrFyC8rdAbZMG6QwcdBFY1oVv8gWkTvKEGBhn0Ec/doQtsMYvfDIWSDvRUSxTgDmc87VvICFSf0Ar8elOA6iRBYgLEkHrS408m2kasqEybHobUP24DLZM9V/w3g+GNGdayYM9VGSAWPPHTGk+2eTGM6i+QHI/3bpPW554g+/1yYWIQRe19SE1kKVWYOl+a5NkdOTFBOCvke+hTZLsRxLeIo5A==",
+      "recipient_pk_hash": "pk-3CTNgLAl82Lp"
+    },
+    {
+      "telegram_message_id": "Edgar_20261015215952_185",
+      "submitted_name": "Unknown",
+      "planting_date": "2026-10-15",
+      "photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20261015185949_MIIBIjANBgkqhkiG9w0B.jpg",
+      "photo_hash": "91d3cc704c4c2633",
+      "latitude": "-3.669614",
+      "longitude": "-51.325108",
+      "coord_source": "submitted",
+      "species": "Cacao - Criolla",
+      "status": "NEW",
+      "submission_source": "https://cfr.truesight.me/",
+      "program": "crf-anapu",
+      "request_txid": "glDPfQj0E5XkluyArLSICeFQUNtD+h4AbLZod8+7iS2kYljJQT120RVdJAE7yofbAO5OBvcLD6zIv0oShJNUDKqcKBIP6vMJO/+F1AJ2lO3+W8V0QGP6+VjvWE4CdjzzXZvMMUQW60Ar69Rqio+PlkwfJLpqMqK/1frP7jPKsAZT8mRb/CVLswR2FH5+wgOIA+cYXm7SnsFTUGGhG46T9qty9UmVd8xKvOOfSsTM7FajJCNWYL/lur1CICXLxRRfk0TQoadRlVjJ8pEcs6SOlVtWaaT5nz2Kks+i64q5OnMVzoFkO7XsM2EqLihrbDRvbTlAI1Xk1uIBF0UQmqEXZQ==",
       "recipient_pk_hash": "pk-3CTNgLAl82Lp"
     }
   ]
