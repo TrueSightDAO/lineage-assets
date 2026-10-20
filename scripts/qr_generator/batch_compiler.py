@@ -421,6 +421,28 @@ def main():
         help="Path to template image (optional). If omitted, a white background of default size is used."
     )
     parser.add_argument(
+        "--qr",
+        action="append",
+        default=None,
+        metavar="QR_ID",
+        help=(
+            "Only process this QR id (repeatable). Use to (re)generate a "
+            "specific batch without rewriting the whole corpus, e.g. the "
+            "40 labels of 2024OSCAR_AGL14_20260911_* whose PNGs were never "
+            "committed. Implies overwriting existing scratch output."
+        ),
+    )
+    parser.add_argument(
+        "--only-missing-png",
+        dest="only_missing_png",
+        action="store_true",
+        help=(
+            "Only process rows whose label PNG is absent from --pngs-dir. "
+            "Repairs drift between qrs/<id>.json and pngs/<id>.png without "
+            "touching the ~1.6k labels that are already published."
+        ),
+    )
+    parser.add_argument(
         "--output-dir", default="package_qr_codes",
         help="Directory to save compiled print-ready images (default: package_qr_codes — operator-local scratch)"
     )
@@ -512,6 +534,32 @@ def main():
 
     # Fetch rows: list of ((qr_code, farm_name, state, country, year, is_cacao), full_row)
     rows = fetch_rows(args.credentials, args.sheet_url, args.sheet_name)
+
+    # ── gap-fill / targeted filters ──────────────────────────────────────────
+    # Repair path for batches whose per-QR manifests landed but whose label
+    # PNGs never did (e.g. 2024OSCAR_AGL14_20260911_*). Without these flags the
+    # only way to fill a gap was a full re-run, which rewrites every label.
+    if args.qr:
+        wanted = {q.strip() for q in args.qr if q and q.strip()}
+        before = len(rows)
+        rows = [r for r in rows if r[0][0] in wanted]
+        found = {r[0][0] for r in rows}
+        msg = f"[filter] --qr kept {len(rows)}/{before} rows"
+        if wanted - found:
+            msg += f" | NOT IN SHEET: {sorted(wanted - found)}"
+        print(msg)
+    if args.only_missing_png:
+        before = len(rows)
+        rows = [
+            r for r in rows
+            if not os.path.exists(os.path.join(args.pngs_dir, f"{r[0][0]}.png"))
+        ]
+        print(f"[filter] --only-missing-png: {len(rows)}/{before} rows need a label PNG")
+
+    if not rows:
+        print("[done] nothing to do (all selected rows already have a label PNG)")
+        return 0
+
     manifests_written = 0
     pngs_written = 0
     for (qr_code, farm_name, state, country, year, is_cacao), full_row in rows:
@@ -519,8 +567,10 @@ def main():
         filename = sanitize_filename(f"compiled_{farm_name}_{qr_code}.png")
         out_path = os.path.join(args.output_dir, filename)
         
-        # Check if file already exists
-        if os.path.exists(out_path):
+        # Check if file already exists. An explicit --qr / --only-missing-png
+        # run must OVERWRITE stale scratch output, otherwise a gap-fill for an
+        # id that was compiled once but never published would be skipped.
+        if os.path.exists(out_path) and not (args.qr or args.only_missing_png):
             print(f"Image already exists, skipping: {out_path}")
             continue
         
