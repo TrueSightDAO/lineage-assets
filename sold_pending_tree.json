@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 467,
+  "count": 473,
   "items": [
     {
       "qr_code": "2024OSCAR_AGL14_20260911_9",
@@ -2677,6 +2677,34 @@
       "minted_at": "2025-12-27"
     },
     {
+      "qr_code": "2024SA_20251227_31",
+      "status": "SOLD",
+      "farm": "Santa Ana Fazenda",
+      "country": "Brazil",
+      "harvest_year": "2023",
+      "product": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Santa Ana 2023 | Kirsten 20251227 | San Francisco - AGL2",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "d1c0e15b9f81cb23",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1246",
+      "minted_at": "2025-12-27"
+    },
+    {
+      "qr_code": "2024SA_20251227_30",
+      "status": "SOLD",
+      "farm": "Santa Ana Fazenda",
+      "country": "Brazil",
+      "harvest_year": "2023",
+      "product": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Santa Ana 2023 | Kirsten 20251227 | San Francisco - AGL2",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "d1c0e15b9f81cb23",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1245",
+      "minted_at": "2025-12-27"
+    },
+    {
       "qr_code": "2024SA_20251227_3",
       "status": "SOLD",
       "farm": "Santa Ana Fazenda",
@@ -2688,6 +2716,34 @@
       "owner_email_present": false,
       "owner_email_hash": "",
       "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1218",
+      "minted_at": "2025-12-27"
+    },
+    {
+      "qr_code": "2024SA_20251227_29",
+      "status": "SOLD",
+      "farm": "Santa Ana Fazenda",
+      "country": "Brazil",
+      "harvest_year": "2023",
+      "product": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Santa Ana 2023 | Kirsten 20251227 | San Francisco - AGL2",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "d1c0e15b9f81cb23",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1244",
+      "minted_at": "2025-12-27"
+    },
+    {
+      "qr_code": "2024SA_20251227_28",
+      "status": "SOLD",
+      "farm": "Santa Ana Fazenda",
+      "country": "Brazil",
+      "harvest_year": "2023",
+      "product": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Santa Ana 2023 | Kirsten 20251227 | San Francisco - AGL2",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "d1c0e15b9f81cb23",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1243",
       "minted_at": "2025-12-27"
     },
     {
@@ -2730,6 +2786,34 @@
       "owner_email_present": false,
       "owner_email_hash": "",
       "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1217",
+      "minted_at": "2025-12-27"
+    },
+    {
+      "qr_code": "2024SA_20251227_19",
+      "status": "SOLD",
+      "farm": "Santa Ana Fazenda",
+      "country": "Brazil",
+      "harvest_year": "2023",
+      "product": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Santa Ana 2023 | Kirsten 20251227 | San Francisco - AGL2",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "d1c0e15b9f81cb23",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1234",
+      "minted_at": "2025-12-27"
+    },
+    {
+      "qr_code": "2024SA_20251227_18",
+      "status": "SOLD",
+      "farm": "Santa Ana Fazenda",
+      "country": "Brazil",
+      "harvest_year": "2023",
+      "product": "Ceremonial Cacao Kraft Pouch - Alibaba:269035810001023771 | Cacao Mass | 200 grams | Santa Ana 2023 | Kirsten 20251227 | San Francisco - AGL2",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "d1c0e15b9f81cb23",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1233",
       "minted_at": "2025-12-27"
     },
     {
