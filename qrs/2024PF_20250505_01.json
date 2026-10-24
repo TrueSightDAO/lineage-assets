@@ -28,14 +28,14 @@
       "notes": "Per Agroverse QR codes sheet status"
     }
   ],
-  "owner_email_hash": "598555a78dc49591",
-  "owner_email_present": true,
+  "owner_email_hash": null,
+  "owner_email_present": false,
   "sheet_row": 2,
   "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A2",
   "current_landing_page": "https://agroverse.shop/shipments/agl4",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024PF_20250505_01.png",
   "scan_target": "https://truesight.me/qr/?id=2024PF_20250505_01",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024PF_20250505_01",
-  "_seeded_at": "2026-10-23T19:56:04Z",
+  "_seeded_at": "2026-10-24T11:34:06Z",
   "_source": "seed_from_sheet.py"
 }
