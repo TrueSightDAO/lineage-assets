@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T11:34:07Z",
+  "generated_at": "2026-10-24T14:51:04Z",
   "source": "build_index.py",
   "qr_count": 1823,
   "by_status": {
@@ -29660,7 +29660,7 @@
       "product_image": "https://static.wixstatic.com/media/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_avif,quality_auto/0e2cde_43e4787aafc14e8b95fe84b826eecf7b~mv2.jpg",
       "price": "25",
       "owner_email_present": true,
-      "owner_email_hash": "8eb5c07cab73b76d",
+      "owner_email_hash": "598555a78dc49591",
       "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A29",
       "minted_at": "2025-05-05",
       "current_holder": null,
