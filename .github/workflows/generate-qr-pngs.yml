@@ -1,0 +1,163 @@
+# On-demand QR label generation -- "fill the tab, click run, get PNGs".
+#
+# WHAT THIS DOES *NOT* DO: it does not change how labels look. The renderer
+# (scripts/qr_generator/batch_compiler.py) is used EXACTLY as deployed on main --
+# no logo flag, no --logo-ratio, no geometry overrides. Defaults are main's:
+#   box_size 10, border 4, logo_ratio 0.2, cacao logo agroverse_logo.jpeg
+# i.e. the same rendering the webhook has been producing in pngs/ on main.
+# If you want a different look, that is a deliberate renderer change in its own
+# PR -- not a side effect of adding a button.
+#
+# WHY IT EXISTS: 'Agroverse QR codes' is the source of truth, but nothing turned
+# new rows into PNGs on demand. sync-lineage-assets.yml only seeds qrs/*.json;
+# PNGs came from a one-off local batch_compiler run. This gives that loop a home.
+#
+# USE:
+#   1. governor fills rows in 'Agroverse QR codes'
+#   2. Actions -> "Generate QR label PNGs" -> Run workflow
+#        qr_codes empty      -> every row that has no PNG yet (idempotent)
+#        qr_codes "a,b,c"    -> just those
+#   3. PNGs commit to pngs/, manifests to qrs/
+#   4. download the run artifact and hand out the zip
+#
+# Requires repo secret GOOGLE_CREDENTIALS_JSON (same one sync-lineage-assets.yml uses).
+
+name: Generate QR label PNGs
+
+on:
+  workflow_dispatch:
+    inputs:
+      qr_codes:
+        description: 'Comma/space separated QR codes. Leave EMPTY to render every row missing a PNG.'
+        required: false
+        default: ''
+      force:
+        description: 'Re-render even if pngs/<code>.png already exists'
+        required: false
+        default: false
+        type: boolean
+      only_missing_png:
+        description: 'Only rows without a PNG (default true when qr_codes is empty)'
+        required: false
+        default: true
+        type: boolean
+
+concurrency:
+  group: generate-qr-pngs
+  cancel-in-progress: false   # the job commits; never race two of them
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout lineage-assets
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --quiet --upgrade pip
+          python3 -m pip install --quiet -r requirements.txt
+          # zxing-cpp so generated labels are decode-verified in CI. The renderer
+          # silently SKIPS verification when no decoder is importable.
+          python3 -m pip install --quiet zxing-cpp
+
+      - name: Fail fast if the service-account secret is missing
+        env:
+          SA: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        run: |
+          [ -n "$SA" ] || { echo "::error::Repo secret GOOGLE_CREDENTIALS_JSON is not set"; exit 1; }
+
+      - name: Write Google service-account JSON (outside the repo)
+        # the orchestrator runs `git clean -fdq`; creds must live outside
+        # $GITHUB_WORKSPACE or they get deleted mid-run.
+        env:
+          SA: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/creds"
+          printf '%s' "$SA" > "$RUNNER_TEMP/creds/sa.json"
+          chmod 600 "$RUNNER_TEMP/creds/sa.json"
+
+      - name: Configure git identity
+        run: |
+          git config --global user.name "truesight-bot"
+          git config --global user.email "sophia@truesight.me"
+
+      - name: Render label PNGs (+ manifests)
+        env:
+          QR_CODES: ${{ inputs.qr_codes }}
+          FORCE: ${{ inputs.force }}
+          ONLY_MISSING: ${{ inputs.only_missing_png }}
+        run: |
+          set -euo pipefail
+          # NO logo / geometry / ratio flags -- main's renderer defaults are the
+          # canonical look. Adding flags here would silently change every label.
+          ARGS=(--credentials "$RUNNER_TEMP/creds/sa.json")
+
+          codes="$(echo "${QR_CODES:-}" | tr ',' ' ' | xargs || true)"
+          if [ -n "$codes" ]; then
+            # shellcheck disable=SC2206
+            ARGS+=(--qr $codes)
+            echo "Rendering explicit codes: $codes"
+          elif [ "${ONLY_MISSING:-true}" = "true" ]; then
+            ARGS+=(--only-missing-png)
+            echo "Rendering every row that has no PNG yet (idempotent)"
+          else
+            echo "Rendering ALL rows (no filter) -- this will rewrite existing PNGs"
+          fi
+
+          if [ "${FORCE:-false}" = "true" ]; then
+            echo "FORCE=true -> --auto-continue"
+            ARGS+=(--auto-continue)
+          fi
+
+          python3 scripts/qr_generator/batch_compiler.py "${ARGS[@]}"
+
+      - name: Report rendering (must stay == main's, no logo drift)
+        run: |
+          python3 - <<'PY'
+          import glob, os, sys
+          from PIL import Image
+          import numpy as np
+          changed = os.popen("git diff --name-only -- 'pngs/*.png'").read().split()
+          targets = changed or []
+          if not targets:
+              print("no PNG changes this run")
+              raise SystemExit(0)
+          print(f"{len(targets)} PNG(s) rendered. Logo/geometry spot-check:")
+          for p in targets[:5]:
+              a = np.asarray(Image.open(p).convert("RGB")).astype(int)
+              chroma = int((a.max(2) - a.min(2)).max())
+              print(f"  {os.path.basename(p):<32} size={Image.open(p).size} max_chroma={chroma}")
+          print("(informational -- main uses a low-contrast cacao logo by design)")
+          PY
+
+      - name: Commit rendered PNGs + manifests
+        run: |
+          set -euo pipefail
+          git add pngs qrs 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes -- every requested label already existed."
+          else
+            git commit -m "chore(qr): render label PNGs [skip ci]"
+            git push origin HEAD:main
+          fi
+
+      - name: Upload PNGs as a downloadable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: qr-label-pngs-${{ github.run_number }}
+          path: pngs/*.png
+          if-no-files-found: warn
+          retention-days: 30
