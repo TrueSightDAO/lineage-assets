@@ -1,0 +1,36 @@
+{
+  "qr_id": "2025_20261025_7",
+  "asset_type": "cacao_bag",
+  "schema_version": "v0",
+  "minted_at": "2026-10-25",
+  "minted_by": "Sophia Truesight",
+  "status": "MINTED",
+  "current_holder": null,
+  "lineage": {
+    "farm": "Jesus do Deus",
+    "state": "Bahia",
+    "country": "Brazil",
+    "harvest_year": "2025",
+    "sku": "Agroverse 81% Cacao Chocolate Bar 50g | Vivi Cacao Nibs | Kirsten 20261025 | San Francisco - AGL13",
+    "product_image": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
+    "price": "10"
+  },
+  "events": [
+    {
+      "type": "minted",
+      "at": "2026-10-25",
+      "by": "Sophia Truesight",
+      "notes": "QR generated and registered on Agroverse QR codes sheet"
+    }
+  ],
+  "owner_email_hash": null,
+  "owner_email_present": false,
+  "sheet_row": 1831,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1831",
+  "current_landing_page": "https://agroverse.shop/shipments/agl13/index.html",
+  "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2025_20261025_7.png",
+  "scan_target": "https://truesight.me/qr/?id=2025_20261025_7",
+  "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2025_20261025_7",
+  "_seeded_at": "2026-10-25T05:59:52Z",
+  "_source": "seed_from_sheet.py"
+}

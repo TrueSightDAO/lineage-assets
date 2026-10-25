@@ -19,7 +19,7 @@
     "longitude": "-48.49907",
     "planting_video_url": "",
     "seedling_photo_url": "https://raw.githubusercontent.com/TrueSightDAO/sunmint/main/images/20260822_130000_FOUNDERHAUS_GROUP.jpg",
-    "location_text": "Jurerê Internacional, Florianópolis, SC, Brazil (FounderHaus hub)",
+    "location_text": "https://github.com/TrueSightDAO/lineage-assets/blob/main/pngs/FOUNDERHAUS_BOUGAINVILLEA_20260821_1.png",
     "linked_tree": "Edgar_20260821175134_006",
     "linked_at": "2026-08-22T11:45:51.722Z"
   },
@@ -45,6 +45,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/FOUNDERHAUS_BOUGAINVILLEA_20260821_1.png",
   "scan_target": "https://truesight.me/qr/?id=FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=FOUNDERHAUS_BOUGAINVILLEA_20260821_1",
-  "_seeded_at": "2026-09-25T18:36:28Z",
+  "_seeded_at": "2026-10-25T05:59:52Z",
   "_source": "seed_from_sheet.py"
 }
