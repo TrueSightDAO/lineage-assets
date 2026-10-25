@@ -145,6 +145,41 @@ def find_duplicate_qr_codes(rows):
     return {qr: n for qr, n in counts.items() if n > 1}
 
 
+
+def scope_rows(rows, qr_ids=None, only_missing_png=False, pngs_dir=None):
+    """Apply the --qr and --only-missing-png filters to fetched sheet rows.
+
+    Pure apart from one os.path.exists check against pngs_dir. Returns
+    (selected_rows, notes) where notes are the human-readable log lines main()
+    used to print inline.
+
+    Extracted so the guard-vs-filter ORDERING is unit-testable: the duplicate-id
+    guard must run on the SELECTED rows, and before this the filters were inlined
+    in main() so no test could assert which runs the guard actually blocks.
+    """
+    notes = []
+    selected = list(rows)
+    if qr_ids:
+        wanted = {q.strip() for q in qr_ids if q and q.strip()}
+        before = len(selected)
+        selected = [r for r in selected if r[0][0] in wanted]
+        found = {r[0][0] for r in selected}
+        msg = f"[filter] --qr kept {len(selected)}/{before} rows"
+        if wanted - found:
+            msg += f" | NOT IN SHEET: {sorted(wanted - found)}"
+        notes.append(msg)
+    if only_missing_png:
+        before = len(selected)
+        selected = [
+            r for r in selected
+            if not os.path.exists(os.path.join(pngs_dir, f"{r[0][0]}.png"))
+        ]
+        notes.append(
+            f"[filter] --only-missing-png: {len(selected)}/{before} rows need a label PNG"
+        )
+    return selected, notes
+
+
 def generate_qr_image(url: str, box_size: int = 10, border: int = 4, logo_path: str = None, logo_ratio: float = 0.2):
     """
     Generate QR Code image for given URL, optionally embed a logo at center.
@@ -611,9 +646,21 @@ def main():
     # Fetch rows: list of ((qr_code, farm_name, state, country, year, is_cacao), full_row)
     rows = fetch_rows(args.credentials, args.sheet_url, args.sheet_name)
 
+    rows, _scope_notes = scope_rows(
+        rows, args.qr, args.only_missing_png, args.pngs_dir
+    )
+    for _n in _scope_notes:
+        print(_n)
+
     # ── structural duplicate-id guard (default ON; --allow-duplicate-ids to skip) ──
     # "Query column A for duplicates" (AGROVERSE_QR_CODE_BATCH_GENERATION.md §5) was
     # a documented step, not an enforced one — make it impossible to skip by accident.
+    #
+    # Runs on the SELECTED rows, after --qr / --only-missing-png. A duplicate in a row
+    # this run never touches cannot corrupt the batch being minted, and aborting on it
+    # made every targeted --qr run impossible while any unrelated duplicate existed
+    # (the on-demand "Generate QR label PNGs" workflow could not render anything).
+    # An unfiltered run still selects every row, so corpus-wide detection is unchanged.
     if not args.allow_duplicate_ids:
         dupes = find_duplicate_qr_codes(rows)
         if dupes:
@@ -624,27 +671,6 @@ def main():
             print("Clean up the sheet rows (or pass --allow-duplicate-ids if this "
                   "is expected) before re-running.")
             sys.exit(4)
-
-    # ── gap-fill / targeted filters ──────────────────────────────────────────
-    # Repair path for batches whose per-QR manifests landed but whose label
-    # PNGs never did (e.g. 2024OSCAR_AGL14_20260911_*). Without these flags the
-    # only way to fill a gap was a full re-run, which rewrites every label.
-    if args.qr:
-        wanted = {q.strip() for q in args.qr if q and q.strip()}
-        before = len(rows)
-        rows = [r for r in rows if r[0][0] in wanted]
-        found = {r[0][0] for r in rows}
-        msg = f"[filter] --qr kept {len(rows)}/{before} rows"
-        if wanted - found:
-            msg += f" | NOT IN SHEET: {sorted(wanted - found)}"
-        print(msg)
-    if args.only_missing_png:
-        before = len(rows)
-        rows = [
-            r for r in rows
-            if not os.path.exists(os.path.join(args.pngs_dir, f"{r[0][0]}.png"))
-        ]
-        print(f"[filter] --only-missing-png: {len(rows)}/{before} rows need a label PNG")
 
     if not rows:
         print("[done] nothing to do (all selected rows already have a label PNG)")
