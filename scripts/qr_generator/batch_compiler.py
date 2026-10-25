@@ -11,7 +11,9 @@ import argparse
 import os
 import re
 import sys
+from collections import Counter
 from pathlib import Path
+from urllib.parse import urlparse
 
 # Shared lineage-assets manifest builder (lib/ lives at scripts/lib/)
 _SCRIPTS_DIR = Path(__file__).resolve().parents[1]
@@ -78,6 +80,21 @@ def extract_sheet_id(sheet_url: str) -> str:
     return match.group(1)
 
 
+def resolve_is_cacao(url: str) -> bool:
+    """Determine if an item is cacao based on its landing_page URL (column B).
+
+    Netloc-based, not a literal "https://www.agroverse.shop" prefix match:
+    the sheet's real landing_page values are consistently written WITHOUT
+    "www." (e.g. https://agroverse.shop/shipments/agl13/index.html), so the
+    old prefix check silently evaluated False for every such row, routing
+    cacao items to --non-cacao-logo (the wrong, differently-branded mark)
+    with no error — found + fixed 2026-10-25 (Vivi 81% bar 50g / AGL13 batch,
+    40 labels embedded the wrong logo before this was caught before shipping).
+    """
+    netloc = urlparse(url).netloc.lower()
+    return netloc == 'agroverse.shop' or netloc.endswith('.agroverse.shop')
+
+
 def fetch_rows(credentials_path: str, sheet_url: str, sheet_name: str):
     """
     Fetch rows from Google Sheet. Returns list of (unpacked_tuple, full_row) pairs,
@@ -104,11 +121,28 @@ def fetch_rows(credentials_path: str, sheet_url: str, sheet_name: str):
         state = row[5].strip() if len(row) >= 6 else ''
         country = row[6].strip() if len(row) >= 7 else ''
         year = row[7].strip() if len(row) >= 8 else ''
-        # Determine if item is cacao based on URL in column B
-        is_cacao = url.startswith('https://www.agroverse.shop')
+        is_cacao = resolve_is_cacao(url)
         if qr_code:
             rows.append(((qr_code, farm_name, state, country, year, is_cacao), row))
     return rows
+
+
+def find_duplicate_qr_codes(rows):
+    """Return {qr_code: count} for any qr_code (column A) appearing more than
+    once among the fetched rows. A duplicate id means two sheet rows will
+    mint/compile against the same output filename — the second write silently
+    clobbers the first (or, on the self-serve/webhook mint path, silently
+    wastes a second serialized id on what should be one physical unit).
+
+    Found 2026-10-25: a botched Vivi 81% bar batch (AGL13) left 100 unique
+    ids minted for a 40-unit batch (7 of them literal duplicate rows) before
+    anyone checked column A — see AGROVERSE_QR_CODE_BATCH_GENERATION.md §5
+    ("Before bulk-adding ids: Query column A for duplicates"), which was
+    documented but not enforced. This makes that check structural instead of
+    a step someone has to remember.
+    """
+    counts = Counter(r[0][0] for r in rows)
+    return {qr: n for qr, n in counts.items() if n > 1}
 
 
 def generate_qr_image(url: str, box_size: int = 10, border: int = 4, logo_path: str = None, logo_ratio: float = 0.2):
@@ -401,6 +435,38 @@ def _try_decode(img):
     return None, tried > 0
 
 
+def _assert_branded(compiled_img, qr_code, logo_path, no_logo=False):
+    """Loud-failure check that a compiled label actually has a composited
+    logo/text, not a bare QR grid. A pure black/white QR render has exactly 2
+    grayscale values; the compiled label (logo + anti-aliased farm/serial
+    text) always has many more.
+
+    Mirrors the manual snippet in AGROVERSE_QR_CODE_BATCH_GENERATION.md §4a
+    ("Before marking any QR image deliverable done, verify branding
+    survived") — that snippet was documentation an operator had to remember
+    to run; this makes it part of --verify so it can't be skipped silently.
+    `--verify` already caught *decodability* (2024OSCAR_CT_20260820_3); it
+    did not catch *wrong/missing branding* (the 2026-10-20 298-bag high-res
+    incident, and the 2026-10-25 Vivi batch wrong-logo incident) because
+    nothing checked pixel content. Raises AssertionError on failure; callers
+    should treat that the same as a failed decode (abort the batch).
+
+    :param no_logo: True when the caller explicitly requested --no-logo; in
+        that case a bare-looking render is expected, not a defect.
+    """
+    if no_logo or not logo_path:
+        return
+    gray = compiled_img.convert("L")
+    colors = gray.getcolors(maxcolors=1_000_000)
+    n_colors = len(colors) if colors is not None else 1_000_001
+    if n_colors <= 10:
+        raise AssertionError(
+            f"{qr_code}: compiled label looks like a bare QR (only {n_colors} "
+            f"distinct grayscale values) — logo/text did not composite. "
+            f"Expected logo_path={logo_path!r} to be visibly embedded."
+        )
+
+
 def main():
     parser = argparse.ArgumentParser(description="Batch compile QR codes with labels")
     parser.add_argument(
@@ -519,7 +585,17 @@ def main():
     )
     parser.add_argument(
         "--no-verify", dest="verify", action="store_false", default=True,
-        help="Skip the post-mint QR decodability self-check (default: verify ON)"
+        help="Skip the post-mint QR decodability + logo-branding self-check (default: verify ON)"
+    )
+    parser.add_argument(
+        "--allow-duplicate-ids", dest="allow_duplicate_ids", action="store_true",
+        help=(
+            "Proceed even if column A (qr_code) has duplicate values among the "
+            "fetched rows. Default is to abort loudly and list them — duplicates "
+            "mean a batch that should mint N units has minted >N ids (see "
+            "find_duplicate_qr_codes docstring). Only pass this once you've "
+            "confirmed the duplicates are expected (e.g. intentional re-run)."
+        ),
     )
     args = parser.parse_args()
     # If requested, disable logo embedding
@@ -534,6 +610,20 @@ def main():
 
     # Fetch rows: list of ((qr_code, farm_name, state, country, year, is_cacao), full_row)
     rows = fetch_rows(args.credentials, args.sheet_url, args.sheet_name)
+
+    # ── structural duplicate-id guard (default ON; --allow-duplicate-ids to skip) ──
+    # "Query column A for duplicates" (AGROVERSE_QR_CODE_BATCH_GENERATION.md §5) was
+    # a documented step, not an enforced one — make it impossible to skip by accident.
+    if not args.allow_duplicate_ids:
+        dupes = find_duplicate_qr_codes(rows)
+        if dupes:
+            print(f"[FATAL] {len(dupes)} duplicate qr_code id(s) in column A — "
+                  f"aborting before any compile/mint:")
+            for qr, n in sorted(dupes.items()):
+                print(f"    {qr}  (x{n})")
+            print("Clean up the sheet rows (or pass --allow-duplicate-ids if this "
+                  "is expected) before re-running.")
+            sys.exit(4)
 
     # ── gap-fill / targeted filters ──────────────────────────────────────────
     # Repair path for batches whose per-QR manifests landed but whose label
@@ -654,6 +744,13 @@ def main():
                 sys.exit(3)
             else:
                 print(f"  ✓ verified {qr_code} -> {decoded}")
+
+            # ─── branding self-check (same flag, same abort-loudly policy) ──
+            try:
+                _assert_branded(compiled, qr_code, logo_path, no_logo=args.no_logo)
+            except AssertionError as e:
+                print(f"  [FATAL] {e} Aborting batch.")
+                sys.exit(3)
 
         # Write the per-QR JSON manifest into ../../qrs so the asset
         # becomes a first-class lineage-asset at mint time. Idempotent —
