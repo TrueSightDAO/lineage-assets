@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 473,
+  "count": 472,
   "items": [
     {
       "qr_code": "2024OSCAR_AGL14_20260911_9",
@@ -1050,20 +1050,6 @@
       "owner_email_present": true,
       "owner_email_hash": "0a8a4f084e0fe8cd",
       "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1379",
-      "minted_at": "2026-04-12"
-    },
-    {
-      "qr_code": "2024OSR_81PB_20260412_5",
-      "status": "SOLD",
-      "farm": "Oscar Farm",
-      "country": "Brazil",
-      "harvest_year": "2024",
-      "product": "81% Dark Chocolate Bar 50grams - Oscar Fazenda, Brazil 2024 + CP340993988BR San Francisco",
-      "product_image": "",
-      "price": "10",
-      "owner_email_present": true,
-      "owner_email_hash": "0a8a4f084e0fe8cd",
-      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1378",
       "minted_at": "2026-04-12"
     },
     {
