@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts" / "qr_gen
 from batch_compiler import (  # noqa: E402
     resolve_is_cacao,
     find_duplicate_qr_codes,
+    scope_rows,
     _assert_branded,
 )
 
@@ -95,3 +96,51 @@ class TestAssertBranded:
 
     def test_missing_logo_path_bypasses_check(self):
         _assert_branded(self._bare_qr_image(), "TEST_1", None, no_logo=False)  # no raise
+
+
+class TestGuardScopedToSelectedRows:
+    """The duplicate-id guard must judge the rows a run will actually mint.
+
+    Regression: the guard originally ran BEFORE the --qr / --only-missing-png
+    filters and therefore scanned the entire sheet, so a duplicate anywhere made
+    every targeted run impossible. That is not hypothetical -- it made the
+    on-demand "Generate QR label PNGs" workflow abort with 0 files produced
+    while 7 unrelated duplicates sat in the sheet (2026-10-25, Vivi AGL13).
+    """
+
+    def _row(self, qr_code):
+        return ((qr_code, "Farm", "State", "Country", "2025", True), [qr_code])
+
+    def test_targeted_selection_excludes_unrelated_duplicates(self):
+        # Sheet has a dup in _63, but we only asked for _1.
+        rows = [self._row("_1"), self._row("_63"), self._row("_63")]
+        selected, _ = scope_rows(rows, ["_1"])
+        assert [r[0][0] for r in selected] == ["_1"]
+        # The guard therefore sees no duplicates and does not abort.
+        assert find_duplicate_qr_codes(selected) == {}
+
+    def test_selection_naming_a_duplicated_id_still_aborts(self):
+        rows = [self._row("_1"), self._row("_63"), self._row("_63")]
+        selected, _ = scope_rows(rows, ["_63"])
+        assert find_duplicate_qr_codes(selected) == {"_63": 2}
+
+    def test_full_selection_still_sees_corpus_duplicates(self):
+        # No filters -> every row selected -> corpus-wide detection unchanged.
+        rows = [self._row("_1"), self._row("_63"), self._row("_63")]
+        selected, _ = scope_rows(rows, None)
+        assert find_duplicate_qr_codes(selected) == {"_63": 2}
+
+    def test_missing_png_filter_scoped_before_guard(self, tmp_path):
+        rows = [self._row("_1"), self._row("_63"), self._row("_63")]
+        (tmp_path / "_1.png").write_bytes(b"x")
+        selected, notes = scope_rows(rows, None, True, str(tmp_path))
+        # _1 already has a PNG, so only the _63 pair survives -> still a dup.
+        assert [r[0][0] for r in selected] == ["_63", "_63"]
+        assert find_duplicate_qr_codes(selected) == {"_63": 2}
+        assert any("only-missing-png" in n for n in notes)
+
+    def test_scope_rows_reports_unknown_ids(self):
+        rows = [self._row("_1")]
+        selected, notes = scope_rows(rows, ["_1", "_999"])
+        assert [r[0][0] for r in selected] == ["_1"]
+        assert any("NOT IN SHEET" in n and "_999" in n for n in notes)
