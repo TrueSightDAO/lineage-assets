@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-27T04:54:56Z",
+  "generated_at": "2026-10-27T10:27:26Z",
   "source": "build_index.py",
   "qr_count": 1863,
   "by_status": {
-    "MINTED": 1125,
-    "SOLD": 587,
+    "MINTED": 1124,
+    "SOLD": 588,
     "INVALIDATED": 4,
     "ASSIGNED_TO_TREE": 16,
     "EXPENSED": 4,
@@ -23991,7 +23991,7 @@
     {
       "qr_id": "2024PAULO_20250804_18",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "La do Sitio",
       "country": "Brazil",
       "harvest_year": "2024",
