@@ -12,7 +12,7 @@
     "country": "Brazil",
     "harvest_year": "2024",
     "sku": "Agroverse 81% Cacao Chocolate Bar 50g | Oscar Cacao Nibs | Kirsten 20261027 | San Francisco - MAIN",
-    "product_image": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
+    "product_image": "",
     "price": "10"
   },
   "events": [
@@ -31,6 +31,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024_20261027_1.png",
   "scan_target": "https://truesight.me/qr/?id=2024_20261027_1",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024_20261027_1",
-  "_seeded_at": "2026-10-27T22:58:16Z",
-  "_source": "batch_compiler.py + seed_from_sheet.py fields"
+  "_seeded_at": "2026-10-27T23:58:38Z",
+  "_source": "seed_from_sheet.py"
 }
