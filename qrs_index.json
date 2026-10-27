@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-27T10:27:26Z",
+  "generated_at": "2026-10-27T16:00:21Z",
   "source": "build_index.py",
-  "qr_count": 1863,
+  "qr_count": 1865,
   "by_status": {
-    "MINTED": 1124,
-    "SOLD": 588,
+    "MINTED": 1108,
+    "SOLD": 606,
     "INVALIDATED": 4,
     "ASSIGNED_TO_TREE": 16,
     "EXPENSED": 4,
@@ -14,10 +14,44 @@
     "GIFT": 3
   },
   "by_asset_type": {
-    "cacao_bag": 1328,
+    "cacao_bag": 1330,
     "tree": 535
   },
   "qrs": [
+    {
+      "qr_id": "2024_20261027_2",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm, Bahia",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "product": "Agroverse 81% Cacao Chocolate Bar 50g | Oscar Cacao Nibs | Kirsten 20261027 | San Francisco - MAIN",
+      "product_image": "",
+      "price": "25",
+      "owner_email_present": false,
+      "owner_email_hash": "",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1866",
+      "minted_at": "2026-10-27",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024_20261027_2"
+    },
+    {
+      "qr_id": "2024_20261027_1",
+      "asset_type": "cacao_bag",
+      "status": "MINTED",
+      "farm": "Oscar's Farm, Bahia",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "product": "Agroverse 81% Cacao Chocolate Bar 50g | Oscar Cacao Nibs | Kirsten 20261027 | San Francisco - MAIN",
+      "product_image": "",
+      "price": "25",
+      "owner_email_present": false,
+      "owner_email_hash": "",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1865",
+      "minted_at": "2026-10-27",
+      "current_holder": null,
+      "scan_target": "https://truesight.me/qr/?id=2024_20261027_1"
+    },
     {
       "qr_id": "2025_20261025_9",
       "asset_type": "cacao_bag",
@@ -11513,7 +11547,7 @@
     {
       "qr_id": "2024OSCAR_20251211_9",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11530,7 +11564,7 @@
     {
       "qr_id": "2024OSCAR_20251211_8",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11547,7 +11581,7 @@
     {
       "qr_id": "2024OSCAR_20251211_7",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11564,7 +11598,7 @@
     {
       "qr_id": "2024OSCAR_20251211_6",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11581,7 +11615,7 @@
     {
       "qr_id": "2024OSCAR_20251211_5",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11598,7 +11632,7 @@
     {
       "qr_id": "2024OSCAR_20251211_4",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11615,7 +11649,7 @@
     {
       "qr_id": "2024OSCAR_20251211_3",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11632,7 +11666,7 @@
     {
       "qr_id": "2024OSCAR_20251211_2",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11666,7 +11700,7 @@
     {
       "qr_id": "2024OSCAR_20251211_14",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11683,7 +11717,7 @@
     {
       "qr_id": "2024OSCAR_20251211_13",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11700,7 +11734,7 @@
     {
       "qr_id": "2024OSCAR_20251211_12",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11717,7 +11751,7 @@
     {
       "qr_id": "2024OSCAR_20251211_11",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11734,7 +11768,7 @@
     {
       "qr_id": "2024OSCAR_20251211_10",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -11751,7 +11785,7 @@
     {
       "qr_id": "2024OSCAR_20251211_1",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -23906,7 +23940,7 @@
     {
       "qr_id": "2024PAULO_20250804_22",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "La do Sitio",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -23923,7 +23957,7 @@
     {
       "qr_id": "2024PAULO_20250804_21",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "La do Sitio",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -23974,7 +24008,7 @@
     {
       "qr_id": "2024PAULO_20250804_19",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "La do Sitio",
       "country": "Brazil",
       "harvest_year": "2024",
@@ -25334,7 +25368,7 @@
     {
       "qr_id": "2024OSCAR_20250728_25",
       "asset_type": "cacao_bag",
-      "status": "MINTED",
+      "status": "SOLD",
       "farm": "Oscar Farm",
       "country": "Brazil",
       "harvest_year": "2024",

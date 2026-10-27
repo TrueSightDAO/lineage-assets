@@ -4,7 +4,7 @@
   "schema_version": "v0",
   "minted_at": "2025-08-04",
   "minted_by": "Sacred Earth Farms",
-  "status": "MINTED",
+  "status": "SOLD",
   "current_holder": null,
   "lineage": {
     "farm": "La do Sitio",
@@ -21,6 +21,11 @@
       "at": "2025-08-04",
       "by": "Sacred Earth Farms",
       "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "AGL8",
+      "notes": "Per Agroverse QR codes sheet status"
     }
   ],
   "owner_email_hash": null,
@@ -31,6 +36,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024PAULO_20250804_22.png",
   "scan_target": "https://truesight.me/qr/?id=2024PAULO_20250804_22",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024PAULO_20250804_22",
-  "_seeded_at": "2026-09-25T18:00:25Z",
+  "_seeded_at": "2026-10-27T16:00:21Z",
   "_source": "seed_from_sheet.py"
 }
