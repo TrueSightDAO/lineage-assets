@@ -275,6 +275,24 @@ def compile_image(template_path: str,
 
     # Helper to load a TrueType font by given family or path, with fallbacks
     def load_font(size):
+        # Absolute system font paths FIRST. Bare filenames ('cour.ttf', 'arial.ttf')
+        # only resolve relative to CWD, so on most hosts they all miss and we fall
+        # through to ImageFont.load_default() -- Pillow's ~11px bitmap font, which
+        # IGNORES `size`. That silently rendered labels at ~1/2 intended height
+        # (line heights 4/8/9/10px instead of 9/20/22/19px). Mirrors the lookup used
+        # by github_webhook_handler.py.
+        for _sys_font in (
+            '/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf',
+            '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',
+            '/System/Library/Fonts/Supplemental/Arial.ttf',
+            '/Library/Fonts/Arial.ttf',
+            'C:\\Windows\\Fonts\\arial.ttf',
+        ):
+            if os.path.isfile(_sys_font):
+                try:
+                    return ImageFont.truetype(_sys_font, size)
+                except Exception:
+                    continue
         try:
             return ImageFont.truetype('cour.ttf', size)  # Prefer Courier New for clear underscore rendering
         except Exception:
