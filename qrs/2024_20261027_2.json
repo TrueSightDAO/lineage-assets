@@ -25,12 +25,12 @@
   ],
   "owner_email_hash": null,
   "owner_email_present": false,
-  "sheet_row": null,
-  "sheet_url": "",
+  "sheet_row": 1866,
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1866",
   "current_landing_page": "https://agroverse.shop/shipments/agl4",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024_20261027_2.png",
   "scan_target": "https://truesight.me/qr/?id=2024_20261027_2",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024_20261027_2",
-  "_seeded_at": "2026-10-27T16:02:07Z",
-  "_source": "batch_compiler.py"
+  "_seeded_at": "2026-10-27T20:38:49Z",
+  "_source": "seed_from_sheet.py"
 }
