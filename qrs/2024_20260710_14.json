@@ -12,7 +12,7 @@
     "country": "Brazil",
     "harvest_year": "2024",
     "sku": "81% Dark Chocolate Bar 50g | Cacao Almonds KG - Organic (Fazenda São Jorge) | Gary Teh 20260710 | San Francisco",
-    "product_image": "https://www.agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
+    "product_image": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
     "price": "25"
   },
   "events": [
@@ -36,6 +36,6 @@
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2024_20260710_14.png",
   "scan_target": "https://truesight.me/qr/?id=2024_20260710_14",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2024_20260710_14",
-  "_seeded_at": "2026-09-25T18:36:28Z",
+  "_seeded_at": "2026-10-28T11:35:44Z",
   "_source": "seed_from_sheet.py"
 }
