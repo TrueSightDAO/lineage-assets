@@ -4,7 +4,7 @@
   "schema_version": "v0",
   "minted_at": "2026-10-25",
   "minted_by": "Sophia Truesight",
-  "status": "MINTED",
+  "status": "SOLD",
   "current_holder": null,
   "lineage": {
     "farm": "Jesus do Deus",
@@ -21,16 +21,21 @@
       "at": "2026-10-25",
       "by": "Sophia Truesight",
       "notes": "QR generated and registered on Agroverse QR codes sheet"
+    },
+    {
+      "type": "sold",
+      "by": "Sophia Truesight",
+      "notes": "Per Agroverse QR codes sheet status"
     }
   ],
-  "owner_email_hash": null,
-  "owner_email_present": false,
+  "owner_email_hash": "fe1d4787b557ad6f",
+  "owner_email_present": true,
   "sheet_row": 1826,
   "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1826",
   "current_landing_page": "https://agroverse.shop/shipments/agl13/index.html",
   "qr_image_url": "https://raw.githubusercontent.com/TrueSightDAO/lineage-assets/main/pngs/2025_20261025_2.png",
   "scan_target": "https://truesight.me/qr/?id=2025_20261025_2",
   "edgar_resolve_url": "https://edgar.truesight.me/agroverse/qr-code-check?qr_code=2025_20261025_2",
-  "_seeded_at": "2026-10-25T05:59:52Z",
+  "_seeded_at": "2026-11-06T10:44:27Z",
   "_source": "seed_from_sheet.py"
 }
