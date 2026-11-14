@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 498,
+  "count": 500,
   "items": [
     {
       "qr_code": "2024_20261027_2",
@@ -5825,6 +5825,34 @@
       "owner_email_hash": "",
       "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A113",
       "minted_at": "2025-07-02"
+    },
+    {
+      "qr_code": "2024OSCAR_20250826_NIBS_6",
+      "status": "SOLD",
+      "farm": "Oscar Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "product": "8 Ounce Package Kraft Pouch - Ilheus, Brazil 2024",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg/v1/fill/w_1000,h_1000,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "95fc289a6c067af6",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A386",
+      "minted_at": "2025-06-24"
+    },
+    {
+      "qr_code": "2024OSCAR_20250826_NIBS_5",
+      "status": "SOLD",
+      "farm": "Oscar Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "product": "8 Ounce Package Kraft Pouch - Ilheus, Brazil 2024",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg/v1/fill/w_1000,h_1000,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "95fc289a6c067af6",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A385",
+      "minted_at": "2025-06-24"
     },
     {
       "qr_code": "2024OSCAR_20250826_NIBS_1",
