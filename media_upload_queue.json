@@ -1,21 +1,15 @@
 {
   "status": "success",
-  "count": 3,
-  "generated_at": "2026-11-26T19:22:40Z",
+  "count": 2,
+  "generated_at": "2026-11-26T19:27:49Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
   "items": [
     {
-      "filename": "Mirante_do_Xar\u00e9u_itacare_capoeira.zip",
-      "size_bytes": 18896748,
-      "status": "uploading",
-      "sha256": "acd49f46d5510f51151bc6b9af79a2f586188e1f462c4d66afe8eeb8b290fb9d",
-      "added_at": "2026-11-26T16:30:41Z"
-    },
-    {
       "filename": "capoeira_mestre_orelha_itacare_plot_2026.zip",
       "size_bytes": 3397951632,
-      "status": "queued",
+      "status": "uploading",
+      "sha256": "fec62f8e91deeef4ef77f0682f07234a4a7a191ac6212fb4a1244d7a6ed85ffa",
       "added_at": "2026-11-26T16:28:51Z"
     },
     {
