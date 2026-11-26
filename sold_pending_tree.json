@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "count": 500,
+  "count": 503,
   "items": [
     {
       "qr_code": "2024_20261027_2",
@@ -17,6 +17,20 @@
       "minted_at": "2026-10-27"
     },
     {
+      "qr_code": "2024_20261027_15",
+      "status": "SOLD",
+      "farm": "Oscar's Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "product": "Agroverse 81% Cacao Chocolate Bar 50g | Oscar Cacao Nibs | Kirsten 20261027 | San Francisco - MAIN",
+      "product_image": "",
+      "price": "10",
+      "owner_email_present": true,
+      "owner_email_hash": "45b4522383329ac3",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1988",
+      "minted_at": "2026-10-27"
+    },
+    {
       "qr_code": "2024_20261027_1",
       "status": "SOLD",
       "farm": "Oscar's Farm",
@@ -29,6 +43,20 @@
       "owner_email_hash": "fe1d4787b557ad6f",
       "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1865",
       "minted_at": "2026-10-27"
+    },
+    {
+      "qr_code": "2025_20261025_7",
+      "status": "SOLD",
+      "farm": "Jesus do Deus",
+      "country": "Brazil",
+      "harvest_year": "2025",
+      "product": "Agroverse 81% Cacao Chocolate Bar 50g | Vivi Cacao Nibs | Kirsten 20261025 | San Francisco - AGL13",
+      "product_image": "https://agroverse.shop/assets/images/products/81-dark-chocolate-bar-50g-packaging.jpg",
+      "price": "10",
+      "owner_email_present": true,
+      "owner_email_hash": "45b4522383329ac3",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A1831",
+      "minted_at": "2026-10-25"
     },
     {
       "qr_code": "2025_20261025_2",
@@ -5852,6 +5880,20 @@
       "owner_email_present": true,
       "owner_email_hash": "95fc289a6c067af6",
       "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A385",
+      "minted_at": "2025-06-24"
+    },
+    {
+      "qr_code": "2024OSCAR_20250826_NIBS_22",
+      "status": "SOLD",
+      "farm": "Oscar Farm",
+      "country": "Brazil",
+      "harvest_year": "2024",
+      "product": "8 Ounce Package Kraft Pouch - Ilheus, Brazil 2024",
+      "product_image": "https://static.wixstatic.com/media/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg/v1/fill/w_1000,h_1000,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0e2cde_d2ec9b7e92c547019e90739efe3e8d96~mv2.jpeg",
+      "price": "25",
+      "owner_email_present": true,
+      "owner_email_hash": "45b4522383329ac3",
+      "sheet_url": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=472328231&range=A402",
       "minted_at": "2025-06-24"
     },
     {
