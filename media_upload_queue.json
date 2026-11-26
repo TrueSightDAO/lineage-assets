@@ -1,7 +1,7 @@
 {
   "status": "success",
   "count": 2,
-  "generated_at": "2026-11-26T16:20:55Z",
+  "generated_at": "2026-11-26T16:26:00Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
   "items": [
@@ -15,6 +15,7 @@
       "filename": "puyuan_organic_farm.zip",
       "size_bytes": 3223311317,
       "status": "uploading",
+      "sha256": "914e041c8435b7aa06f682931101176a110fd1d5166638db6489de4a6e074705",
       "added_at": "2026-11-26T16:16:11Z"
     }
   ]
