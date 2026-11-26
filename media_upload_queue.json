@@ -1,8 +1,21 @@
 {
   "status": "success",
-  "count": 0,
-  "generated_at": "2026-10-07T03:44:26Z",
+  "count": 2,
+  "generated_at": "2026-11-26T16:20:55Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
-  "items": []
+  "items": [
+    {
+      "filename": "dr_wang_tcm_retreat.zip",
+      "size_bytes": 594747277,
+      "status": "queued",
+      "added_at": "2026-11-26T16:18:41Z"
+    },
+    {
+      "filename": "puyuan_organic_farm.zip",
+      "size_bytes": 3223311317,
+      "status": "uploading",
+      "added_at": "2026-11-26T16:16:11Z"
+    }
+  ]
 }
