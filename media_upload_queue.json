@@ -1,14 +1,15 @@
 {
   "status": "success",
-  "count": 4,
-  "generated_at": "2026-11-26T16:36:16Z",
+  "count": 3,
+  "generated_at": "2026-11-26T19:22:40Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
   "items": [
     {
       "filename": "Mirante_do_Xar\u00e9u_itacare_capoeira.zip",
       "size_bytes": 18896748,
-      "status": "queued",
+      "status": "uploading",
+      "sha256": "acd49f46d5510f51151bc6b9af79a2f586188e1f462c4d66afe8eeb8b290fb9d",
       "added_at": "2026-11-26T16:30:41Z"
     },
     {
@@ -22,13 +23,6 @@
       "size_bytes": 594747277,
       "status": "queued",
       "added_at": "2026-11-26T16:18:41Z"
-    },
-    {
-      "filename": "puyuan_organic_farm.zip",
-      "size_bytes": 3223311317,
-      "status": "uploading",
-      "sha256": "914e041c8435b7aa06f682931101176a110fd1d5166638db6489de4a6e074705",
-      "added_at": "2026-11-26T16:16:11Z"
     }
   ]
 }
