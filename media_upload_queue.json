@@ -1,21 +1,15 @@
 {
   "status": "success",
-  "count": 2,
-  "generated_at": "2026-11-26T19:27:49Z",
+  "count": 1,
+  "generated_at": "2026-11-27T01:48:13Z",
   "source": "gary-mac truesight_media_courier",
   "daemon_running": true,
   "items": [
     {
-      "filename": "capoeira_mestre_orelha_itacare_plot_2026.zip",
-      "size_bytes": 3397951632,
-      "status": "uploading",
-      "sha256": "fec62f8e91deeef4ef77f0682f07234a4a7a191ac6212fb4a1244d7a6ed85ffa",
-      "added_at": "2026-11-26T16:28:51Z"
-    },
-    {
       "filename": "dr_wang_tcm_retreat.zip",
       "size_bytes": 594747277,
-      "status": "queued",
+      "status": "uploading",
+      "sha256": "92e7b5bdb356ae0a77ef4ba5a904da449d9f6c27ef68414d125d7f7f928a204c",
       "added_at": "2026-11-26T16:18:41Z"
     }
   ]
